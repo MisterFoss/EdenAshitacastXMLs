@@ -43,6 +43,9 @@
 			<ring2>Balance Ring</ring2>
 			<back>Nomad's Mantle</back>
         </set>
+        <set name="Town">
+            <body>Federation Aketon</body>
+        </set>
 		<set name="SA">
 			<head>Empress Hairpin</head>
 			<body>Brigandine</body>
@@ -194,6 +197,9 @@
                 <elseif p_ismoving="true">
                     <equip set="Running" />
                 </elseif>
+                <if e_area="Windurst*|Port Windurst">
+                    <equip set="Town"/>
+                </if>
         </if>
         <if p_status="engaged">
             <equip set="TP" />
