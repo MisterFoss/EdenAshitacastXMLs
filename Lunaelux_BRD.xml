@@ -22,7 +22,6 @@
 		<else>
 			<if p_subjob="WHM"><setvar name="macropage" value="1" /></if>
 			<if p_subjob="BLM"><setvar name="macropage" value="1" /></if>
-			<if p_subjob="SCH"><setvar name="macropage" value="1" /></if>
 			<if p_subjob="RDM"><setvar name="macropage" value="1" /></if>
 			<setvar name="Refreash" value="1"/>
 		</else>
@@ -30,7 +29,6 @@
 
 		<if p_mainjob="BRD">
 			<setvar name="macrobook" value="1" />
-			<setvar name="lockstyleset" value="1" />
 		</if>
 		
         <command delay="1500">/macro book $macrobook</command>
