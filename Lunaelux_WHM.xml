@@ -209,29 +209,16 @@
 			will be equiped on any offencice spell alligned with that element.
 		-->
 		
-		<set name="BaseCastingMain">
-			<main>Krins Pole</main>
-		</set>
+		<set name="BaseCastingMain"> <main>Krins Pole</main> </set>
 
-		<set name="Dark-acc" baseset="BaseCastingMain">
-			<main>Dark Staff</main>
-		</set>
-		<set name="Light-acc" baseset="BaseCastingMain">
-			<main>Apollo's Staff</main>
-		</set>
-		<set name="Ice-acc" baseset="BaseCastingMain">
-		</set>
-		<set name="Fire-acc" baseset="BaseCastingMain">
-		</set>
-		<set name="Thunder-acc" baseset="BaseCastingMain">
-		</set>
-		<set name="Water-acc" baseset="BaseCastingMain">
-		</set>
-		<set name="Earth-acc" baseset="BaseCastingMain">
-			<main>Earth Staff</main>
-		</set>
-		<set name="Wind-acc" baseset="BaseCastingMain">
-		</set>
+		<set name="Dark-acc" 	baseset="BaseCastingMain"> <main>Dark Staff</main> </set>
+		<set name="Light-acc" 	baseset="BaseCastingMain"> <main>Apollo's Staff</main> </set>
+		<set name="Ice-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Fire-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Thunder-acc" baseset="BaseCastingMain"> </set>
+		<set name="Water-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Earth-acc" 	baseset="BaseCastingMain"> <main>Earth Staff</main> </set>
+		<set name="Wind-acc" 	baseset="BaseCastingMain"> </set>
 		
 		<!-- Melee mode sets, toggle with "/1h, /2h, /dw". well lock main and sub to prevent tp loss lose tp. -->
 		

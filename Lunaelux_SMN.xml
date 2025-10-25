@@ -1,50 +1,31 @@
 <!--
- 
           Archaide's Level 75 SMN XML 
- 
-This XML includes a few specific things for SMN:
-- Will auto equip staves according to spirit/summon that you have out
-- Carbuncle has its own set to accomodate Carby Mitts
-- Relic body will autoequip if your summoned pet matches the elemental day
-- Will auto set macro book and lockstyle upon switching to SMN
-- Herald's gaiters will autoequip when you start moving
- 
-Enjoy! Have Fun!!  
 -->
  
  
-    <ashitacast>
-    <settings> <!--Contains settings specific to this xml, must be set to true/false to override default-->
-        <buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
-        <statusupdate>true</statusupdate> <!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
-        <hpupdate>false</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
-        <autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+<ashitacast>
+
+    <settings> 
+        <buffupdate>true</buffupdate> 
+        <statusupdate>true</statusupdate> 
+        <hpupdate>false</hpupdate> 
+        <autoupdate>true</autoupdate> 
     </settings>
         
     <init>
         <!-- This codeblock will automatically change your macro book/page according to the job and subjob list below -->
-        <command delay="1500">/echo ****** Initiating Archaide's Summoner AshitaCast, ENJOY! ******</command>
         <command delay="1600">/echo Job is %p_job.</command>
         <command delay="1700">/echo Macro-book $macrobook, Page $macropage.</command>
         <command delay="2000">/macro book $macrobook</command>
         <command delay="3000">/macro set $macropage</command>
-        <command delay="4000">/lockstyleset $lockstyleset</command>
-		<!-- This codeblock will automatically change your macro book/page/lockstyle according to the job and subjob list below -->
-		<!-- Change the below variable subjob abbreviations according to the subjobs you use with this profile. --> 
-        <if p_mainjob="SMN"><setvar name="macrobook" value="2" /><setvar name="lockstyleset" value="13" /></if>
+
+        <if p_mainjob="SMN"><setvar name="macrobook" value="2" /></if>
         <if p_subjob="WHM"><setvar name="macropage" value="1" /></if>
-        <if p_subjob="SCH"><setvar name="macropage" value="1" /></if>
         <if p_subjob="NIN"><setvar name="macropage" value="1" /></if>
         <if p_subjob="THF"><setvar name="macropage" value="1" /></if>
     </init> 
     
     <sets>
-    
-    
-	<!--
-		Change the below sets to your own, type the item EXACTLY how you see it in your inventory EX> Shura Head is "Shr.Znr.Kabuto" with no spaces. GL!
-	-->
- 
     
         <set name="Perp-DAY"><body></body></set>    
         <set name="Carbuncle"><main>Light Staff</main><hands>Carbuncle Mitts</hands></set>
@@ -60,61 +41,31 @@ Enjoy! Have Fun!!
  
         <set name="Idle">
             <main>Earth Staff</main>
-            <sub>Raptor Strap +1</sub>
-            <ammo>Hedgehog Bomb</ammo>
-            <head>Walahra Turban</head>
-            <body>Yinyang Robe</body>
-            <hands>Beacon Cuffs</hands>
-            <legs>Evoker's Spats</legs>
-            <feet>Evoker's Pigaches</feet>
-            <neck>Smn. Torque</neck>
-            <waist>Summoning Belt</waist>
-            <ear1>Death Earring</ear1>
-            <ear2>Astral Earring</ear2>
-            <ring1>Serket Ring</ring1>
-            <ring2>Evoker's Ring</ring2>
-            <back>Blue Cape +1</back>
         </set>
         
         <set name="Cure">
             <main>Light Staff</main>
-            <sub>Raptor Strap +1</sub>
-            <head>Mirror Tiara</head>
-            <neck>Justice Badge</neck>
-            <legs>Druid's Slops</legs>
-            <waist>Friar's Rope</waist> 
         </set>      
         
         <set name="Resting">
             <main>Dark Staff</main>
-            <head></head>
             <body>Errant Hpl.</body>
-            <neck></neck>
+            <neck>Beack necklace</neck>
             <waist>Qiqirn Sash</waist>
         </set>
         
         <set name="Stoneskin">
 			<main>kirin's pole</main>
-			<sub></sub>
-			<ammo>holy ampulla</ammo>
-			<head>Opo-opo crown</head>
 			<body>Errant Hpl.</body>
 			<hands>Zealot's mitts</hands>
-			<legs></legs>
-			<feet>Goliard clogs</feet>
-			<neck>holy phial</neck>
 			<waist>friar's rope</waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2>San d'orian ring</ring2>
 			<back>rainbow cape</back>
         </set>
         
         <set name="Idle-Refresh" baseset="Idle">
         </set>
         
-        <set name="Town" baseset="Idle-$IdleSet">
+        <set name="Town">
         	<body>Federation aketon</body>
         </set>
            
@@ -123,44 +74,13 @@ Enjoy! Have Fun!!
         
         <!--Perpetuation Sets-->
         <set name="Perpetuation" baseset="Idle-Refresh">
-            <sub>Raptor Strap +1</sub>
-            <ammo>Hedgehog Bomb</ammo>
-            <head>Walahra Turban</head>
-            <body>Yinyang Robe</body>
-            <hands>Beacon Cuffs</hands>
-            <legs>Evoker's Spats</legs>
-            <feet>Evoker's Pigaches</feet>
-            <neck>Smn. Torque</neck>
-            <waist>Summoning Belt</waist>
-            <ear1>Death Earring</ear1>
-            <ear2>Astral Earring</ear2>
-            <ring1>Serket Ring</ring1>
-            <ring2>Evoker's Ring</ring2>
-            <back>Blue Cape +1</back>
         </set>
         
         <set name="Spirit" baseset="Idle-Refresh">
-            <sub>Raptor Strap +1</sub>
-            <ammo>Hedgehog Bomb</ammo>
-            <head>Walahra Turban</head>
-            <body>Yinyang Robe</body>
-            <hands>Beacon Cuffs</hands>
-            <legs>Evoker's Spats</legs>
-            <feet>Evoker's Pigaches</feet>
-            <neck>Smn. Torque</neck>
-            <waist>Summoning Belt</waist>
-            <ear1>Death Earring</ear1>
-            <ear2>Astral Earring</ear2>
-            <ring1>Serket Ring</ring1>
-            <ring2>Evoker's Ring</ring2>
-            <back>Blue Cape +1</back>
         </set>    
         
         <!-- Precast -->      
         <set name="Precast">
-            <head>Walahra Turban</head>
-            <feet>Rostrum Pumps</feet>
-            <waist>Headlong Belt</waist>
         </set>
         
         <set name="BP-Delay">
@@ -168,100 +88,25 @@ Enjoy! Have Fun!!
         </set>  
         
         <!-- Midcast-Pets-->
-        <set name="Siphon">
-            <head>Evoker's horn</head>
-            <hands>Beacon Cuffs</hands>
-            <neck>Smn. Torque</neck>
-            <waist>Summoner's Belt</waist>      
-            <ring2>Evoker's Ring</ring2>            
+        <set name="Siphon">            
         </set>
         
         <set name="BP-Perfect Defense">            
         </set>
         
         <set name="BP-Physical">
-            <sub>Raptor Strap +1</sub>
-            <ammo>Hedgehog Bomb</ammo>
-            <head>Evoker's Horn</head>
-            <body>Yinyang Robe</body>
-            <hands>Beacon Cuffs</hands>
-            <legs>Evoker's Spats</legs>
-            <feet>Evoker's Pigaches</feet>
-            <neck>Smn. Torque</neck>
-            <waist>Summoning Belt</waist>
-            <ear1>Death Earring</ear1>
-            <ear2>Astral Earring</ear2>
-            <ring1>Serket Ring</ring1>
-            <ring2>Evoker's Ring</ring2>
-            <back>Blue Cape +1</back>
         </set>
         
         <set name="BP-Hybrid">
-            <sub>Raptor Strap +1</sub>
-            <ammo>Hedgehog Bomb</ammo>
-            <head>Evoker's Horn</head>
-            <body>Yinyang Robe</body>
-            <hands>Beacon Cuffs</hands>
-            <legs>Evoker's Spats</legs>
-            <feet>Evoker's Pigaches</feet>
-            <neck>Smn. Torque</neck>
-            <waist>Summoning Belt</waist>
-            <ear1>Death Earring</ear1>
-            <ear2>Astral Earring</ear2>
-            <ring1>Serket Ring</ring1>
-            <ring2>Evoker's Ring</ring2>
-            <back>Blue Cape +1</back>
         </set>
         
         <set name="BP-Magical">
-            <sub>Raptor Strap +1</sub>
-            <ammo>Hedgehog Bomb</ammo>
-            <head>Evoker's Horn</head>
-            <body>Yinyang Robe</body>
-            <hands>Beacon Cuffs</hands>
-            <legs>Evoker's Spats</legs>
-            <feet>Evoker's Pigaches</feet>
-            <neck>Smn. Torque</neck>
-            <waist>Summoning Belt</waist>
-            <ear1>Death Earring</ear1>
-            <ear2>Astral Earring</ear2>
-            <ring1>Serket Ring</ring1>
-            <ring2>Evoker's Ring</ring2>
-            <back>Blue Cape +1</back>
         </set>
         
         <set name="BP-Enfeebling">  
-            <sub>Raptor Strap +1</sub>
-            <ammo>Hedgehog Bomb</ammo>
-            <head>Evoker's Horn</head>
-            <body>Yinyang Robe</body>
-            <hands>Beacon Cuffs</hands>
-            <legs>Evoker's Spats</legs>
-            <feet>Evoker's Pigaches</feet>
-            <neck>Smn. Torque</neck>
-            <waist>Summoning Belt</waist>
-            <ear1>Death Earring</ear1>
-            <ear2>Astral Earring</ear2>
-            <ring1>Serket Ring</ring1>
-            <ring2>Evoker's Ring</ring2>
-            <back>Blue Cape +1</back>
         </set>
         
         <set name="BP-Enhancing">          
-            <sub>Raptor Strap +1</sub>
-            <ammo>Hedgehog Bomb</ammo>
-            <head>Evoker's Horn</head>
-            <body>Yinyang Robe</body>
-            <hands>Beacon Cuffs</hands>
-            <legs>Evoker's Spats</legs>
-            <feet>Evoker's Pigaches</feet>
-            <neck>Smn. Torque</neck>
-            <waist>Summoning Belt</waist>
-            <ear1>Death Earring</ear1>
-            <ear2>Astral Earring</ear2>
-            <ring1>Serket Ring</ring1>
-            <ring2>Evoker's Ring</ring2>
-            <back>Blue Cape +1</back>
         </set>    
         
         <set name="BP-Healing" baseset="BP-Enhancing">            
@@ -697,3 +542,5 @@ Enjoy! Have Fun!!
         <elseif ad_name="Mana Cede"><equip set="Mana Cede" /></elseif>
         <elseif ad_name="Astral Flow"><equip set="Astral Flow" /></elseif>
     </jobability>
+
+</ashitacast>
