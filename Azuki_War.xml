@@ -14,7 +14,6 @@
         <var name="FireResist">0</var>
         <var name="LightningResist">0</var>
         <var name="Acc">0</var>
-        <var name="Town">0</var>
     </variables>
     <init>
         <command delay="1500">/echo ****** Initiating Warrior AshitaCast, ENJOY! ******</command>
@@ -31,77 +30,64 @@
         <if p_subjob="NIN"><setvar name="macropage" value="1" /></if>
         <if p_subjob="SAM"><setvar name="macropage" value="2" /></if>
 <!-- Delete next line if you don't use keybinds -->
-		<!-- <command delay="5000">/exec WAR_keybinds</command> -->
     </init>
 	
     <sets>
-	
-	
-
-	
-<!-- Default Idle Set when out of combat -->
         <set name="Idle">
-			<head>walahra turban</head>
-			<body>kirin's osode</body>
-			<hands>Fighter's mufflers</hands>
+			<head>Walahra Turban</head>
+			<body>Kirin's Osode</body>
+			<hands>Warrior's Mufflers</hands>
 			<legs>Byakko's Haidate</legs>
 			<feet>Fighter's Calligae</feet>
-			<neck>chivalrous chain</neck>
+			<neck>Chivalrous Chain</neck>
 			<waist>Warrior's Stone</waist>
-			<ear1>Fang Earring</ear1>
-			<ear2>Fang Earring</ear2>
-			<ring1>Sniper's Ring</ring1>
-			<ring2>Sniper's Ring</ring2>
-			<back>Amemet Mantle</back>
+			<ear1>Suppanomimi</ear1>
+			<ear2>Reraise Earring</ear2>
+			<ring1>Balance Ring</ring1>
+			<ring2>Balance Ring</ring2>
+			<back>Nomad's Mantle</back>
         </set>
-		
-<!-- Town Set, /town /towno -->
+
         <set name="Town">
             <body>Federation Aketon</body>
         </set>
 
-<!-- Default TP Set -->
         <set name="TP">
-			<head>walahra turban</head>
-            <body>haubergeon</body>
+			<head>Walahra Turban</head>
+			<body>Haubergeon</body>
 			<hands>Dusk Gloves</hands>
 			<legs>Byakko's Haidate</legs>
 			<feet>Dusk Ledelsens</feet>
-			<neck>chivalrous chain</neck>
-			<waist>Warrior's Stone</waist>
+			<neck>Chivalrous Chain</neck>
+			<waist>Life Belt</waist>
 			<ear1>Fang Earring</ear1>
 			<ear2>Fang Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
 			<ring2>Sniper's Ring</ring2>
 			<back>Amemet Mantle</back>
         </set>
-		
-<!-- High Accuracy Set, /acc /acco -->
+
         <set name="Acc">
-
         </set>
-		
-<!-- Evasion Set, /eva /evao -->
+
         <set name="Evasion">
-
+            <head>Empress Hairpin</head>
+			<body>Scorpion Harness</body>
+			<ear1>Suppanomimi</ear1>
+			<ear2>Reraise Earring</ear2>
+			<back>Nomad's Mantle</back>
         </set>
-		
-<!-- PDT Set, /pdt /pdto -->
+	
         <set name="PhysicalDefense">
         </set>
 		
-<!-- MDT Set, /mdt /mdto -->
         <set name="MagicDefense">
         </set>
 		
-<!-- Fire Resist Set for Cerberus, /fr /fro -->
         <set name="FireResist">
-
         </set>
 		
-<!-- Lightning Resist Set for Khimaira, /lr /lro -->
         <set name="LightningResist">
-
         </set>
 		
 <!-- WS's -->
@@ -109,18 +95,18 @@
 
         </set>
 		<set name="RagingRush">
-            <head>Empress Hairpin</head>
-            <body>Kirin's osode</body>
-            <hands>Custom F Gloves</hands>
-            <legs>Byakko's Haidate</legs>
-            <feet>Bounding Boots</feet>
-            <neck>chivalrous chain</neck>
-            <waist>Warrior's Stone</waist>
-            <ear1>Fang Earring</ear1>
-            <ear2>Fang Earring</ear2>
-            <ring1>Courage Ring</ring1>
-            <ring2>Courage Ring +1</ring2>
-            <back>Amemet Mantle</back>
+			<head>Patroclus's Helm</head>
+			<body>Kirin's Osode</body>
+			<hands>Custom F Gloves</hands>
+			<legs>Byakko's Haidate</legs>
+			<feet>Dusk Ledelsens</feet>
+			<neck>Chivalrous Chain</neck>
+			<waist>Warrior's Stone</waist>
+			<ear1>Fang Earring</ear1>
+			<ear2>Fang Earring</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Sniper's Ring</ring2>
+			<back>Amemet Mantle</back>
         </set>
 		<set name="KingsJustice">
 
@@ -143,36 +129,30 @@
 
         </set>
 		
-<!-- Default WS Set -->		
         <set name="WS">
 
         </set>
 		
-<!-- Snaphot set for Ranged Attacks -->
 		<set name="Preshot">
 		</set>
 		
-<!-- Ranged Attack Set -->		
 		<set name="Ranged">
 		</set>
 		
-<!-- Haste Set for Magic Recast -->
-		<set name="Haste"> 
+		<set name="Casting"> 
 			<head>Walahra Turban</head>
-			<waist>Speed Belt</waist>
-			<body>Nuevo Coselete</body>
+			<body>Scorpion Harness</body>
 			<hands>Dusk Gloves</hands>
 			<legs>Byakko's Haidate</legs>
-			<feet>Aurum Sabatons</feet>
+			<feet>Dusk Ledelsens</feet>
+			<ear1>Suppanomimi</ear1>
+			<ear2>Reraise Earring</ear2>
+			<back>Nomad's Mantle</back>
         </set>
 		
-<!-- Will autoequip Desert Boots in Earth Weather -->
-		<set name="DesertBoots">
-        <!-- 
-			<feet>Desert Boots</feet>
-        -->
+		<set name="DesertBoots">    
+            <!-- <feet>Desert Boots</feet> -->
 		</set>
-
 
     </sets>
 	
@@ -185,7 +165,6 @@
             <setvar name="FireResist" value="0" />
             <setvar name="LightningResist" value="0" />
             <setvar name="Acc" value="0" />
-            <setvar name="Town" value="0" />
             <if advanced="$Evasion=0">
                 <setvar name="Evasion" value="1" />
                 <addtochat color="100">Evasion Set Equipped.</addtochat>
@@ -203,7 +182,6 @@
             <setvar name="FireResist" value="0" />
             <setvar name="LightningResist" value="0" />
             <setvar name="Acc" value="0" />
-            <setvar name="Town" value="0" />
             <if advanced="$PhysicalDefense=0">
                 <setvar name="PhysicalDefense" value="1" />
                 <addtochat color="100">Physical Defense Set Equipped.</addtochat>
@@ -221,7 +199,6 @@
             <setvar name="FireResist" value="0" />
             <setvar name="LightningResist" value="0" />
             <setvar name="Acc" value="0" />
-            <setvar name="Town" value="0" />
             <if advanced="$MagicDefense=0">
                 <setvar name="MagicDefense" value="1" />
                 <addtochat color="100">Magic Defense Set Equipped.</addtochat>
@@ -239,7 +216,6 @@
             <setvar name="MagicDefense" value="0" />
             <setvar name="LightningResist" value="0" />
             <setvar name="Acc" value="0" />
-            <setvar name="Town" value="0" />
             <if advanced="$FireResist=0">
                 <setvar name="FireResist" value="1" />
                 <addtochat color="100">Fire Resist Set Equipped.</addtochat>
@@ -257,7 +233,6 @@
             <setvar name="MagicDefense" value="0" />
             <setvar name="FireResist" value="0" />
             <setvar name="Acc" value="0" />
-            <setvar name="Town" value="0" />
             <if advanced="$LightningResist=0">
                 <setvar name="LightningResist" value="1" />
                 <addtochat color="100">Lightning Resist Set Equipped.</addtochat>
@@ -275,7 +250,6 @@
             <setvar name="MagicDefense" value="0" />
             <setvar name="FireResist" value="0" />
             <setvar name="LightningResist" value="0" />
-            <setvar name="Town" value="0" />
             <if advanced="$Acc=0">
                 <setvar name="Acc" value="1" />
                 <addtochat color="100">High Accuracy Set Set Equipped.</addtochat>
@@ -285,24 +259,6 @@
             <if advanced="$Acc=1">
                 <setvar name="Acc" value="0" />
                 <addtochat color="200">High Accuracy Set Canceled. Returning to Normal set.</addtochat>
-            </if>
-        </cmd>
-        <cmd input="/Town">
-            <setvar name="Evasion" value="0" />
-            <setvar name="PhysicalDefense" value="0" />
-            <setvar name="MagicDefense" value="0" />
-            <setvar name="FireResist" value="0" />
-            <setvar name="LightningResist" value="0" />
-            <setvar name="Acc" value="0" />
-            <if advanced="$Town=0">
-                <setvar name="Town" value="1" />
-                <addtochat color="100">Town Set Equipped.</addtochat>
-            </if>
-        </cmd>
-        <cmd input="/Towno">
-            <if advanced="$Town=1">
-                <setvar name="Town" value="0" />
-                <addtochat color="200">Town Set Canceled. Returning to Normal set.</addtochat>
             </if>
         </cmd>
     </inputcommands>
@@ -340,8 +296,8 @@
                     </equip>
                 </if>
                 <if e_area="Windurst*|Port Windurst">
-                <equip set="Town"/>
-            </if>
+                    <equip set="Town"/>
+                </if>
                 <if advanced="$Evasion=1">
                     <equip set="Evasion" />
                 </if>
@@ -359,9 +315,6 @@
                 </if>
                 <if advanced="$LightningResist=1">
                     <equip set="LightningResist" />
-                </if>
-                <if advanced="$Town=1">
-                    <equip set="Town" />
                 </if>
 				<elseif p_ismoving="true">
 					<if e_weatherelement="Earth">
@@ -424,11 +377,11 @@
 	
 	
     <premagic>
-			<equip set="Haste" />
+			<equip set="Casting" />
     </premagic>
     <midmagic>
 		<if ad_name="Utsusemi: Ichi">
-			<equip set="Haste"/>
+			<equip set="Casting"/>
 				<if buffactive="66"> <!-- One shadow are left -->
 					<command delay="3545">/cancel 66</command>
 				</if>
@@ -437,10 +390,10 @@
 				</else>
 		</if>
 		<if ad_name="Utsusemi: Ni|Tonko*">
-			<equip set="Haste"/>
+			<equip set="Casting"/>
 		</if>
 		<if ad_name="Monomi: Ichi">
-			<equip set="Haste"/>
+			<equip set="Casting"/>
             <command delay="2800">/cancel 71</command>
 		</if>
     </midmagic>
