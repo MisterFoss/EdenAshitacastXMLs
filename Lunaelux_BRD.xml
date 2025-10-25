@@ -42,19 +42,19 @@
 
 	<sets>
 		<!--Song + sets-->
-		<set name="DeafultInstrument"> <Range>kingdom horn</Range> </set>
+		<set name="DefaultInstrument"> <Range>kingdom horn</Range> </set>
 		
-		<set name="Minuet+" 	baseset="DeafultInstrument"><Range>Cornette +1</Range></set>
-		<set name="March+" 		baseset="DeafultInstrument"><Range>kingdom horn</Range></set>
-		<set name="Minne+" 		baseset="DeafultInstrument"></set>
-		<set name="Lulleby+" 	baseset="DeafultInstrument"></set>
-		<set name="Elegy+" 		baseset="DeafultInstrument"></set>
-		<set name="Madrigal+" 	baseset="DeafultInstrument"><Range>Traversiere =1</Range></set>
-		<set name="Mazurka+" 	baseset="DeafultInstrument"></set>
-		<set name="Requiem+"	baseset="DeafultInstrument"></set>
-		<set name="Paeon+" 		baseset="DeafultInstrument"></set>
+		<set name="Minuet+" 	baseset="DefaultInstrument"><Range>Cornette +1</Range></set>
+		<set name="March+" 		baseset="DefaultInstrument"><Range>kingdom horn</Range></set>
+		<set name="Minne+" 		baseset="DefaultInstrument"></set>
+		<set name="Lulleby+" 	baseset="DefaultInstrument"></set>
+		<set name="Elegy+" 		baseset="DefaultInstrument"></set>
+		<set name="Madrigal+" 	baseset="DefaultInstrument"><Range>Traversiere =1</Range></set>
+		<set name="Mazurka+" 	baseset="DefaultInstrument"></set>
+		<set name="Requiem+"	baseset="DefaultInstrument"></set>
+		<set name="Paeon+" 		baseset="DefaultInstrument"></set>
 
-		<!--Deafult Idle when NIN is sub. PDT, MDT and evation set-->
+		<!--Default Idle when NIN is sub. PDT, MDT and evation set-->
 		<set name="Idle">
 			<main>earth staff</main>
 			<head>walahra turban</head>
