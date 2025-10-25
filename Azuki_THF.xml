@@ -1,0 +1,299 @@
+<ashitacast>
+    <settings>
+        <buffupdate>false</buffupdate>
+        <statusupdate>false</statusupdate>
+        <hpupdate>false</hpupdate>
+        <autoupdate>true</autoupdate>
+    </settings>
+    <variables>
+        <var name="Evasion">0</var>
+        <var name="MagicDefense">0</var>
+        <var name="TH">0</var>
+        <var name="Showoff">0</var>
+    </variables>
+    <init>
+        <!-- This codeblock will automatically change your macro book/page according to the job and subjob list below -->
+        <!-- Change the below variable subjob abbreviations according to the subjobs you use with this profile. -->
+        <if p_mainjob="THF"><setvar name="macrobook" value="2" /> <setvar name="macropage" value="2" /></if>
+        <if p_subjob="NIN"><setvar name="macropage" value="2" /></if>
+        <if p_subjob="WAR"><setvar name="macropage" value="2" /></if>
+        <if p_subjob="RNG"><setvar name="macropage" value="2" /></if>
+        <!-- You probably don't need to change these variables below, unless you want to play PUP or GEO. -->
+ 
+        <command delay="1500">/macro book $macrobook</command>
+        <command delay="3000">/macro set $macropage</command>
+        <command delay="4500">/echo *** Job is %p_job. Macros set to Book $macrobook, Page $macropage. ***</command>
+        <command delay='5000'>/gl blink</command> 
+        <command delay='5500'>/addon reload equipviewer</command>
+ 
+        <!-- This will change your Lockstyle set if desired -->
+        
+    </init>
+    <sets>
+        <set name="Idle">
+            <head>Empress Hairpin</head>
+            <body>Scorpion Harness</body>
+            <hands>Assassin's armlets</hands>
+            <legs>Jaridah Salvars</legs>
+            <feet>Assassin's pouln.</feet>
+            <neck>spike Necklace</neck>
+            <waist>life belt</waist>
+            <ear1>fang earring</ear1>
+            <ear2>fang earring</ear2>
+            <ring1>sniper's ring</ring1>
+            <ring2>sniper's ring</ring2>
+            <back>Nomad's Mantle</back>
+
+        </set>
+		<set name="SA">
+			<head>Empress Hairpin</head>
+			<body>Brigandine</body>
+			<hands>Custom F Gloves</hands>
+			<feet>Bounding Boots</feet>
+			<neck>spike Necklace</neck>
+			<waist>Mrc.Cpt. Belt</waist>
+			<ring1>Balance Ring</ring1>
+			<ring2>Balance Ring</ring2>
+			<back>Nomad's Mantle</back>
+		</set>
+		<set name="TA">
+			<head>Empress Hairpin</head>
+			<body>Mrc.Cpt. doublet</body>
+			<hands>Mrc.Cpt. Gloves</hands>
+			<feet>Bounding Boots</feet>
+			<waist>Mrc.Cpt. Belt</waist>
+			<back>Nomad's Mantle</back>
+		</set>
+		<set name="RangedAttack">
+			<head>Empress Hairpin</head>
+			<body>Jaridah Peti</body>
+			<hands>Assassin's armlets</hands>
+			<legs>Jaridah Salvars</legs>
+			<feet>Bounding Boots</feet>
+			<neck>spike Necklace</neck>
+			<waist>Mrc.Cpt. Belt</waist>
+			<ring1>sniper's ring</ring1>
+			<ring2>sniper's ring</ring2>
+			<back>Nomad's Mantle</back>
+		</set>
+		<set name="TP">
+			<head>walahra turban</head>
+			<body>Rapparee Harness</body>
+			<hands>Dusk Gloves</hands>
+			<legs>Bravo's Subligar</legs>
+			<feet>Dusk ledelsens</feet>
+			<neck>Chivalrous Chain</neck>
+			<waist>life belt</waist>
+			<ear1>suppanomimi</ear1>
+			<ear2>fang earring</ear2>
+			<ring1>sniper's ring</ring1>
+			<ring2>sniper's ring</ring2>
+			<back>amemet mantle</back>
+		</set>
+		<set name="WS">
+			<head>Empress Hairpin</head>
+			<body>Jaridah Peti</body>
+			<hands>Custom F Gloves</hands>
+			<legs>Republic Subligar</legs>
+			<feet>Bounding Boots</feet>
+			<neck>Fang Necklace</neck>
+			<waist>life belt</waist>
+			<ear1>fang earring</ear1>
+			<ear2>fang earring</ear2>
+			<ring1>Courage Ring</ring1>
+			<ring2>Courage Ring +1</ring2>
+			<back>Nomad's Mantle</back>
+		</set>
+
+        <set name="Running">
+
+        </set>
+
+        <set name="Showoff">
+
+        </set>
+        <set name="Haste">
+
+        </set>
+        <set name="TH">
+        </set>
+        <set name="Evasion">
+
+        </set>
+        <set name="MagicDefense">
+
+        </set>
+
+        <set name="STRWS">
+
+        </set>
+
+
+
+    </sets>
+    <inputcommands>
+        <cmd input="/eva">
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="TH" value="0" />
+            <setvar name="Showoff" value="0" />
+            <if advanced="$Evasion=0">
+                <setvar name="Evasion" value="1" />
+                <addtochat color="100">Evasion Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/eva off">
+            <if advanced="$Evasion=1">
+                <setvar name="Evasion" value="0" />
+                <addtochat color="200">Evasion Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/mdt">
+            <setvar name="Evasion" value="0" />
+            <setvar name="TH" value="0" />
+            <setvar name="Showoff" value="0" />
+            <if advanced="$MagicDefense=0">
+                <setvar name="MagicDefense" value="1" />
+                <addtochat color="100">Magic Defense Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/mdt off">
+            <if advanced="$MagicDefense=1">
+                <setvar name="MagicDefense" value="0" />
+                <addtochat color="200">Magic Defense Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/th">
+            <setvar name="Evasion" value="0" />
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="Showoff" value="0" />
+            <if advanced="$TH=0">
+                <setvar name="TH" value="1" />
+                <addtochat color="100">TH Set Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/th off">
+            <if advanced="$TH=1">
+                <setvar name="TH" value="0" />
+                <addtochat color="200">TH Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/showoff">
+            <setvar name="Evasion" value="0" />
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="TH" value="0" />
+            <if advanced="$Showoff=0">
+                <setvar name="Showoff" value="1" />
+                <addtochat color="100">Show Off Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/showoff off">
+            <if advanced="$Showoff=1">
+                <setvar name="Showoff" value="0" />
+                <addtochat color="200">Show Off Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+    </inputcommands>
+    <idlegear>
+        <if p_status="idle">
+            <equip set="Idle" />
+                <if advanced="$Evasion=1">
+                    <equip set="Evasion" />
+                </if>
+                <elseif advanced="$MagicDefense=1">
+                    <equip set="MagicDefense" />
+                </elseif>
+                <elseif advanced="$Showoff=1">
+                    <equip set="Showoff" />
+                </elseif>
+                <elseif p_ismoving="true">
+                    <equip set="Running" />
+                </elseif>
+        </if>
+        <if p_status="engaged">
+            <equip set="TP" />
+                <if buffactive="65">
+                    <equip set="SA" />
+                </if>
+                <elseif buffactive="87">
+                    <equip set="TA" />
+                </elseif>
+                <elseif advanced="$Evasion=1">
+                    <equip set="Evasion" />
+                        <if buffactive="65">
+                            <equip set="SA" />
+                        </if>
+                        <elseif buffactive="87">
+                            <equip set="TA" />
+                        </elseif>
+                </elseif>
+                <elseif advanced="$MagicDefense=1">
+                    <equip set="MagicDefense" />
+                        <if buffactive="65">
+                            <equip set="SA" />
+                        </if>
+                        <elseif buffactive="87">
+                            <equip set="TA" />
+                        </elseif>
+                </elseif>
+                <elseif advanced="$TH=1">
+                    <equip set="TH" />
+                        <if buffactive="65">
+                            <equip set="SA" />
+                        </if>
+                        <elseif buffactive="87">
+                            <equip set="TA" />
+                        </elseif>
+                </elseif>
+               
+        </if>
+    </idlegear>
+    <preranged>
+    </preranged>
+    <midranged>
+        <equip set="RangedAttack"/>
+    </midranged>
+    <premagic>
+        <equip set="Haste" />
+    </premagic>
+    <midmagic>
+    <!-- 
+        <if ad_name="Monomi*">
+            <command>/cancel 71</command>
+        </if>
+    -->
+    </midmagic>
+    <jobability>
+        <if ad_name="Flee">
+            <equip when="precast">
+                <feet>Rogue's Poulaines</feet>
+            </equip>
+        </if>
+        <if ad_name="Steal">
+            <equip when="precast">
+                <!-- 
+                <head>Rogue's Bonnet</head>
+                <neck>Rabbit Charm</neck>
+                <hands>Thief's Kote</hands>
+                <waist>Key Ring Belt</waist>
+                <legs>Assassin's Culottes</legs>
+                <feet>Rogue's Poulaines</feet>
+                -->
+            </equip>
+        </if>
+        <if ad_name="Mug">
+            <equip when="precast">
+                <!-- 
+                <head>Assassin's Bonnet</head>
+                -->
+            </equip>
+        </if>
+    </jobability>  
+    <weaponskill>
+        <if ad_name="Mercy Stroke">
+            <equip set="StrWS" />
+        </if>
+        <else>
+            <equip set="WS" />
+        </else>
+    </weaponskill>
+</ashitacast>

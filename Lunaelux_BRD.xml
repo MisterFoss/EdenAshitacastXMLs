@@ -1,0 +1,684 @@
+
+
+<!--  																								
+									Bard 75 cap Ashitacast
+-->
+
+<ashitacast>
+	<settings>
+		<buffupdate>true</buffupdate>
+		<statusupdate>true</statusupdate>
+		<hpupdate>false</hpupdate>
+		<autoupdate>true</autoupdate>
+	</settings>
+
+    <init>
+        <!-- This codeblock will automatically change your macro book/page according to the job and subjob list below -->
+        <!-- Change the below variable subjob abbreviations according to the subjobs you use with this profile. -->
+        <if p_subjob="NIN">
+			<setvar name="macropage" value="1" />
+			<setvar name="Refreash" value="0"/>
+		</if>
+		<else>
+			<if p_subjob="WHM"><setvar name="macropage" value="1" /></if>
+			<if p_subjob="BLM"><setvar name="macropage" value="1" /></if>
+			<if p_subjob="SCH"><setvar name="macropage" value="1" /></if>
+			<if p_subjob="RDM"><setvar name="macropage" value="1" /></if>
+			<setvar name="Refreash" value="1"/>
+		</else>
+		
+
+		<if p_mainjob="BRD">
+			<setvar name="macrobook" value="1" />
+			<setvar name="lockstyleset" value="1" />
+		</if>
+		
+        <command delay="1500">/macro book $macrobook</command>
+        <command delay="3000">/macro set $macropage</command>
+        <command delay="4500">/echo *** Job is %p_job. Macros set to Book $macrobook, Page $macropage. ***</command>
+		
+        <!-- This will change your Lockstyle set if desired -->
+        <command delay="6000">/lockstyleset $lockstyleset</command>
+		
+    </init>
+
+	<sets>
+		<!--Song +x sets-->
+		<set name="Minuet+"><Range>Cornette +1</Range></set>
+		<set name="March+"><Range>kingdom horn</Range></set>
+		<set name="Minne+"><Range></Range></set>
+		<set name="Lulleby+"><Range></Range></set>
+		<set name="Elegy+"><Range></Range></set>
+		<set name="Madrigal+"><Range>Traversiere =1</Range></set>
+		<set name="Mazurka+"><Range></Range></set>
+		<set name="Requiem+"><Range></Range></set>
+		<set name="Paeon+"><Range></Range></set>
+		<set name="Deafult"><Range>kingdom horn</Range></set>
+
+		<!--Deafult Idle when NIN is sub. PDT, MDT and evation set-->
+		<set name="Idle">
+			<main>earth staff</main>
+			<sub></sub>
+			<ammo></ammo>
+			<head>walahra turban</head>
+			<body>Scorpion harness</body>
+			<hands>bard's cuffs</hands>
+			<legs>choral cannions</legs>
+			<feet>Goliard clogs</feet>
+			<neck></neck>
+			<waist>mrc.cpt. belt</waist>
+			<ear1>Melody earring</ear1>
+			<ear2>Melody earring</ear2>
+			<ring1>hope ring</ring1>
+			<ring2>hope ring</ring2>
+			<back>traveler's mantle</back>
+		</set>
+
+		<!--Equiped as idel when NIN is not your sub, can be toggled with /mps -->
+		<set name="Idle_Refreash">
+			<main>earth staff</main>
+			<sub>staff strap</sub>
+			<ammo></ammo>
+			<head></head>
+			<body>Vermillion cloak</body>
+			<hands></hands>
+			<legs></legs>
+			<feet></feet>
+			<neck>beak necklace</neck>
+			<waist>qiqirn sash</waist>
+			<ear1>antivenom earring</ear1>
+			<ear2>Energy earring</ear2>
+			<ring1>astral ring</ring1>
+			<ring2>astral ring</ring2>
+			<back>rainbow cape</back>
+		</set>
+
+		<set name="Precast">
+
+		</set>
+
+		<set name="PreSong" baseset="Precast">
+
+		</set>
+		
+		<!-- Max Haste, Deafault spellcasting set -->
+		<set name="Haste">
+			<head>Walahra Turban</head>		
+		</set>
+		
+		<!-- Debuffing songs, macc, CHR, skill set-->
+		<set name="SongAcc">
+			<sub></sub>
+			<head>bard's roundlet</head>
+			<body>Errant hpl.</body>
+			<hands>choral cuffs</hands>
+			<legs>Bard's cannions</legs>
+			<feet></feet>
+			<neck></neck>
+			<waist>Corsette</waist>
+			<ear1>Melody earring</ear1>
+			<ear2>Melody earring</ear2>
+			<ring1>moon ring</ring1>
+			<ring2>moon ring</ring2>
+			<back>Jester's cape +1</back>
+		</set>
+		
+		<!-- Buffing songs, max skill-->
+		<set name="SongSkill">
+			<main></main>
+			<sub></sub>
+			<head></head>
+			<body></body>
+			<hands>Choral cuffs</hands>
+			<legs>choral cannions</legs>
+			<feet></feet>
+			<neck></neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1>trumpet ring</ring1>
+			<ring2>trumpet ring</ring2>
+			<back>Echo cape</back>
+		</set>
+
+		<!-- Equiped when resting -->
+		<set name="Resting" baseset="Idle_Refreash">
+			<main>Dark staff</main>
+			<head>Mirror tiara</head>
+			<body>Errant hpl.</body>
+			<feet>Goliard clogs</feet>
+			<neck>Beak necklace</neck>
+			<waist>qiqirn sash +1</waist>
+		</set>
+		
+		<!-- Town gear, only in windurst currently -->
+		<set name="Town">
+			<body>Federation aketon</body>
+		</set>
+		
+		<!-- Equiped when runing-->
+		<set name="Movement">
+			
+		</set>
+
+		<!--magic damage taken down set, can be toggled with - "/mdt" -->
+		<set name="MDT">
+			
+		</set>
+		
+		<!-- Physical damage taken down set, can be toggled with "/pdt"-->
+		<set name="PDT">
+			
+		</set>
+		
+		<!-- Default Precast, for fast cast -->
+		<set name="Precast">
+			<ear1></ear1>
+			<feet>rostrum pumps</feet>
+		</set>
+
+		<set name="PreSong">
+
+		</set>
+		
+		<!-- Max Haste, Deafault spellcasting set -->
+		<set name="Haste">
+			<head>Walahra Turban</head>		
+			<hands></hands>
+			<legs></legs>
+			<feet></feet>
+			<ear1></ear1>
+		</set>
+		
+		<!-- When castin Cure* Cura* spells-->
+		<set name="Cure" baseset="Haste">
+			<main>light staff</main>
+		</set>
+		
+		<!-- white magic based efeebling-->
+		<set name="Enfeeble-MND">
+
+		</set>
+		
+		<!-- Black magic based enfeebeling-->
+		<set name="Enfeeble-INT">
+			
+		</set>
+		
+		<!-- Stoneskin set, max mind -->
+		<set name="Stoneskin" baseset="Haste">
+			<main>kirin's pole</main>
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body>Errant Hpl.</body>
+			<hands></hands>
+			<legs></legs>
+			<feet></feet>
+			<neck>holy phial</neck>
+			<waist>friar's rope</waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1></ring1>
+			<ring2></ring2>
+			<back>rainbow cape</back>
+		</set>
+		
+		<!-- Cursna -->
+		<set name="Cursna" baseset="Haste">
+
+		</set>
+		
+		<!-- 
+			Elemental accuracy sets, primeraly for elemetal staffs + grips, 
+			will be equiped on any offencice spell alligned with that element.
+		-->
+		
+		<set name="Dark-acc">
+			<main>Dark staff</main>
+			<sub></sub>
+		</set>
+		<set name="Light-acc">
+			<main>light staff</main>
+			<sub></sub>
+		</set>
+		<set name="Ice-acc">
+			<main>Ice staff</main>
+			<sub></sub>
+		</set>
+		<set name="Fire-acc">
+			<main>Fire staff</main>
+			<sub></sub>
+		</set>
+		<set name="Thunder-acc">
+			<main>Thunder staff</main>
+			<sub></sub>
+		</set>
+		<set name="Water-acc">
+			<main>Water staff</main>
+			<sub></sub>
+		</set>
+		<set name="Earth-acc">
+			<main>Earth staff</main>
+			<sub></sub>
+		</set>
+		<set name="Wind-acc">
+			<main>Wind staff</main>
+			<sub></sub>
+		</set>
+		
+		<!-- Melee mode sets, toggle with "/1h, /2h, /dw". well lock main and sub to prevent tp loss. -->
+		
+		<set name="Melee-1H">
+			<main>Crimson blade</main>
+			<sub></sub>
+			<Range></Range>
+		</set>
+		
+		<set name="Melee-2H">
+			<main>Earth staff</main>
+			<sub>lizard strap</sub>
+			<Range></Range>
+		</set>
+		
+		<set name="Melee-DW">
+			<main></main>
+			<sub></sub>
+			<Range></Range>
+		</set>
+		
+		<!-- 
+			Melee set, equip when engaged. 
+			All slots will be overwritten when casting, including main, sub and Range.
+			Use the above sets with "/1h, /2h, /dw" to avoid tp loss 
+		-->		
+		<set name="TP-Set">
+			<head>Walahra turban</head>
+			<body>reverend mail</body>
+			<hands>blessed mitts</hands>
+			<legs></legs>
+			<feet>blessed pumps</feet>
+			<neck></neck>
+			<waist>Mrc.cpt. belt</waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1>astral ring</ring1>
+			<ring2>serket ring</ring2>
+			<back></back>
+		</set>
+		
+		<!-- WS sets -->
+		
+		<set name="WS" baseset="TP-Set">
+			
+		</set>
+
+	</sets> 
+
+	<!-- 
+		!_________________________________________!
+		End of sets, logic belove, edit carefully.
+		!_________________________________________!
+	-->
+
+	<variables>
+		
+		<var name="Melee1H">0</var>
+		<var name="Melee2H">0</var>
+		<var name="MeleeDW">0</var>
+		<var name="MDTSetActive">0</var>
+		<var name="PDTSetActive">0</var>
+
+	</variables>
+
+
+	<inputcommands>
+
+		<!-- Resets All Toggles to Default! -->
+		<cmd input="/resetall">
+			<setvar name="Melee1H" value="0" />
+			<setvar name="Melee2H" value="0" />
+			<setvar name="MeleeDW" value="0" />
+			<setvar name="MDTSetActive" value="0" />
+			<setvar name="PDTSetActive" value="0" />
+			<setvar name="Refreash" value="0" />
+			<addtochat color="57">Reset to initial settings.</addtochat>
+		</cmd>
+
+		<!-- Melee mode toggles -->
+		<cmd input="/1h">
+			<setvar name="Melee2H" value="0" />
+			<setvar name="MeleeDW" value="0" />
+			<if advanced="$Melee1H=0">
+				<setvar name="Melee1H" value="1" />
+				<addtochat color="57">1H mode enabled!</addtochat>
+			</if>
+			<else>
+				<setvar name="Melee1H" value="0" />
+				<addtochat color="57">1H mode disabled.</addtochat>
+			</else>
+		</cmd>
+
+		<cmd input="/2h">
+			<setvar name="Melee1H" value="0" />
+			<setvar name="MeleeDW" value="0" />
+			<if advanced="$Melee2H=0">
+				<setvar name="Melee2H" value="1" />
+				<addtochat color="57">2H mode enabled!</addtochat>
+			</if>
+			<else>
+				<setvar name="Melee2H" value="0" />
+				<addtochat color="57">2H mode disabled.</addtochat>
+			</else>
+		</cmd>
+
+		<cmd input="/dw">
+			<setvar name="Melee1H" value="0" />
+			<setvar name="Melee2H" value="0" />
+			<if advanced="$Melee1H=0">
+				<setvar name="MeleeDW" value="1" />
+				<addtochat color="57">Dual Wield mode enabled!</addtochat>
+			</if>
+			<else>
+				<setvar name="MeleeDW" value="0" />
+				<addtochat color="57">Dual Wield mode disabled.</addtochat>
+			</else>
+		</cmd>
+
+		<!-- MDT set toggle -->
+		<cmd input="/mdt">
+
+			<setvar name="PDTSetActive" value="0" />
+			<setvar name="Refreash" value="0" />
+			<if advanced="$MDTSetActive=0">
+				<setvar name="MDTSetActive" value="1" />
+				<addtochat color="57">MDT set enabled!</addtochat>
+			</if>
+			<else>
+				<setvar name="MDTSetActive" value="0" />
+				<addtochat color="57">MDT set disabled.</addtochat>
+			</else>
+		</cmd>
+
+		<!-- PDT set toggle -->
+		<cmd input="/pdt">
+
+			<setvar name="MDTSetActive" value="0" />
+			<setvar name="Refreash" value="0" />
+			<if advanced="$PDTSetActive=0">
+				<setvar name="PDTSetActive" value="1" />
+				<addtochat color="57">PDT set enabled!</addtochat>
+			</if>
+			<else>
+				<setvar name="PDTSetActive" value="0" />
+				<addtochat color="57">PDT set disabled.</addtochat>
+			</else>
+		</cmd>
+
+		<!-- Refreash set toggle -->
+		<cmd input="/mps">
+
+			<setvar name="MDTSetActive" value="0" />
+			<setvar name="PDTSetActive" value="0" />
+			<if advanced="$Refreash=0">
+				<setvar name="Refreash" value="1" />
+				<addtochat color="57">Refreash set enabled!</addtochat>
+			</if>
+			<else>
+				<setvar name="Refreash" value="0" />
+				<addtochat color="57">Refreash set disabled.</addtochat>
+			</else>
+		</cmd>
+	</inputcommands>
+
+
+	<premagic>
+
+		<if ad_type="BardSong">
+			<equip set="PreSong"/>
+		</if>
+		<else>
+			<equip set="Precast" />
+		</else>
+
+	</premagic>
+
+	<midmagic>
+		<if advanced="$Melee1H=1">
+			<equip set="Melee-1H" lock="true"/>
+		</if>
+
+		<elseif advanced="$Melee2H=1">
+			<equip set="Melee-2H" lock="true"/>
+		</elseif>
+
+		<elseif advanced="$MeleeDW=1">
+			<equip set="Melee-DW" lock="true"/>
+		</elseif>
+		
+		<elseif ad_name="Sleep*|Drain|Aspir|Blind|Bio">
+			<equip set="Dark-acc" lock="true"/>
+		</elseif>
+		
+		<elseif ad_name="Slow*|*Elegy|Rasp|Stone|Stone I*|Stonega*">
+			<equip set="Earth-acc" lock="true"/>
+		</elseif>	
+		
+		<elseif ad_name="Paralyze*|Bind|Frost|Blizzard*|Blizzaga*">
+			<equip set="Ice-acc" lock="true"/>
+		</elseif>
+		
+		<elseif ad_name="Silence|Choke|Gravity|Aero*|Aeroga*">
+			<equip set="Wind-acc" lock="true"/>
+		</elseif>
+		
+		<elseif ad_name="Poison*|Drown|Water|Waterga*">
+			<equip set="Water-acc" lock="true"/>
+		</elseif>
+		
+		<elseif ad_name="Burn|Fire*|Firaga*">
+			<equip set="Fire-acc" lock="true"/>
+		</elseif>
+
+		<elseif ad_name="Foe*|*Lulleby|Dia*|Repose|Banish*|Holy">
+			<equip set="Light-acc" lock="true"/>
+		</elseif>
+		
+		<elseif ad_name="Stun|Shock|Thunder*|Thundaga*">
+			<equip set="Thunder-acc" lock="true"/>
+		</elseif>
+		
+
+		
+		<if ad_type="BardSong">
+			<if ad_name="Foe*|*Lulleby|*Elegy">
+				<equip set="SongAcc"/>
+			</if>
+			<else>
+				<equip set="SongSkill"/>
+			</else>
+			
+			<equip set="Deafult"/>
+			<if ad_name="*Minuet*"><equip set="Minuet+"/></if>
+			<elseif ad_name="*Minne*"><equip set="Minne+"/></elseif>
+			<elseif ad_name="*March"><equip set="March+"/></elseif>
+			<elseif ad_name="*Elegy"><equip set="Elegy+"/></elseif>
+			<elseif ad_name="*Madrigal"><equip set="Madrigal+"/></elseif>
+			<elseif ad_name="Foe*"><equip set="Requiem+"/></elseif>
+			<elseif ad_name="*Paeon*"><equip set="Paeon+"/></elseif>
+			<elseif ad_name="*Lulleby"><equip set="Lulleby+"/></elseif>
+			<elseif ad_name="*Mazurka"><equip set="Mazurka+"/></elseif>	
+		</if>
+		
+		<elseif ad_type="whitemagic">
+			<if ad_skill="healingmagic">
+				<if ad_name="Cure*|Cura*">
+					<equip set="Cure"/>
+				</if>
+				<elseif ad_name="*na">
+					<if ad_name="Cursna">
+						<equip set="Cursna"/>
+					</if>
+				</elseif>
+				<else>
+					<equip set="Haste"/>
+				</else>
+			</if>
+
+			<elseif ad_skill="divinemagic">
+				<equip set="DivineMagic"/>
+			</elseif>
+
+			<elseif ad_skill="enhancingmagic">
+		
+				<if ad_name="Stoneskin">
+					<equip set="Stoneskin"/>
+				</if>
+				<else>
+					<equip set="Haste" />
+				</else>
+
+			</elseif>
+
+			<elseif ad_skill="enfeeblingmagic">
+				<equip set="Enfeeble-MND" />
+			</elseif>
+			
+			<else>
+				<equip set="Haste" />
+			</else>
+		</elseif>
+		
+		<elseif ad_type="blackmagic">
+
+			<if ad_skill="enfeeblingmagic">
+                <equip set="Enfeeble-INT"/>
+			</if>
+			<else>
+				<equip set="Haste"/>
+			</else>
+
+		</elseif>
+		<else>
+			<equip set="Haste"/>
+		</else>
+	</midmagic>
+
+	<preranged>
+
+		<equip>
+			<range></range>
+		</equip>
+
+	</preranged>
+ 
+	<idlegear>
+	
+		<if advanced="$Melee1H=1">
+			<equip set="Melee-1H" lock="true"/>
+		</if>
+
+		<elseif advanced="$Melee2H=1">
+			<equip set="Melee-2H" lock="true"/>
+		</elseif>
+
+		<elseif advanced="$MeleeDW=1">
+			<equip set="Melee-DW" lock="true"/>
+		</elseif>
+		
+		<if advanced="$MaxHP=1">
+			<equip set="HP" lock="true"/>
+		</if>
+		
+		<elseif p_status="resting">
+			<equip set="Resting"/>		
+		</elseif>
+
+		<elseif p_status="engaged">
+			<equip set="TP-Set"/>
+		</elseif>
+
+		<elseif advanced="$MDTSetActive=1">
+			<equip set="MDT" />
+			<if p_ismoving="True">
+				<equip set="Movement" />
+			</if>
+		</elseif>
+
+		<elseif advanced="$PDTSetActive=1">
+			<equip set="PDT"/>
+			<if p_ismoving="True">
+				<equip set="Movement" />
+			</if>
+		</elseif>		
+
+		<else>
+
+			<if advanced="$Refreash=1">
+				<equip set="Idle_Refreash" />
+			</if>
+			<else>
+				<equip set="Idle"/>
+			</else>
+
+ 			<if e_area="Windurst*|Port Windurst">
+				<equip set="Town" />
+			</if>
+			
+			<if eq_main="Warp Cudgel|trick Staff II|treat staff II">
+				<equip lock="true">
+					<main>%eq_main</main>
+				</equip>
+			</if>		
+			<if eq_head="Nomad cap">
+				<equip>
+					<head>%eq_head</head>
+				</equip>
+			</if>
+			<if eq_body="Tidal Talisman">
+				<equip>
+					<body>%eq_body</body>
+				</equip>
+			</if>
+			<if eq_ring1="Empress Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+				<equip lock="true">
+					<ring1>%eq_ring1</ring1>
+				</equip>
+			</if>
+			<if eq_ring2="Empress Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+				<equip lock="true">
+					<ring2>%eq_ring2</ring2>
+				</equip>
+			</if>
+
+			<if p_ismoving="True">
+				<equip set="Movement" />
+			</if>		
+
+		</else>
+
+	</idlegear>
+
+	<jobability>
+
+	</jobability>
+
+
+	<weaponskill>
+
+		<if ad_name="Mystic Boon">
+			<equip set="MysticBoon" />
+		</if>
+
+		<elseif ad_name="Hexa Strike">
+			<equip set="HexaStrike" />
+		</elseif>
+
+		<else>
+			<equip set="WS" />
+		</else>
+
+	</weaponskill>
+
+
+</ashitacast>

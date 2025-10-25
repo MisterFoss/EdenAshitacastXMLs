@@ -1,0 +1,640 @@
+<!--  																								
+									Black Mage 75 cap Ashitacast
+-->
+
+<ashitacast>
+	<settings>
+		<!--Contains settings specific to this xml, must be set to true/false to override default-->
+		<buffupdate>true</buffupdate>
+		<!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
+		<statusupdate>true</statusupdate>
+		<!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
+		<hpupdate>false</hpupdate>
+		<!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
+		<autoupdate>true</autoupdate>
+		<!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+	</settings>
+    <init>
+        <!-- This codeblock will automatically change your macro book/page according to the job and subjob list below -->
+        <!-- Change the below variable subjob abbreviations according to the subjobs you use with this profile. -->
+        <if p_subjob="WHM"><setvar name="macropage" value="3" /></if>
+		<if p_subjob="SCH"><setvar name="macropage" value="3" /></if>
+        <if p_subjob="RDM"><setvar name="macropage" value="3" /></if>
+        <if p_subjob="NIN"><setvar name="macropage" value="3" /></if>
+		
+		<if p_mainjob="BLM"><setvar name="macrobook" value="6" /><setvar name="lockstyleset" value="" /></if>
+		
+        <command delay="1500">/macro book $macrobook</command>
+        <command delay="3000">/macro set $macropage</command>
+        <command delay="4500">/echo *** Job is %p_job. Macros set to Book $macrobook, Page $macropage. ***</command>
+		
+        <!-- This will change your Lockstyle set if desired -->
+		
+    </init>
+
+	<sets>
+		<!--Deafualt gear when not taking any action, refresh, max mp and damage daken down -->
+		<set name="Idle">
+		</set>
+		
+		<!-- Equiped when resting -->
+		<set name="Resting" baseset="Idle">
+			<main>Pilgrim's wand</main>			
+		</set>
+		
+		<!-- Town gear, only in windurst currently -->
+		<set name="Town" baseset="Idle">
+		</set>
+		
+		<!-- Equiped when runing-->
+		<set name="Movement">
+			
+		</set>
+		
+		<!--magic damage taken down set, can be toggled with - "/mdt" -->
+		<set name="MDT">
+			
+		</set>
+		
+		<!-- Physical damage taken down set, can be toggled with "/pdt"-->
+		<set name="PDT">
+			
+		</set>
+		
+		<!-- Default Precast, for fast cast -->
+		<set name="Precast">
+		</set>
+		
+		<!-- Max Haste, Deafault spellcasting set -->
+		<set name="Haste">
+
+		</set>
+		
+		<!-- All elemental including DoTs, addi if needed-->
+		<set name="Elemental" baseset="Haste">
+			<main>yew wand +1</main>
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body>ryl.ftm. tunic</body>
+			<hands></hands>
+			<legs></legs>
+			<feet></feet>
+			<neck></neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1>Eremite's ring</ring1>
+			<ring2>Eremite's ring</ring2>
+			<back></back>
+		</set>
+
+		<set name="Elem_Debuffs">
+
+		</set>
+
+
+		<!-- white magic based efeebling-->
+		<set name="Enfeeble-MND">
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body></body>
+			<hands></hands>
+			<legs></legs>
+			<feet></feet>
+			<neck>Justice badge</neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1>saintly ring</ring1>
+			<ring2>saintly ring</ring2>
+			<back></back>
+		</set>
+		
+		<!-- Black magic based enfeebeling-->
+		<set name="Enfeeble-INT">
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body>ryl.ftm. tunic</body>
+			<hands></hands>
+			<legs></legs>
+			<feet></feet>
+			<neck></neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1>Eremite's ring</ring1>
+			<ring2>Eremite's ring</ring2>
+			<back></back>
+		</set>
+		
+		<!-- Stoneskin set, max mind -->
+		<set name="Stoneskin" baseset="Haste">
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body></body>
+			<hands></hands>
+			<legs></legs>
+			<feet></feet>
+			<neck>Justice badge</neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1>saintly ring</ring1>
+			<ring2>saintly ring</ring2>
+			<back></back>
+		</set>
+		
+		<!-- When castin Cure* Cura* spells-->
+		<set name="Cure" baseset="Haste">
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body></body>
+			<hands></hands>
+			<legs></legs>
+			<feet></feet>
+			<neck>Justice badge</neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1>saintly ring</ring1>
+			<ring2>saintly ring</ring2>
+			<back></back>
+		</set>
+			
+		<set name="DarkMagic" baseset="Haste">
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body></body>
+			<hands></hands>
+			<legs></legs>
+			<feet></feet>
+			<neck></neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1></ring1>
+			<ring2></ring2>
+			<back></back>
+		</set>
+		<set name="Light-belt">
+		</set>
+		<set name="Dark-belt">
+		</set>
+		<set name="Fire-belt">
+		</set>
+		<set name="Ice-belt">
+		</set>
+		<set name="Wind-belt">
+		</set>
+		<set name="Earth-belt">
+		</set>
+		<set name="Thunder-belt">
+		</set>
+		<set name="Water-belt">
+		</set>
+		<!-- 
+			Elemental accuracy sets, primeraly for elemetal staffs + grips, 
+			will be equiped on any offencice spell alligned with that element.
+		-->
+		
+		<set name="BaseCastingMain">
+			<main>yew wand +1</main>
+		</set>
+
+		<set name="Dark-acc" baseset="BaseCastingMain">
+		</set>
+		<set name="Light-acc" baseset="BaseCastingMain">
+		</set>
+		<set name="Ice-acc" baseset="BaseCastingMain">
+		</set>
+		<set name="Fire-acc" baseset="BaseCastingMain">
+		</set>
+		<set name="Thunder-acc" baseset="BaseCastingMain">
+		</set>
+		<set name="Water-acc" baseset="BaseCastingMain">
+		</set>
+		<set name="Earth-acc" baseset="BaseCastingMain">
+		</set>
+		<set name="Wind-acc" baseset="BaseCastingMain">
+		</set>
+		
+		<!-- Melee mode sets, toggle with "/1h, /2h, /dw". well lock main and sub to prevent tp loss lose tp. -->
+		
+		<set name="Melee-1H">
+		</set>
+		
+		<set name="Melee-2H">
+		</set>
+		
+		<set name="Melee-DW">
+		</set>
+		
+		<!-- 
+			Melee set, equip when engaged. 
+			All slots will be overwritten when casting, including main, sub and ranged.
+			Use the above sets with "/1h, /2h, /dw" to avoid tp loss 
+		-->		
+		<set name="TP-Set">
+		<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body></body>
+			<hands></hands>
+			<legs></legs>
+			<feet></feet>
+			<neck></neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1></ring1>
+			<ring2></ring2>
+			<back></back>
+		</set>
+		
+		<!-- WS sets -->
+		
+		<set name="WS" baseset="TP-Set">
+		<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body></body>
+			<hands></hands>
+			<legs></legs>
+			<feet></feet>
+			<neck></neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1></ring1>
+			<ring2></ring2>
+			<back></back>
+		</set>
+		
+		<set name="MysticBoon" baseset="TP-Set">
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body></body>
+			<hands></hands>
+			<legs></legs>
+			<feet></feet>
+			<neck></neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1></ring1>
+			<ring2></ring2>
+			<back></back>
+		</set>
+		
+		<set name="HexaStrike" baseset="TP-Set">
+			
+		</set>
+		
+	</sets> 
+
+	<!-- 
+		!_________________________________________!
+		End of sets, logic belove, edit carefully.
+		!_________________________________________!
+	-->
+
+	<variables>
+		
+		<var name="Melee1H">0</var>
+		<var name="Melee2H">0</var>
+		<var name="MeleeDW">0</var>
+		<var name="MDTSetActive">0</var>
+		<var name="PDTSetActive">0</var>
+
+	</variables>
+
+
+	<inputcommands>
+
+		<!-- Resets All Toggles to Default! -->
+		<cmd input="/resetall">
+			<setvar name="Melee1H" value="0" />
+			<setvar name="Melee2H" value="0" />
+			<setvar name="MeleeDW" value="0" />
+			<setvar name="MDTSetActive" value="0" />
+			<setvar name="PDTSetActive" value="0" />
+			<addtochat color="57">Reset to initial settings.</addtochat>
+		</cmd>
+
+		<!-- Melee mode toggles -->
+		<cmd input="/1h">
+			<setvar name="Melee2H" value="0" />
+			<setvar name="MeleeDW" value="0" />
+			<if advanced="$Melee1H=0">
+				<setvar name="Melee1H" value="1" />
+				<addtochat color="57">1H mode enabled!</addtochat>
+			</if>
+			<else>
+				<setvar name="Melee1H" value="0" />
+				<addtochat color="57">1H mode disabled.</addtochat>
+			</else>
+		</cmd>
+
+		<cmd input="/2h">
+			<setvar name="Melee1H" value="0" />
+			<setvar name="MeleeDW" value="0" />
+			<if advanced="$Melee2H=0">
+				<setvar name="Melee2H" value="1" />
+				<addtochat color="57">2H mode enabled!</addtochat>
+			</if>
+			<else>
+				<setvar name="Melee2H" value="0" />
+				<addtochat color="57">2H mode disabled.</addtochat>
+			</else>
+		</cmd>
+
+		<cmd input="/dw">
+			<setvar name="Melee1H" value="0" />
+			<setvar name="Melee2H" value="0" />
+			<if advanced="$Melee1H=0">
+				<setvar name="MeleeDW" value="1" />
+				<addtochat color="57">Dual Wield mode enabled!</addtochat>
+			</if>
+			<else>
+				<setvar name="MeleeDW" value="0" />
+				<addtochat color="57">Dual Wield mode disabled.</addtochat>
+			</else>
+		</cmd>
+
+		<!-- MDT set toggle -->
+		<cmd input="/mdt">
+
+			<setvar name="PDTSetActive" value="0" />
+			<if advanced="$MDTSetActive=0">
+				<setvar name="MDTSetActive" value="1" />
+				<addtochat color="57">MDT set enabled!</addtochat>
+			</if>
+			<else>
+				<setvar name="MDTSetActive" value="0" />
+				<addtochat color="57">MDT set disabled.</addtochat>
+			</else>
+		</cmd>
+
+		<!-- PDT set toggle -->
+		<cmd input="/pdt">
+
+			<setvar name="MDTSetActive" value="0" />
+			<if advanced="$PDTSetActive=0">
+				<setvar name="PDTSetActive" value="1" />
+				<addtochat color="57">PDT set enabled!</addtochat>
+			</if>
+			<else>
+				<setvar name="PDTSetActive" value="0" />
+				<addtochat color="57">PDT set disabled.</addtochat>
+			</else>
+		</cmd>
+
+	</inputcommands>
+
+
+	<premagic>
+		<equip set="Precast" />
+	</premagic>
+
+	<midmagic>
+		<if advanced="$Melee1H=1">
+			<equip set="Melee-1H" lock="true"/>
+		</if>
+
+		<elseif advanced="$Melee2H=1">
+			<equip set="Melee-2H" lock="true"/>
+		</elseif>
+
+		<elseif advanced="$MeleeDW=1">
+			<equip set="Melee-DW" lock="true"/>
+		</elseif>
+		
+		<elseif ad_name="Sleep*|Drain|Aspir|Blind|Bio*">
+			<equip set="Dark-acc" lock="true"/>
+		</elseif>
+		
+		<elseif ad_name="Slow*|Rasp|Stone|Stone I*|Stonega*|quake*">
+			<equip set="Earth-acc" lock="true"/>
+		</elseif>	
+		
+		<elseif ad_name="Paralyze*|Bind|Frost|Blizzard*|Blizzaga*|Freeze*">
+			<equip set="Earth-acc" lock="true"/>
+			<equip set="Ice-acc" lock="true"/>
+		</elseif>
+		
+		<elseif ad_name="Silence|Choke|Gravity|Aero*|Aeroga*|Tornado*">
+			<equip set="Wind-acc" lock="true"/>
+		</elseif>
+		
+		<elseif ad_name="Poison*|Drown|Water*|Waterga*|Flood*">
+			<equip set="Water-acc" lock="true"/>
+		</elseif>
+		
+		<elseif ad_name="Burn|Fire*|Firaga*|Flare*">
+			<equip set="Fire-acc" lock="true"/>
+		</elseif>
+
+		<elseif ad_name="Dia*|Repose|Banish*|Holy">
+			<equip set="Light-acc" lock="true"/>
+		</elseif>
+		
+		<elseif ad_name="Stun|Shock|Thunder*|Thundaga*|Burst*">
+			<equip set="Thunder-acc" lock="true"/>
+		</elseif>
+		
+		<if ad_type="whitemagic">
+			<if ad_skill="healingmagic">
+				<if ad_name="Cure*|Cura*">
+					<equip set="Cure"/>
+				</if>
+				<else>
+					<equip set="Haste"/>
+				</else>
+			</if>
+
+
+			<elseif ad_skill="enhancingmagic">
+	
+				<if ad_name="Stoneskin">
+					<equip set="Stoneskin"/>
+				</if>
+
+				<else>
+					<equip set="Haste" />
+				</else>
+
+			</elseif>
+
+			<elseif ad_skill="enfeeblingmagic">
+				<equip set="Enfeeble-MND"/>
+			</elseif>
+			
+			<else>
+				<equip set="Haste" />
+			</else>
+		</if>
+		
+		<elseif ad_type="blackmagic">
+			<if ad_skill="darkmagic">
+				<if ad_name="Drain|Aspir*|Bio*">
+					<equip set="DarkMagic" />
+				</if>
+				<elseif>
+					<equip set="Enfeeble-INT" />
+				</elseif>
+				<else>
+					<equip set="Haste" />
+				</else>
+			</if>
+
+			<elseif ad_skill="ElementalMagic">
+				<equip set="Elemental"/>
+				<if ad_name="Rasp|Drown|Frost|Burn|Choke|Shock">
+					<equip set="Elem_Debuffs"/>
+				</if>
+				<elseif advanced="%ad_element=%e_dayelement">
+					<equip lock="true">
+						<legs>Sorcerer's Tonban</legs>
+					</equip>
+					<addtochat color="200">%ad_element-belt</addtochat>
+					<equip set="%ad_element-belt"/>
+				</elseif>	
+				<elseif advanced="%ad_element=%e_weatherelement">
+					<equip set="%ad_element-belt"/>	
+				</elseif>
+
+
+			</elseif>
+
+			<elseif ad_skill="enfeeblingmagic">
+                <equip set="Enfeeble-INT"/>
+			</elseif>
+			<else>
+				<equip set="Haste"/>
+			</else>
+		</elseif>
+		
+		<else>
+			<equip set="Haste"/>
+		</else>
+
+		<if advanced="%ad_element=%e_dayelement">
+			<equip lock="true">
+				<legs>Sorcerer's Tonban</legs>
+			</equip>
+			<addtochat color="200">%ad_element-belt</addtochat>
+			<equip set="%ad_element-belt"/>
+		</if>	
+		<elseif advanced="%ad_element=%e_weatherelement">
+			<equip set="%ad_element-belt"/>	
+		</elseif>
+	</midmagic>
+
+	<idlegear>
+	
+		<if advanced="$Melee1H=1">
+			<equip set="Melee-1H" lock="true"/>
+		</if>
+
+		<elseif advanced="$Melee2H=1">
+			<equip set="Melee-2H" lock="true"/>
+		</elseif>
+
+		<elseif advanced="$MeleeDW=1">
+			<equip set="Melee-DW" lock="true"/>
+		</elseif>
+		
+		<if p_status="resting">
+			<equip set="Resting"/>		
+		</if>
+
+		<elseif p_status="engaged">
+			<equip set="TP-Set"/>
+		</elseif>
+
+		<elseif advanced="$MDTSetActive=1">
+			<equip set="MDT" />
+			<if p_ismoving="True">
+				<equip set="Movement" />
+			</if>
+		</elseif>
+
+		<elseif advanced="$PDTSetActive=1">
+			<equip set="PDT"/>
+			<if p_ismoving="True">
+				<equip set="Movement" />
+			</if>
+		</elseif>		
+
+		<else>
+
+			<equip set="Idle" />
+ 			<if e_area="Windurst*|Port Windurst">
+				<equip set="Town" />
+			</if>
+			
+			<if eq_main="Warp Cudgel|trick Staff II|treat staff II">
+				<equip lock="true">
+					<main>%eq_main</main>
+				</equip>
+			</if>		
+			<if eq_head="Nomad cap">
+				<equip>
+					<head>%eq_head</head>
+				</equip>
+			</if>
+			<if eq_body="Tidal Talisman">
+				<equip>
+					<body>%eq_body</body>
+				</equip>
+			</if>
+			<if eq_ring1="Empress Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+				<equip lock="true">
+					<ring1>%eq_ring1</ring1>
+				</equip>
+			</if>
+			<if eq_ring2="Empress Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+				<equip lock="true">
+					<ring2>%eq_ring2</ring2>
+				</equip>
+			</if>
+
+			<if p_ismoving="True">
+				<equip set="Movement" />
+			</if>		
+
+		</else>
+
+	</idlegear>
+
+
+	<jobability>
+
+	</jobability>
+
+
+	<weaponskill>
+
+		<if ad_name="Mystic Boon">
+			<equip set="MysticBoon" />
+		</if>
+
+		<elseif ad_name="Hexa Strike">
+			<equip set="HexaStrike" />
+		</elseif>
+
+		<else>
+			<equip set="WS" />
+		</else>
+
+	</weaponskill>
+
+
+</ashitacast>
