@@ -22,7 +22,6 @@
 		<else>
 			<if p_subjob="WHM"><setvar name="macropage" value="1" /></if>
 			<if p_subjob="BLM"><setvar name="macropage" value="1" /></if>
-			<if p_subjob="SCH"><setvar name="macropage" value="1" /></if>
 			<if p_subjob="RDM"><setvar name="macropage" value="1" /></if>
 			<setvar name="Refreash" value="1"/>
 		</else>
@@ -30,7 +29,6 @@
 
 		<if p_mainjob="BRD">
 			<setvar name="macrobook" value="1" />
-			<setvar name="lockstyleset" value="1" />
 		</if>
 		
         <command delay="1500">/macro book $macrobook</command>
@@ -43,29 +41,27 @@
     </init>
 
 	<sets>
-		<!--Song +x sets-->
-		<set name="Minuet+"><Range>Cornette +1</Range></set>
-		<set name="March+"><Range>kingdom horn</Range></set>
-		<set name="Minne+"><Range></Range></set>
-		<set name="Lulleby+"><Range></Range></set>
-		<set name="Elegy+"><Range></Range></set>
-		<set name="Madrigal+"><Range>Traversiere =1</Range></set>
-		<set name="Mazurka+"><Range></Range></set>
-		<set name="Requiem+"><Range></Range></set>
-		<set name="Paeon+"><Range></Range></set>
-		<set name="Deafult"><Range>kingdom horn</Range></set>
+		<!--Song + sets-->
+		<set name="Default_Instrument"> <Range>kingdom horn</Range> </set>
+		
+		<set name="Minuet+" 	baseset="Default_Instrument"><Range>Cornette +1</Range></set>
+		<set name="March+" 		baseset="Default_Instrument"><Range>kingdom horn</Range></set>
+		<set name="Minne+" 		baseset="Default_Instrument"></set>
+		<set name="Lulleby+" 	baseset="Default_Instrument"></set>
+		<set name="Elegy+" 		baseset="Default_Instrument"></set>
+		<set name="Madrigal+" 	baseset="Default_Instrument"><Range>Traversiere =1</Range></set>
+		<set name="Mazurka+" 	baseset="Default_Instrument"></set>
+		<set name="Requiem+"	baseset="Default_Instrument"></set>
+		<set name="Paeon+" 		baseset="Default_Instrument"></set>
 
-		<!--Deafult Idle when NIN is sub. PDT, MDT and evation set-->
+		<!--Default Idle when NIN is sub. PDT, MDT and evation set-->
 		<set name="Idle">
 			<main>earth staff</main>
-			<sub></sub>
-			<ammo></ammo>
 			<head>walahra turban</head>
 			<body>Scorpion harness</body>
 			<hands>bard's cuffs</hands>
 			<legs>choral cannions</legs>
 			<feet>Goliard clogs</feet>
-			<neck></neck>
 			<waist>mrc.cpt. belt</waist>
 			<ear1>Melody earring</ear1>
 			<ear2>Melody earring</ear2>
@@ -74,16 +70,10 @@
 			<back>traveler's mantle</back>
 		</set>
 
-		<!--Equiped as idel when NIN is not your sub, can be toggled with /mps -->
 		<set name="Idle_Refreash">
 			<main>earth staff</main>
 			<sub>staff strap</sub>
-			<ammo></ammo>
-			<head></head>
 			<body>Vermillion cloak</body>
-			<hands></hands>
-			<legs></legs>
-			<feet></feet>
 			<neck>beak necklace</neck>
 			<waist>qiqirn sash</waist>
 			<ear1>antivenom earring</ear1>
@@ -94,27 +84,20 @@
 		</set>
 
 		<set name="Precast">
-
 		</set>
 
 		<set name="PreSong" baseset="Precast">
-
 		</set>
 		
-		<!-- Max Haste, Deafault spellcasting set -->
 		<set name="Haste">
 			<head>Walahra Turban</head>		
 		</set>
 		
-		<!-- Debuffing songs, macc, CHR, skill set-->
 		<set name="SongAcc">
-			<sub></sub>
 			<head>bard's roundlet</head>
 			<body>Errant hpl.</body>
 			<hands>choral cuffs</hands>
 			<legs>Bard's cannions</legs>
-			<feet></feet>
-			<neck></neck>
 			<waist>Corsette</waist>
 			<ear1>Melody earring</ear1>
 			<ear2>Melody earring</ear2>
@@ -123,110 +106,54 @@
 			<back>Jester's cape +1</back>
 		</set>
 		
-		<!-- Buffing songs, max skill-->
 		<set name="SongSkill">
-			<main></main>
-			<sub></sub>
-			<head></head>
-			<body></body>
 			<hands>Choral cuffs</hands>
 			<legs>choral cannions</legs>
-			<feet></feet>
-			<neck></neck>
-			<waist></waist>
-			<ear1></ear1>
-			<ear2></ear2>
 			<ring1>trumpet ring</ring1>
 			<ring2>trumpet ring</ring2>
 			<back>Echo cape</back>
 		</set>
 
-		<!-- Equiped when resting -->
 		<set name="Resting" baseset="Idle_Refreash">
 			<main>Dark staff</main>
-			<head>Mirror tiara</head>
 			<body>Errant hpl.</body>
-			<feet>Goliard clogs</feet>
 			<neck>Beak necklace</neck>
 			<waist>qiqirn sash +1</waist>
 		</set>
 		
-		<!-- Town gear, only in windurst currently -->
 		<set name="Town">
 			<body>Federation aketon</body>
 		</set>
 		
-		<!-- Equiped when runing-->
 		<set name="Movement">
-			
 		</set>
 
-		<!--magic damage taken down set, can be toggled with - "/mdt" -->
 		<set name="MDT">
-			
 		</set>
 		
-		<!-- Physical damage taken down set, can be toggled with "/pdt"-->
 		<set name="PDT">
-			
 		</set>
 		
-		<!-- Default Precast, for fast cast -->
-		<set name="Precast">
-			<ear1></ear1>
-			<feet>rostrum pumps</feet>
-		</set>
-
-		<set name="PreSong">
-
-		</set>
-		
-		<!-- Max Haste, Deafault spellcasting set -->
-		<set name="Haste">
-			<head>Walahra Turban</head>		
-			<hands></hands>
-			<legs></legs>
-			<feet></feet>
-			<ear1></ear1>
-		</set>
-		
-		<!-- When castin Cure* Cura* spells-->
 		<set name="Cure" baseset="Haste">
 			<main>light staff</main>
 		</set>
 		
-		<!-- white magic based efeebling-->
 		<set name="Enfeeble-MND">
-
 		</set>
 		
-		<!-- Black magic based enfeebeling-->
 		<set name="Enfeeble-INT">
-			
 		</set>
 		
-		<!-- Stoneskin set, max mind -->
 		<set name="Stoneskin" baseset="Haste">
 			<main>kirin's pole</main>
-			<sub></sub>
-			<ammo></ammo>
-			<head></head>
 			<body>Errant Hpl.</body>
-			<hands></hands>
-			<legs></legs>
-			<feet></feet>
 			<neck>holy phial</neck>
 			<waist>friar's rope</waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
 			<back>rainbow cape</back>
 		</set>
 		
 		<!-- Cursna -->
 		<set name="Cursna" baseset="Haste">
-
 		</set>
 		
 		<!-- 
@@ -234,38 +161,17 @@
 			will be equiped on any offencice spell alligned with that element.
 		-->
 		
-		<set name="Dark-acc">
-			<main>Dark staff</main>
-			<sub></sub>
-		</set>
-		<set name="Light-acc">
-			<main>light staff</main>
-			<sub></sub>
-		</set>
-		<set name="Ice-acc">
-			<main>Ice staff</main>
-			<sub></sub>
-		</set>
-		<set name="Fire-acc">
-			<main>Fire staff</main>
-			<sub></sub>
-		</set>
-		<set name="Thunder-acc">
-			<main>Thunder staff</main>
-			<sub></sub>
-		</set>
-		<set name="Water-acc">
-			<main>Water staff</main>
-			<sub></sub>
-		</set>
-		<set name="Earth-acc">
-			<main>Earth staff</main>
-			<sub></sub>
-		</set>
-		<set name="Wind-acc">
-			<main>Wind staff</main>
-			<sub></sub>
-		</set>
+
+		<set name="BaseCastingMain"> <main>Krins Pole</main> </set>
+
+		<set name="Dark-acc" 	baseset="BaseCastingMain"> <main>Dark Staff</main> </set>
+		<set name="Light-acc" 	baseset="BaseCastingMain"> <main>Apollo's Staff</main> </set>
+		<set name="Ice-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Fire-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Thunder-acc" baseset="BaseCastingMain"> </set>
+		<set name="Water-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Earth-acc" 	baseset="BaseCastingMain"> <main>Earth Staff</main> </set>
+		<set name="Wind-acc" 	baseset="BaseCastingMain"> </set>
 		
 		<!-- Melee mode sets, toggle with "/1h, /2h, /dw". well lock main and sub to prevent tp loss. -->
 		
@@ -293,24 +199,11 @@
 			Use the above sets with "/1h, /2h, /dw" to avoid tp loss 
 		-->		
 		<set name="TP-Set">
-			<head>Walahra turban</head>
-			<body>reverend mail</body>
-			<hands>blessed mitts</hands>
-			<legs></legs>
-			<feet>blessed pumps</feet>
-			<neck></neck>
-			<waist>Mrc.cpt. belt</waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1>astral ring</ring1>
-			<ring2>serket ring</ring2>
-			<back></back>
 		</set>
 		
 		<!-- WS sets -->
 		
 		<set name="WS" baseset="TP-Set">
-			
 		</set>
 
 	</sets> 
@@ -498,16 +391,15 @@
 				<equip set="SongSkill"/>
 			</else>
 			
-			<equip set="Deafult"/>
-			<if ad_name="*Minuet*"><equip set="Minuet+"/></if>
-			<elseif ad_name="*Minne*"><equip set="Minne+"/></elseif>
-			<elseif ad_name="*March"><equip set="March+"/></elseif>
-			<elseif ad_name="*Elegy"><equip set="Elegy+"/></elseif>
+			<if ad_name="*Minuet*">		<equip set="Minuet+"/></if>
+			<elseif ad_name="*Minne*">	<equip set="Minne+"/></elseif>
+			<elseif ad_name="*March">	<equip set="March+"/></elseif>
+			<elseif ad_name="*Elegy">	<equip set="Elegy+"/></elseif>
 			<elseif ad_name="*Madrigal"><equip set="Madrigal+"/></elseif>
-			<elseif ad_name="Foe*"><equip set="Requiem+"/></elseif>
-			<elseif ad_name="*Paeon*"><equip set="Paeon+"/></elseif>
-			<elseif ad_name="*Lulleby"><equip set="Lulleby+"/></elseif>
-			<elseif ad_name="*Mazurka"><equip set="Mazurka+"/></elseif>	
+			<elseif ad_name="Foe*">		<equip set="Requiem+"/></elseif>
+			<elseif ad_name="*Paeon*">	<equip set="Paeon+"/></elseif>
+			<elseif ad_name="*Lulleby">	<equip set="Lulleby+"/></elseif>
+			<elseif ad_name="*Mazurka">	<equip set="Mazurka+"/></elseif>
 		</if>
 		
 		<elseif ad_type="whitemagic">

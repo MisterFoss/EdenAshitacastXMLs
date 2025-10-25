@@ -6,25 +6,19 @@
 
 <ashitacast>
 	<settings>
-		<!--Contains settings specific to this xml, must be set to true/false to override default-->
 		<buffupdate>true</buffupdate>
-		<!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
 		<statusupdate>true</statusupdate>
-		<!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
 		<hpupdate>false</hpupdate>
-		<!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
 		<autoupdate>true</autoupdate>
-		<!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
 	</settings>
     <init>
         <!-- This codeblock will automatically change your macro book/page according to the job and subjob list below -->
         <!-- Change the below variable subjob abbreviations according to the subjobs you use with this profile. -->
         <if p_subjob="BLM"><setvar name="macropage" value="1" /></if>
-		<if p_subjob="SCH"><setvar name="macropage" value="1" /></if>
         <if p_subjob="RDM"><setvar name="macropage" value="1" /></if>
         <if p_subjob="NIN"><setvar name="macropage" value="1" /></if>
 		
-		<if p_mainjob="WHM"><setvar name="macrobook" value="1" /><setvar name="lockstyleset" value="1" /></if>
+		<if p_mainjob="WHM"><setvar name="macrobook" value="1" /></if>
 		
         <command delay="1500">/macro book $macrobook</command>
         <command delay="3000">/macro set $macropage</command>
@@ -32,16 +26,12 @@
 		<command delay="3200">/gl blink</command>
 		<command delay="3400">/Addon reload equipviewer</command>
         <!-- This will change your Lockstyle set if desired -->
-        <command delay="6000">/lockstyleset $lockstyleset</command>
 		
     </init>
 
 	<sets>
-		<!--Deafualt gear when not taking any action, refresh, max mp and damage daken down -->
 		<set name="Idle">
 			<main>earth staff</main>
-			<sub></sub>
-			<ammo></ammo>
 			<head>Walahra Turban</head>
 			<body>Cleric's briault</body>
 			<hands>Healer's mitts</hands>
@@ -56,57 +46,37 @@
 			<back>Rainbow Cape</back>
 		</set>
 		
-		<!-- Equiped when resting -->
 		<set name="Resting" baseset="Idle">
 			<main>dark Staff</main>
-			<ammo></ammo>	
-			<head></head>
 			<neck>Beak Necklace</neck>
 			<body>Errant Hpl.</body>
-			<hands></hands>			
-			<legs></legs>	
-			<feet></feet>
 			<neck>Beak Necklace</neck>
 			<ear1>boroka Earring</ear1>
-			<ear2>antivenom Earring</ear1>				
-			<ring1></ring1>
-			<ring2></ring2>		
+			<ear2>antivenom Earring</ear2>				
 			<waist>Cleric's Belt</waist>		
 		</set>
 		
-		<!-- gear, only in windurst currently -->
 		<set name="Town" baseset="Idle">
 			<body>Federation Aketon</body>
 		</set>
 		
-		<!-- Equiped when runing-->
 		<set name="Movement">
-			
 		</set>
 		
-		<!--MaxHP for devotion, "/maxhp" to equip. while active will not be swapped out.-->		
 		<set name="HP">
-			
-			
 		</set>
 		
-		<!--magic damage taken down set, can be toggled with - "/mdt" -->
 		<set name="MDT">
-			
 		</set>
 		
-		<!-- Physical damage taken down set, can be toggled with "/pdt"-->
 		<set name="PDT">
-			
 		</set>
 		
-		<!-- Default Precast, for fast cast -->
 		<set name="Precast">
 			<ear1></ear1>
 			<feet></feet>
 		</set>
 		
-		<!-- Max Haste, Deafault spellcasting set -->
 		<set name="Haste">
 			<head>Walahra Turban</head>		
 			<feet>blessed pumps</feet>
@@ -116,7 +86,6 @@
 			-->
 		</set>
 		
-		<!-- When castin Cure* Cura* spells-->
 		<set name="Cure" baseset="Haste">
 			<main>Apollo's Staff</main>
 			<head></head>
@@ -133,7 +102,6 @@
 			<back></back>
 		</set>
 		
-		<!-- white magic based efeebling-->
 		<set name="Enfeeble-MND">
 			<sub></sub>
 			<ammo></ammo>
@@ -151,7 +119,6 @@
 			<back>rainbow cape</back>
 		</set>
 		
-		<!-- Black magic based enfeebeling-->
 		<set name="Enfeeble-INT">
 			<sub></sub>
 			<ammo></ammo>
@@ -169,7 +136,6 @@
 			<back>rainbow cape</back>
 		</set>
 		
-		<!-- Stoneskin set, max mind -->
 		<set name="Stoneskin" baseset="Haste">
 			<main>kirin's pole</main>
 			<sub></sub>
@@ -188,13 +154,11 @@
 			<back>rainbow cape</back>
 		</set>
 		
-		<!-- Cursna -->
 		<set name="Cursna" baseset="Haste">
 			<hands>Healer's Mitts</hands>
 			<legs>Cleric's Pantaln.</legs>
 		</set>
 		
-		<!-- Devine magic skill based, including repose-->
 		<set name="DivineMagic" baseset="Haste">
 			<sub></sub>
 			<ammo></ammo>
@@ -234,12 +198,9 @@
 		</set>
 		
 		<set name="DarkMagic" baseset="Haste">
-			
 		</set>
 		
-		<!-- All elemental including DoTs, addi if needed-->
 		<set name="Elemental" baseset="Haste">
-			
 		</set>
 		
 
@@ -248,38 +209,16 @@
 			will be equiped on any offencice spell alligned with that element.
 		-->
 		
-		<set name="Dark-acc">
-			<main>Dark staff</main>
-			<sub></sub>
-		</set>
-		<set name="Light-acc">
-			<main>apollo's staff</main>
-			<sub></sub>
-		</set>
-		<set name="Ice-acc">
-			<main>kirin's pole</main>
-			<sub></sub>
-		</set>
-		<set name="Fire-acc">
-			<main>kirin's pole</main>
-			<sub></sub>
-		</set>
-		<set name="Thunder-acc">
-			<main>kirin's pole</main>
-			<sub></sub>
-		</set>
-		<set name="Water-acc">
-			<main>kirin's pole</main>
-			<sub></sub>
-		</set>
-		<set name="Earth-acc">
-			<main>Earth staff</main>
-			<sub></sub>
-		</set>
-		<set name="Wind-acc">
-			<main>kirin's pole</main>
-			<sub></sub>
-		</set>
+		<set name="BaseCastingMain"> <main>Krins Pole</main> </set>
+
+		<set name="Dark-acc" 	baseset="BaseCastingMain"> <main>Dark Staff</main> </set>
+		<set name="Light-acc" 	baseset="BaseCastingMain"> <main>Apollo's Staff</main> </set>
+		<set name="Ice-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Fire-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Thunder-acc" baseset="BaseCastingMain"> </set>
+		<set name="Water-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Earth-acc" 	baseset="BaseCastingMain"> <main>Earth Staff</main> </set>
+		<set name="Wind-acc" 	baseset="BaseCastingMain"> </set>
 		
 		<!-- Melee mode sets, toggle with "/1h, /2h, /dw". well lock main and sub to prevent tp loss lose tp. -->
 		
@@ -347,14 +286,12 @@
 	-->
 
 	<variables>
-		
 		<var name="Melee1H">0</var>
 		<var name="Melee2H">0</var>
 		<var name="MeleeDW">0</var>
 		<var name="MDTSetActive">0</var>
 		<var name="PDTSetActive">0</var>
 		<var name="MaxHP">0</var>
-
 	</variables>
 
 
@@ -463,7 +400,7 @@
 
 		<if ad_name="Cure*|Cura*">
 			<equip>
-				<feet>cure clogs</feet>
+				<feet>Cure Clogs</feet>
 			</equip>
 		</if>
 	</premagic>
