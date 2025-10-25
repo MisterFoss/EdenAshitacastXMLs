@@ -116,7 +116,7 @@
         <set name="Running">
         </set>
 
-        <set name="Haste">
+        <set name="Casting">
             <head>Walahra Turban</head>
 			<body>Rapparee Harness</body>
 			<hands>Dusk Gloves</hands>
@@ -245,7 +245,7 @@
         <equip set="RangedAttack"/>
     </midranged>
     <premagic>
-        <equip set="Haste" />
+        <equip set="Casting" />
     </premagic>
     <midmagic>
     <!-- 
