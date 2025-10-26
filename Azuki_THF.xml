@@ -5,29 +5,26 @@
         <hpupdate>false</hpupdate>
         <autoupdate>true</autoupdate>
     </settings>
+
     <variables>
         <var name="Evasion">0</var>
         <var name="MagicDefense">0</var>
         <var name="TH">0</var>
     </variables>
+
     <init>
-        <!-- This codeblock will automatically change your macro book/page according to the job and subjob list below -->
-        <!-- Change the below variable subjob abbreviations according to the subjobs you use with this profile. -->
         <if p_mainjob="THF"><setvar name="macrobook" value="2" /> <setvar name="macropage" value="2" /></if>
         <if p_subjob="NIN"><setvar name="macropage" value="2" /></if>
         <if p_subjob="WAR"><setvar name="macropage" value="2" /></if>
         <if p_subjob="RNG"><setvar name="macropage" value="2" /></if>
-        <!-- You probably don't need to change these variables below, unless you want to play PUP or GEO. -->
  
         <command delay="1500">/macro book $macrobook</command>
         <command delay="3000">/macro set $macropage</command>
         <command delay="4500">/echo *** Job is %p_job. Macros set to Book $macrobook, Page $macropage. ***</command>
         <command delay='5000'>/gl blink</command> 
         <command delay='5500'>/addon reload equipviewer</command>
- 
-        <!-- This will change your Lockstyle set if desired -->
-        
     </init>
+
     <sets>
         <set name="Idle">
 			<head>Empress Hairpin</head>
@@ -138,8 +135,8 @@
 
         <set name="MagicDefense">
         </set>
-
     </sets>
+
     <inputcommands>
         <cmd input="/eva">
             <setvar name="MagicDefense" value="0" />
@@ -183,8 +180,8 @@
                 <addtochat color="200">TH Set Canceled. Returning to Normal set.</addtochat>
             </if>
         </cmd>
-
     </inputcommands>
+
     <idlegear>
         <if p_status="idle">
             <equip set="Idle" />
@@ -239,24 +236,39 @@
                
         </if>
     </idlegear>
+
     <preranged>
     </preranged>
+
     <midranged>
         <equip set="RangedAttack"/>
         <if advanced="$TH=1">
             <equip set="TH" />
         </if>
     </midranged>
+
     <premagic>
-        <equip set="Casting" />
     </premagic>
+
     <midmagic>
-    <!-- 
-        <if ad_name="Monomi*">
-            <command>/cancel 71</command>
+        <if ad_name="Utsusemi: Ichi">
+            <equip set="Casting"/>
+            <if buffactive="66"> <!-- One shadow are left -->
+                <command delay="3545">/cancel 66</command>
+            </if>
+            <elseif buffactive="444"> <!-- Two shadows are left -->
+                <command delay="3545">/cancel 444</command>
+            </elseif>
         </if>
-    -->
+        <elseif ad_name="Monomi: Ichi">
+            <equip set="Casting"/>
+            <command delay="2800">/cancel 71</command>
+        </elseif>
+        <else>
+            <equip set="Casting"/>
+        </else>
     </midmagic>
+
     <jobability>
         <if ad_name="Flee">
             <equip when="precast">
@@ -282,7 +294,8 @@
                 -->
             </equip>
         </if>
-    </jobability>  
+    </jobability> 
+
     <weaponskill>
         <if ad_name="Mercy Stroke|Shark Bite|Mandalic Stab">
             <equip set="StrWS" />
@@ -291,4 +304,5 @@
             <equip set="WS" />
         </else>
     </weaponskill>
+
 </ashitacast>

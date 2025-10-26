@@ -458,8 +458,12 @@
 					<equip set="Haste"/>
 				</else>
 			</if>
-
-
+			<elseif ad_name="Sneak">
+				<equip set="Haste">
+					<feet>Dream boots +1</feet>
+				</equip>
+				<command delay="1400">/cancel 71</command>
+			</elseif>
 			<elseif ad_skill="enhancingmagic">
 	
 				<if ad_name="Stoneskin">

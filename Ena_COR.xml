@@ -1,14 +1,12 @@
 <!--
 		 Martin's Level 75 COR XML   
 -->
-
-
 <ashitacast>
     <settings> 
-        <buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
-        <statusupdate>true</statusupdate> <!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
-        <hpupdate>false</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
-        <autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+        <buffupdate>true</buffupdate> 
+        <statusupdate>true</statusupdate> 
+        <hpupdate>false</hpupdate> 
+        <autoupdate>true</autoupdate> 
     </settings>
     <variables>
 		<var name="Fish">0</var>
@@ -25,8 +23,7 @@
         <command delay="3000">/macro set $macropage</command>
 		<command delay="3200">/gl blink</command>
 		<command delay="3400">/Addon reload equipviewer</command>
-<!-- This codeblock will automatically change your macro book/page/lockstyle according to the job and subjob list below -->
-<!-- Change the below variable subjob abbreviations according to the subjobs you use with this profile. -->		
+
         <if p_mainjob="COR"><setvar name="macrobook" value="2"/><setvar name="macropage" value="1"/></if>
         <if p_subjob="RNG" ><setvar name="macropage" value="1"/></if>
         <if p_subjob="NIN" ><setvar name="macropage" value="3"/></if>
@@ -37,14 +34,6 @@
     </init>
 	
     <sets>
-	
-	
-<!--
-Change the below sets to your own, type the item EXACTLY how you see it in your inventory EX> Shura Head is "Shr.Znr.Kabuto" with no spaces. GL!
--->
-
-	
-<!-- Default Idle Set when out of combat -->
         <set name="Idle">
 			<neck>Orochi Nodowa</neck>
 			<body>Commodore Frac</body>
@@ -52,16 +41,13 @@ Change the below sets to your own, type the item EXACTLY how you see it in your 
 			<feet>Blood Greaves</feet>
         </set>
 		
-<!-- Will autoequip Crimson Cuisses when you move out of combat-->
         <set name="Running">
             <legs>Blood Cuisses</legs>
         </set>
 		
-<!-- Town Set, /town /towno -->
         <set name="Town">
         </set>
 		
-<!-- Set when Engaged but not Meleeing -->
         <set name="TP">
 			<head>Walahra Turban</head>
 			<body>scorpion harness</body>
@@ -77,12 +63,10 @@ Change the below sets to your own, type the item EXACTLY how you see it in your 
 			<back>Amemet mantle</back>
         </set>
 		
-<!-- Preshot Set -->
 		<set name="Preshot">
 			<hands>Commodore gants</hands>
 		</set>
 
-<!-- Ranged Attack Set -->		
 		<set name="Ranged-TP">
 			<head>corsair's tricorne</head>
 			<body>Corsair's Frac</body>
@@ -98,7 +82,6 @@ Change the below sets to your own, type the item EXACTLY how you see it in your 
 			<back>amemet mantle</back>
 		</set>
 		
-<!-- Default WS Set -->	
         <set name="WS">
 			<ammo>Steel Bullet</ammo>
 			<head>corsair's tricorne</head>
@@ -131,7 +114,6 @@ Change the below sets to your own, type the item EXACTLY how you see it in your 
 			<back>amemet mantle</back>
 		</set>
 
-
         <set name="SavageBlade">
 			<head>Corsair's Tricorne</head>
 			<body>Commodore Frac</body>
@@ -146,7 +128,6 @@ Change the below sets to your own, type the item EXACTLY how you see it in your 
 			<ring2>Ruby Ring</ring2>
 			<back>Amemet Mantle</back>
 		</set>
-
 
         <set name="LeadenSalute">
 		<!--
@@ -163,7 +144,7 @@ Change the below sets to your own, type the item EXACTLY how you see it in your 
 			<ring2>Emerald Ring</ring2>
 			<back>Nomad's Mantle</back>
 		-->
-		        </set>
+		</set>
 		
 		<set name="Detonator">
 			<ammo>Steel Bullet</ammo>
@@ -181,7 +162,6 @@ Change the below sets to your own, type the item EXACTLY how you see it in your 
 			<back>Amemet Mantle</back>
 		</set>
 		
-<!-- Melee TP set, /melee /meleeo -->
         <set name="Fish">
 			<body>fsh. tunica</body>
 			<hands>fsh. gloves</hands>
@@ -191,7 +171,6 @@ Change the below sets to your own, type the item EXACTLY how you see it in your 
 			<ring2>Pelican Ring</ring2>
         </set>
 		
-<!-- PDT Set, /pdt /pdto -->
         <set name="PhysicalDefense">
 			<body>field tunica</body>
 			<hands>field gloves</hands>
@@ -199,29 +178,24 @@ Change the below sets to your own, type the item EXACTLY how you see it in your 
 			<feet>field Boots</feet>
         </set>
 		
-<!-- MDT Set, /mdt /mdto -->
         <set name="MagicDefense">
         </set>		      
 		
-<!-- Fire Resist Set for Cerberus, /fr /fro -->
         <set name="FireResist">
         </set>
 		
-<!-- Lightning Resist Set for Khimaira, /lr /lro -->
         <set name="LightningResist">
         </set>
 
-<!-- Cure set for when /whm, stack Cure Potency and MND-->
         <set name="WhiteMagic">
         </set>
 		
-<!-- Haste Set for Magic Recast, other slots should be Evasion+ or -PDT -->
         <set name="Haste">
 			<head>Walahra Turban</head>
+			<body>scorpion harness</body>
 			<hands>Dusk Gloves</hands>
 			<feet>Dusk Ledelsens</feet>
 		<!-- 
-			<body>scorpion harness</body>
 			<legs></legs>	
 			<neck></neck>
 			<waist>Headlong Belt</waist>
@@ -233,7 +207,6 @@ Change the below sets to your own, type the item EXACTLY how you see it in your 
 		-->
         </set>		
     
-<!-- Quick Draw Set -->		
 		<set name="QD">
 			<ammo>Steel Bullet</ammo>
 			<head>empress hairpin</head>
@@ -489,8 +462,27 @@ IMPORTANT CODE BELOW
 	
     <midmagic>
 		<if ad_skill="White Magic">
-            <equip set="WhiteMagic" />
+			<equip set="WhiteMagic" />
         </if>
+		<elseif ad_name="Utsusemi: Ichi">
+			<equip set="Haste"/>
+			<if buffactive="66"> <!-- One shadow are left -->
+				<command delay="3545">/cancel 66</command>
+			</if>
+			<elseif buffactive="444"> <!-- Two shadows are left -->
+				<command delay="3545">/cancel 444</command>
+			</elseif>
+    	</elseif>
+		<elseif ad_name="Sneak">
+			<equip set="Haste">
+				<feet>Dream boots +1</feet>
+			</equip>
+			<command delay="1400">/cancel 71</command>
+		</elseif>
+		<elseif ad_name="Monomi: Ichi">
+			<equip set="Haste"/>
+            <command delay="2800">/cancel 71</command>
+		</elseif>
     </midmagic>
 
 
