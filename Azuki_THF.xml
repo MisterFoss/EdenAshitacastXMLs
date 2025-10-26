@@ -243,6 +243,9 @@
     </preranged>
     <midranged>
         <equip set="RangedAttack"/>
+        <if advanced="%TH=1">
+            <equip set="TH"/>
+        </if>
     </midranged>
     <premagic>
         <equip set="Casting" />
