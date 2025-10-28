@@ -60,14 +60,18 @@
 
 <!-- Default TP Set -->
         <set name="TP">
-            <head>Empress hairpin</head>
-            <body>Scorpion harness</body>
-            <hands>ryl.kgt. mufflers</hands>
-            <feet>Leaping boots</feet>
-            <neck>merman's gorget</neck>
-            <waist>life belt</waist>
-			<ring1>sniper's Ring</ring1>
-			<ring2>sniper's Ring</ring2>
+			<head>Walkure Mask</head>
+			<body>Haubergeon</body>
+			<hands>Ryl.Kgt. Mufflers</hands>
+			<legs>Ryl.Kgt. Breeches</legs>
+			<feet>Leaping Boots</feet>
+			<neck>Merman's Gorget</neck>
+			<waist>Life Belt</waist>
+			<ear1>Beetle Earring +1</ear1>
+			<ear2>Beetle Earring +1</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Sniper's Ring</ring2>
+			<back>Traveler's Mantle</back>
         </set>
 		
 <!-- High Accuracy Set, /acc /acco -->
@@ -118,14 +122,18 @@
 		
 <!-- Default WS Set -->		
         <set name="WS">
-            <hands>lgn. mittens</hands>
-            <legs>ryl.kgt. breeches</legs>
-            <ring1>sun Ring</ring1>
-			<ring2>sun Ring</ring2>
-            <neck>Spike necklace</neck>
-            <waist>life belt</waist>
-            <ear1>beetle earring +1</ear1>
-            <ear1>beetle earring +1</ear1>
+			<head>Walkure Mask</head>
+			<body>Haubergeon</body>
+			<hands>Ryl.Kgt. Mufflers</hands>
+			<legs>Ryl.Kgt. Breeches</legs>
+			<feet>Leaping Boots</feet>
+			<neck>Merman's Gorget</neck>
+			<waist>Life Belt</waist>
+			<ear1>Beetle Earring +1</ear1>
+			<ear2>Beetle Earring +1</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Sniper's Ring</ring2>
+			<back>Traveler's Mantle</back>
         </set>
 		
 <!-- Snaphot set for Ranged Attacks -->
@@ -158,6 +166,20 @@
 		</set>
 
 
+		<set name="dumptp">
+			<head>Walkure Mask</head>
+			<body>Haubergeon</body>
+			<hands>Ryl.Kgt. Mufflers</hands>
+			<legs>Ryl.Kgt. Breeches</legs>
+			<feet>Leaping Boots</feet>
+			<neck>Merman's Gorget</neck>
+			<waist>Life Belt</waist>
+			<ear1>Beetle Earring +1</ear1>
+			<ear2>Beetle Earring +1</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Sniper's Ring</ring2>
+			<back>Traveler's Mantle</back>
+		</set>
     </sets>
 	
 
@@ -363,7 +385,7 @@
 				</if>
                 -->
         </if>
-        <if advanced="%p_hpp>=85">
+        <if advanced="(%p_hpp>=85)&(%p_mpp<100)">
             <equip>
                 <neck>parade gorget</neck>
             </equip>
