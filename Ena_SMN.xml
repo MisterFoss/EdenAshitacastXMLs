@@ -19,16 +19,26 @@
         <command delay="2000">/macro book $macrobook</command>
         <command delay="3000">/macro set $macropage</command>
 
-        <if p_mainjob="SMN"><setvar name="macrobook" value="2" /></if>
-        <if p_subjob="WHM"><setvar name="macropage" value="1" /></if>
-        <if p_subjob="NIN"><setvar name="macropage" value="1" /></if>
-        <if p_subjob="THF"><setvar name="macropage" value="1" /></if>
+        <if p_mainjob="SMN"><setvar name="macrobook" value="9" /><setvar name="macropage" value="2"/></if>
+        <if p_subjob="WHM"><setvar name="macropage" value="2" /></if>
+        <if p_subjob="NIN"><setvar name="macropage" value="2" /></if>
+        <if p_subjob="THF"><setvar name="macropage" value="2" /></if>
     </init> 
     
     <sets>
         
         <set name="Idle">
             <main>Earth Staff</main>
+            <head>Gold Hairpin +1</head>
+			<body>Seer's Tunic</body>
+			<hands>Carbuncle Mitts</hands>
+			<legs>Savage Loincloth</legs>
+			<feet>Seer's Pumps</feet>
+			<neck>Beak Necklace</neck>
+			<waist>Mohbwa Sash</waist>
+			<ear1>Antivenom Earring</ear1>
+			<ring1>Vilma's Ring</ring1>
+			<ring2>Electrum Ring</ring2>
         </set>
 
         <set name="Perpetuation" baseset="Idle">
@@ -40,28 +50,34 @@
         <set name="Ice Perp"        baseset="Perpetuation"> <main>aquilo's Staff</main> </set>
         <set name="Earth Perp"      baseset="Perpetuation"> <main>Earth Staff</main> </set>
         <set name="Water Perp"      baseset="Perpetuation"> <main></main> </set>
-        <set name="Lightning Perp"   baseset="Perpetuation"> <main></main> </set>
+        <set name="Lightning Perp"  baseset="Perpetuation"> <main></main> </set>
         <set name="wind Perp"       baseset="Perpetuation"> <main></main> </set>
         <set name="Light Perp"      baseset="Perpetuation"> <main>apollo's Staff</main> </set>     
         
         
         <set name="Resting">
-            <main>Dark Staff</main>
-            <body>seer's tunic</body>
-            <neck>Beack necklace</neck>
-            <waist>Qiqirn Sash</waist>
+			<main>Dark Staff</main>
+			<body>Seer's Tunic</body>
+			<neck>Beak Necklace</neck>
+			<waist>Mohbwa Sash</waist>
+			<ear1>Antivenom Earring</ear1>
         </set>
         
         <set name="Cure">
-            <main>Light Staff</main>
+            <main>Apollo's Staff</main>
         </set>
 
         <set name="Stoneskin">
-			<main>kirin's pole</main>
-			<body>Errant Hpl.</body>
-			<hands>Zealot's mitts</hands>
-			<waist>friar's rope</waist>
-			<back>rainbow cape</back>
+			<main>Yew Wand +1</main>
+			<body>Seer's Tunic</body>
+			<hands>Savage Gauntlets</hands>
+			<legs>Savage Loincloth</legs>
+			<feet>Seer's Pumps</feet>
+			<neck>Justice Badge</neck>
+			<waist>Friar's Rope</waist>
+			<ring1>Saintly Ring</ring1>
+			<ring2>Saintly Ring</ring2>
+			<back>Mist Silk Cape</back>
         </set>
         
         <set name="Town">
@@ -75,7 +91,6 @@
         </set>
         
         <set name="BP-Delay">
-            <body>Yinyang Robe</body>
         </set>  
         
         <set name="Siphon">            
@@ -166,7 +181,7 @@
                 <elseif ad_name="Sneak">
                     <equip set="Haste">
                         <feet>Dream boots +1</feet>
-                        <back>Skulker's cape</back>
+                        <!-- <back>Skulker's cape</back> -->
                     </equip>
                     <if advanced="%at_type=self">
                         <command delay="1400">/cancel 71</command>
@@ -175,7 +190,7 @@
     
                 <elseif ad_name="Invisible">
                     <equip>
-                        <back>Skulker's cape</back>
+                        <!-- <back>Skulker's cape</back> -->
                     </equip>
                 </elseif>
     
