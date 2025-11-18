@@ -28,11 +28,11 @@
     <sets>
     
         <set name="Perp-DAY"><body></body></set>    
-        <set name="Carbuncle"><main>Light Staff</main><hands>Carbuncle Mitts</hands></set>
+        <set name="Carbuncle"><main>apollo's Staff</main><hands>Carbuncle Mitts</hands></set>
         <set name="Fenrir"><main>Dark Staff</main></set>
         <set name="Diabolos"><main>Dark Staff</main></set>
         <set name="Ifrit"><main>Fire Staff</main></set>
-        <set name="Shiva"><main>Ice Staff</main></set>
+        <set name="Shiva"><main>aquilo's Staff</main></set>
         <set name="Titan"><main>Earth Staff</main></set>
         <set name="Leviathan"><main>Water Staff</main></set>
         <set name="Ramuh"><main>Thunder Staff</main></set>
