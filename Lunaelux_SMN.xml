@@ -36,8 +36,8 @@
         <set name="Titan"><main>Earth Staff</main></set>
         <set name="Leviathan"><main>Water Staff</main></set>
         <set name="Ramuh"><main>Thunder Staff</main></set>
-        <set name="Garuda"><main>Wind Staff</main></set>
-        <set name="Light"><main>Light Staff</main></set>     
+        <set name="Garuda"><main></main></set>
+        <set name="Light"><main>apollo's Staff</main></set>     
  
         <set name="Idle">
             <main>Earth Staff</main>
