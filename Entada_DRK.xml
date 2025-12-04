@@ -39,39 +39,35 @@
 	
 <!-- Default Idle Set when out of combat -->
         <set name="Idle">
-			<head></head>
-			<body></body>
-			<hands></hands>
-			<legs></legs>
-			<feet></feet>
-			<neck></neck>
-			<waist></waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
-			<back></back>
+			<body>Vampire Cloak</body>
+			<hands>Ryl.Kgt. Mufflers</hands>
+			<legs>Ryl.Kgt. Breeches</legs>
+			<feet>Leaping Boots</feet>
+			<neck>Parade Gorget</neck>
+			<ring1>Sun Ring</ring1>
+			<ring2>Sun Ring</ring2>
         </set>
 		
 <!-- Town Set, When in Windurst -->
         <set name="Town">
+		<head>Walahra Turban</head>
         <body>Federation Aketon</body>
         </set>
 
 <!-- Default TP Set -->
         <set name="TP">
-			<head>Walkure Mask</head>
+			<head>Walahra Turban</head>
 			<body>Haubergeon</body>
-			<hands>Ryl.Kgt. Mufflers</hands>
+			<hands>Dusk Gloves</hands>
 			<legs>Ryl.Kgt. Breeches</legs>
-			<feet>Leaping Boots</feet>
-			<neck>Merman's Gorget</neck>
+			<feet>Dusk Ledelsens</feet>
+			<neck>Chivalrous Chain</neck>
 			<waist>Life Belt</waist>
 			<ear1>Beetle Earring +1</ear1>
 			<ear2>Beetle Earring +1</ear2>
 			<ring1>Sniper's Ring</ring1>
 			<ring2>Sniper's Ring</ring2>
-			<back>Traveler's Mantle</back>
+			<back>Amemet Mantle</back>
         </set>
 		
 <!-- High Accuracy Set, /acc /acco -->
@@ -126,14 +122,14 @@
 			<body>Haubergeon</body>
 			<hands>Ryl.Kgt. Mufflers</hands>
 			<legs>Ryl.Kgt. Breeches</legs>
-			<feet>Leaping Boots</feet>
-			<neck>Merman's Gorget</neck>
+			<feet>Dusk Ledelsens</feet>
+			<neck>Chivalrous Chain</neck>
 			<waist>Life Belt</waist>
 			<ear1>Beetle Earring +1</ear1>
 			<ear2>Beetle Earring +1</ear2>
 			<ring1>Sniper's Ring</ring1>
 			<ring2>Sniper's Ring</ring2>
-			<back>Traveler's Mantle</back>
+			<back>Amemet Mantle</back>
         </set>
 		
 <!-- Snaphot set for Ranged Attacks -->
@@ -148,14 +144,9 @@
 		
 <!-- Haste Set for Magic Recast -->
 		<set name="Haste">
-        <!-- 
 			<head>Walahra Turban</head>
-			<waist>Speed Belt</waist>
-			<body>Nuevo Coselete</body>
 			<hands>Dusk Gloves</hands>
-			<legs>Byakko's Haidate</legs>
-			<feet>Aurum Sabatons</feet>
-        -->
+			<feet>Dusk Ledelsens</feet>
         </set>
 		
 <!-- Will autoequip Desert Boots in Earth Weather -->
@@ -163,22 +154,6 @@
         <!-- 
 			<feet>Desert Boots</feet>
         -->
-		</set>
-
-
-		<set name="dumptp">
-			<head>Walkure Mask</head>
-			<body>Haubergeon</body>
-			<hands>Ryl.Kgt. Mufflers</hands>
-			<legs>Ryl.Kgt. Breeches</legs>
-			<feet>Leaping Boots</feet>
-			<neck>Merman's Gorget</neck>
-			<waist>Life Belt</waist>
-			<ear1>Beetle Earring +1</ear1>
-			<ear2>Beetle Earring +1</ear2>
-			<ring1>Sniper's Ring</ring1>
-			<ring2>Sniper's Ring</ring2>
-			<back>Traveler's Mantle</back>
 		</set>
     </sets>
 	
@@ -321,6 +296,7 @@
                 -->
 				<if buffactive="2">
                     <equip>
+                        <neck>opo-opo necklace</neck>
                     </equip>
                 </if>
                 <if advanced="$Evasion=1">
@@ -388,6 +364,11 @@
         <if advanced="(%p_hpp>=85)&(%p_mpp<100)">
             <equip>
                 <neck>parade gorget</neck>
+            </equip>
+        </if>
+        <if buffactive="2">
+            <equip>
+                <neck>opo-opo necklace</neck>
             </equip>
         </if>   
             <!-- 
