@@ -38,7 +38,7 @@
 			<ear2>Reraise Earring</ear2>
 			<ring1>Balance Ring</ring1>
 			<ring2>Balance Ring</ring2>
-			<back>Nomad's Mantle</back>
+			<back>Bat cape</back>
         </set>
         <set name="Town">
             <body>Federation Aketon</body>
@@ -82,7 +82,7 @@
 		</set>
 		<set name="WS">
 			<head>Walkure Mask</head>
-			<body>Scorpion Harness</body>
+			<body>Assault Jerkin</body>
 			<hands>Dusk Gloves</hands>
 			<legs>Republic Subligar</legs>
 			<feet>Dusk Ledelsens</feet>
@@ -114,11 +114,14 @@
         </set>
 
         <set name="Casting">
-            <head>Walahra Turban</head>
+			<head>Walahra Turban</head>
 			<body>Rapparee Harness</body>
 			<hands>Dusk Gloves</hands>
 			<legs>Bravo's Subligar</legs>
 			<feet>Dusk Ledelsens</feet>
+			<ear1>Suppanomimi</ear1>
+			<ear2>Raising Earring</ear2>
+			<back>Bat Cape</back>
         </set>
 
         <set name="TH">
@@ -130,7 +133,7 @@
 			<ear1>Suppanomimi</ear1>
 			<ear2>Reraise Earring</ear2>
 			<body>Scorpion Harness</body>
-			<back>Nomad's Mantle</back>
+			<back>Bat cape</back>
         </set>
 
         <set name="MagicDefense">

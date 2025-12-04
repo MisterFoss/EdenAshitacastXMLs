@@ -25,6 +25,8 @@
         <command delay="4500">/echo *** Job is %p_job. Macros set to Book $macrobook, Page $macropage. ***</command>
 		<command delay="3200">/gl blink</command>
 		<command delay="3400">/Addon reload equipviewer</command>
+		<command delay="3200">/gl blink</command>
+		<command delay="3400">/Addon reload equipviewer</command>
         <!-- This will change your Lockstyle set if desired -->
 		
     </init>
@@ -500,7 +502,9 @@
 						<feet>Dream boots +1</feet>
 						<back>Skulker's cape</back>
 					</equip>
-		            <command delay="1400">/cancel 71</command>
+					<if advanced="%at_type=self">
+						<command delay="1400">/cancel 71</command>
+					</if>
 				</elseif>
 
 				<elseif ad_name="Invisible">

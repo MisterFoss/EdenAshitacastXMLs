@@ -1,5 +1,3 @@
-
-
 <!--  																								
 									Bard 75 cap Ashitacast
 -->
@@ -28,16 +26,16 @@
 		
 
 		<if p_mainjob="BRD">
-			<setvar name="macrobook" value="1" />
+			<setvar name="macrobook" value="3" />
 		</if>
 		
         <command delay="1500">/macro book $macrobook</command>
         <command delay="3000">/macro set $macropage</command>
         <command delay="4500">/echo *** Job is %p_job. Macros set to Book $macrobook, Page $macropage. ***</command>
+		<command delay="3200">/gl blink</command>
+		<command delay="3400">/Addon reload equipviewer</command>
 		
-        <!-- This will change your Lockstyle set if desired -->
-        <command delay="6000">/lockstyleset $lockstyleset</command>
-		
+        <!-- This will change your Lockstyle set if desired -->		
     </init>
 
 	<sets>
