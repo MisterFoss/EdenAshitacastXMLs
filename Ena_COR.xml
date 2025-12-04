@@ -53,13 +53,13 @@
 			<body>scorpion harness</body>
 			<hands>Dusk gloves</hands>
 			<legs>Comm. Trews</legs>
-			<feet>Dusk Ledelsens</feet>
+			<feet>Denali gamashes</feet>
 			<neck>Wivre gorget</neck>
 			<waist>Life Belt</waist>
 			<ear1>Beetle earring</ear1>
 			<ear2>Suppanomimi</ear2>
-			<ring1>sniper's Ring</ring1>
-			<ring2>sniper's Ring</ring2>
+			<ring1>woodsman Ring</ring1>
+			<ring2>woodsman Ring</ring2>
 			<back>Amemet mantle</back>
         </set>
 		
@@ -463,7 +463,10 @@ IMPORTANT CODE BELOW
     <midmagic>
 		<if ad_skill="White Magic">
 			<equip set="WhiteMagic" />
-        </if>
+		</if>
+		<if ad_name="Stoneskin">
+			<command delay="2000">/cancel stoneskin</command>
+		</if>
 		<elseif ad_name="Utsusemi: Ichi">
 			<equip set="Haste"/>
 			<if buffactive="66"> <!-- One shadow are left -->
@@ -477,7 +480,9 @@ IMPORTANT CODE BELOW
 			<equip set="Haste">
 				<feet>Dream boots +1</feet>
 			</equip>
-			<command delay="1400">/cancel 71</command>
+			<if advanced="%at_type=self">
+				<command delay="1400">/cancel 71</command>
+			</if>
 		</elseif>
 		<elseif ad_name="Monomi: Ichi">
 			<equip set="Haste"/>

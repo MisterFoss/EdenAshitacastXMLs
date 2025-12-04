@@ -29,10 +29,10 @@
         
         <set name="Idle">
             <main>Earth Staff</main>
-            <head>Gold Hairpin +1</head>
-			<body>Seer's Tunic</body>
+            <head></head>
+			<body>Vermillion Cloak</body>
 			<hands>Carbuncle Mitts</hands>
-			<legs>Savage Loincloth</legs>
+			<legs>evoker's spats</legs>
 			<feet>Seer's Pumps</feet>
 			<neck>Beak Necklace</neck>
 			<waist>Mohbwa Sash</waist>
@@ -57,7 +57,6 @@
         
         <set name="Resting">
 			<main>Dark Staff</main>
-			<body>Seer's Tunic</body>
 			<neck>Beak Necklace</neck>
 			<waist>Mohbwa Sash</waist>
 			<ear1>Antivenom Earring</ear1>
