@@ -361,7 +361,7 @@
 				</if>
                 -->
         </if>
-        <if advanced="(%p_hpp>=85)&(%p_mpp<100)">
+        <if advanced="(%p_hpp&gt;=85)&amp;(%p_mpp&lt;100)">
             <equip>
                 <neck>parade gorget</neck>
             </equip>

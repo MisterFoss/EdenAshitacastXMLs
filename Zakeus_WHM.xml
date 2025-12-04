@@ -6,94 +6,247 @@
 
 <ashitacast>
 	<settings>
+		<!--Contains settings specific to this xml, must be set to true/false to override default-->
 		<buffupdate>true</buffupdate>
+		<!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
 		<statusupdate>true</statusupdate>
+		<!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
 		<hpupdate>false</hpupdate>
+		<!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
 		<autoupdate>true</autoupdate>
+		<!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
 	</settings>
     <init>
         <!-- This codeblock will automatically change your macro book/page according to the job and subjob list below -->
         <!-- Change the below variable subjob abbreviations according to the subjobs you use with this profile. -->
         <if p_subjob="BLM"><setvar name="macropage" value="1" /></if>
+		<if p_subjob="SCH"><setvar name="macropage" value="1" /></if>
         <if p_subjob="RDM"><setvar name="macropage" value="1" /></if>
         <if p_subjob="NIN"><setvar name="macropage" value="1" /></if>
 		
-		<if p_mainjob="WHM"><setvar name="macrobook" value="1" /></if>
+		<if p_mainjob="WHM"><setvar name="macrobook" value="1" /><setvar name="lockstyleset" value="1" /></if>
 		
         <command delay="1500">/macro book $macrobook</command>
         <command delay="3000">/macro set $macropage</command>
         <command delay="4500">/echo *** Job is %p_job. Macros set to Book $macrobook, Page $macropage. ***</command>
 		<command delay="3200">/gl blink</command>
 		<command delay="3400">/Addon reload equipviewer</command>
-		<command delay="3200">/gl blink</command>
-		<command delay="3400">/Addon reload equipviewer</command>
         <!-- This will change your Lockstyle set if desired -->
+        <command delay="6000">/lockstyleset $lockstyleset</command>
 		
     </init>
 
 	<sets>
+		<!--Deafualt gear when not taking any action, refresh, max mp and damage daken down -->
 		<set name="Idle">
-			<main>earth staff</main>
+			<main>light staff</main>
+			<sub>thunder grip</sub>
+			<ammo>Hedgehog Bomb</ammo>
 			<head>Walahra Turban</head>
 			<body>Cleric's briault</body>
-			<hands>Healer's mitts</hands>
-			<legs>Healer's Pantaln.</legs>
-			<feet>blessed pumps</feet>
-			<neck>beak necklace</neck>
-			<waist>Cleric's Belt</waist>
-			<ear1>antivenom earring</ear1>
-			<ear2>Morion Earring</ear2>
-			<ring1>astral Ring</ring1>
-			<ring2>astral Ring</ring2>
-			<back>Rainbow Cape</back>
+			<hands>Cleric's mitts</hands>
+			<legs>Blessed Trousers</legs>
+			<feet>Cleric's Duckbills</feet>
+			<neck>beak necklace +1</neck>
+			<waist>Cleric's belt</waist>
+			<ear1>Astral earring</ear1>
+			<ear2></ear2>
+			<ring1>Ether Ring</ring1>
+			<ring2>Astral Ring</ring2>
+			<back></back>
 		</set>
 		
+		<!-- Equiped when resting -->
 		<set name="Resting" baseset="Idle">
 			<main>dark Staff</main>
-			<neck>Beak Necklace</neck>
+			<ammo></ammo>	
+			<head></head>
+			<neck>Beak Necklace +1</neck>
 			<body>Errant Hpl.</body>
-			<neck>Beak Necklace</neck>
-			<ear1>boroka Earring</ear1>
-			<ear2>antivenom Earring</ear2>				
-			<waist>Cleric's Belt</waist>		
-		</set>
-		
-		<set name="Town" baseset="Idle">
-			<body>Federation Aketon</body>
-		</set>
-		
-		<set name="Movement">
-		</set>
-		
-		<set name="HP">
-		</set>
-		
-		<set name="MDT">
-		</set>
-		
-		<set name="PDT">
-		</set>
-		
-		<set name="Precast">
-			<ear1></ear1>
+			<hands></hands>			
+			<legs></legs>	
 			<feet></feet>
+			<neck>Beak Necklace</neck>
+			<ear1>Astral earring</ear1>
+			<ear2></ear2>			
+			<ring1></ring1>
+			<ring2></ring2>		
+			<waist>Cleric's belt</waist>
+			<back></back>
 		</set>
 		
+		<!-- gear, only in windurst currently -->
+		<set name="Town" baseset="Idle">
+			<body>Federation aketon</body>`
+		</set>
+		
+		<!-- Equiped when runing-->
+		<set name="Movement">
+			
+		</set>
+		
+		<!--MaxHP for devotion, "/maxhp" to equip. while active will not be swapped out.-->		
+		<set name="HP">
+				
+		</set>
+		
+		<!--magic damage taken down set, can be toggled with - "/mdt" -->
+		<set name="MDT">
+			
+		</set>
+		
+		<!-- Physical damage taken down set, can be toggled with "/pdt"-->
+		<set name="PDT">
+			
+		</set>
+		
+		<!-- Default Precast, for fast cast -->
+		<set name="Precast">
+			<main></main>
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body></body>
+			<hands></hands>
+			<legs></legs>
+			<feet>Cure Clogs</feet>
+			<neck></neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1></ring1>
+			<ring2></ring2>
+			<back></back>
+		</set>
+		
+		<!-- Max Haste, Deafault spellcasting set -->
 		<set name="Haste">
-			<head>Walahra Turban</head>		
-			<feet>blessed pumps</feet>
-			<!--
+			<main></main>
+			<sub></sub>
+			<ammo></ammo>
+			<head>Walahra Turban</head>
+			<body></body>
 			<hands>Blessed Mitts</hands>
 			<legs>Blessed Trousers</legs>
-			-->
+			<feet>Blessed Pumps</feet>
+			<neck></neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1></ring1>
+			<ring2></ring2>
+			<back></back>
 		</set>
 		
+		<!-- When castin Cure* Cura* spells-->
 		<set name="Cure" baseset="Haste">
-			<main>Apollo's Staff</main>
-			<head></head>
-			<body>Noble's Tunic</body>
+			<main>light staff</main>
+			<sub></sub>
+			<ammo></ammo>
+			<head>Healer's cap</head>
+			<body>Noble's tunic</body>
+			<hands>Healer's mitts</hands>
+			<legs>Cleric's pantaloons</legs>
+			<feet>Cleric's Duckbills</feet>
+			<neck>Promise Badge</neck>
+			<waist>Cleric's belt</waist>
+			<ear1>Harvent earring</ear1>
+			<ear2></ear2>
+			<ring1>Saintly ring</ring1>
+			<ring2>Saintly ring</ring2>
+			<back>White cape</back>
+		</set>
+		
+		<!-- white magic based efeebling-->
+		<set name="Enfeeble-MND">
+			<main>light staff</main>
+			<sub></sub>
+			<ammo></ammo>
+			<head>Healer's cap</head>
+			<body>Healer's briault</body>
+			<hands>Cleric's mitts</hands>
+			<legs>Blessed trousers</legs>
+			<feet>Cleric's Duckbills</feet>
+			<neck>Promise Badge</neck>
+			<waist>Cleric's belt</waist>
+			<ear1>Harvent earring</ear1>
+			<ear2></ear2>
+			<ring1>Saintly ring</ring1>
+			<ring2>Saintly ring</ring2>
+			<back>White cape</back>
+		</set>
+		
+		<!-- Black magic based enfeebeling-->
+		<set name="Enfeeble-INT">
+			<main>Dark staff</main>
+			<sub></sub>
+			<ammo></ammo>
+			<head>Seer's crown</head>
+			<body>Errant houppelande</body>
+			<hands>Seer's mitts</hands>
+			<legs>Seer's slacks</legs>
+			<feet>Cleric's Duckbills</feet>
+			<neck>Black silk neckerchief</neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2>Cunning earring</ear2>
+			<ring1>Ermite's ring</ring1>
+			<ring2>Ermite's ring</ring2>
+			<back>Black cape</back>
+		</set>
+		
+		<!-- Stoneskin set, max mind -->
+		<set name="Stoneskin" baseset="Haste">
+			<main>light staff</main>
+			<sub></sub>
+			<ammo></ammo>
+			<head>Healer's cap</head>
+			<body>Errant houppelande</body>
+			<hands>Healer's mitts</hands>
+			<legs>Blessed trousers</legs>
+			<feet>Cleric's Duckbills</feet>
+			<neck>Promise Badge</neck>
+			<waist>Cleric's belt</waist>
+			<ear1>Harvent earring</ear1>
+			<ear2></ear2>
+			<ring1>Saintly ring</ring1>
+			<ring2>Saintly ring</ring2>
+			<back>White cape</back>
+		</set>
+		
+		<!-- Cursna -->
+		<set name="Cursna" baseset="Haste">
 			<hands>Healer's Mitts</hands>
-			<legs>Cleric's pantaln.</legs>
+			<legs>Cleric's Pantaln.</legs>
+		</set>
+		
+		<!-- Devine magic skill based, including repose-->
+		<set name="DivineMagic" baseset="Haste">
+			<main>light staff</main>
+			<sub></sub>
+			<ammo></ammo>
+			<head>Healer's cap</head>
+			<body>Errant houppelande</body>
+			<hands>Healer's mitts</hands>
+			<legs>Healer's pantaloons</legs>
+			<feet>Cleric's Duckbills</feet>
+			<neck>Promise Badge</neck>
+			<waist>Cleric's belt</waist>
+			<ear1>Harvent earring</ear1>
+			<ear2></ear2>
+			<ring1>Saintly ring</ring1>
+			<ring2>Saintly ring</ring2>
+			<back>White cape</back>
+		</set>
+		
+		<set name="Barspells" baseset="Haste">
+			<main></main>
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body></body>
+			<hands></hands>
+			<legs>Cleric's Pantaln.</legs>
 			<feet></feet>
 			<neck></neck>
 			<waist></waist>
@@ -104,105 +257,41 @@
 			<back></back>
 		</set>
 		
-		<set name="Enfeeble-MND">
-			<sub></sub>
-			<ammo></ammo>
-			<head>healer's cap</head>
-			<body>Healer's Briault</body>
-			<hands>cleric's mitts</hands>
-			<legs>errant slops</legs>
-			<feet>blessed pumps</feet>
-			<neck>justice badge</neck>
-			<waist>Cleric's Belt</waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
-			<back>rainbow cape</back>
-		</set>
-		
-		<set name="Enfeeble-INT">
-			<sub></sub>
-			<ammo></ammo>
-			<head></head>
-			<body>Healer's Briault</body>
-			<hands>cleric's mitts</hands>
-			<legs>errant slops</legs>
-			<feet></feet>
-			<neck></neck>
-			<waist>mrc.cpt. belt</waist>
-			<ear1></ear1>
-			<ear2>morion earring</ear2>
-			<ring1>eremite's ring</ring1>
-			<ring2>eremite's ring</ring2>
-			<back>rainbow cape</back>
-		</set>
-		
-		<set name="Stoneskin" baseset="Haste">
-			<main>kirin's pole</main>
-			<sub></sub>
-			<ammo></ammo>
-			<head>healer's cap</head>
-			<body>Errant Hpl.</body>
-			<hands>zealot's mitts</hands>
-			<legs>errant slops</legs>
-			<feet>blessed pumps</feet>
-			<neck>justice badge</neck>
-			<waist>Cleric's Belt</waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
-			<back>rainbow cape</back>
-		</set>
-		
-		<set name="Cursna" baseset="Haste">
-			<hands>Healer's Mitts</hands>
-			<legs>Cleric's Pantaln.</legs>
-		</set>
-		
-		<set name="DivineMagic" baseset="Haste">
-			<sub></sub>
-			<ammo></ammo>
-			<head></head>
-			<body>errant hpl.</body>
-			<hands>cleric's mitts</hands>
-			<legs>healer's pantaln.</legs>
-			<feet></feet>
-			<neck>justice badge</neck>
-			<waist>cleric's belt</waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
-			<back>rainbow cape</back>
-		</set>
-
-		<set name="Repose" baseset="Haste">
-			<sub></sub>
-			<ammo></ammo>
-			<head>Healer's Cap</head>
-			<body>errant hpl.</body>
-			<hands>zealot's mitts</hands>
-			<legs>healer's pantaln.</legs>
-			<feet></feet>
-			<neck>justice badge</neck>
-			<waist>cleric's belt</waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
-			<back>rainbow cape</back>
-		</set>
-		
-		<set name="Barspells" baseset="Haste">
-			<legs>Cleric's Pantaln.</legs>
-		</set>
-		
 		<set name="DarkMagic" baseset="Haste">
+			<main>Dark staff</main>
+			<sub></sub>
+			<ammo></ammo>
+			<head>Seer's crown</head>
+			<body>Errant houppelande</body>
+			<hands>Seer's mitts</hands>
+			<legs>Seer's slacks</legs>
+			<feet>Cleric's Duckbills</feet>
+			<neck>Black silk neckerchief</neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2>Cunning earring</ear2>
+			<ring1></ring1>
+			<ring2></ring2>
+			<back>Black cape</back>
 		</set>
 		
+		<!-- All elemental including DoTs, addi if needed-->
 		<set name="Elemental" baseset="Haste">
+			<main>Dark staff</main>
+			<sub></sub>
+			<ammo></ammo>
+			<head>Seer's crown</head>
+			<body>Errant houppelande</body>
+			<hands>Seer's mitts</hands>
+			<legs>Seer's slacks</legs>
+			<feet>Cleric's Duckbills</feet>
+			<neck>Black silk neckerchief</neck>
+			<waist></waist>
+			<ear1></ear1>
+			<ear2>Cunning earring</ear2>
+			<ring1></ring1>
+			<ring2></ring2>
+			<back>Black cape</back>
 		</set>
 		
 
@@ -211,31 +300,53 @@
 			will be equiped on any offencice spell alligned with that element.
 		-->
 		
-		<set name="BaseCastingMain"> <main>Krins Pole</main> </set>
-
-		<set name="Dark-acc" 	baseset="BaseCastingMain"> <main>Dark Staff</main> </set>
-		<set name="Light-acc" 	baseset="BaseCastingMain"> <main>Apollo's Staff</main> </set>
-		<set name="Ice-acc" 	baseset="BaseCastingMain"> </set>
-		<set name="Fire-acc" 	baseset="BaseCastingMain"> </set>
-		<set name="Thunder-acc" baseset="BaseCastingMain"> </set>
-		<set name="Water-acc" 	baseset="BaseCastingMain"> </set>
-		<set name="Earth-acc" 	baseset="BaseCastingMain"> <main>Earth Staff</main> </set>
-		<set name="Wind-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Dark-acc">
+			<main>Dark staff</main>
+			<sub></sub>
+		</set>
+		<set name="Light-acc">
+			<main>Light staff</main>
+			<sub></sub>
+		</set>
+		<set name="Ice-acc">
+			<main>Ice staff</main>
+			<sub></sub>
+		</set>
+		<set name="Fire-acc">
+			<main>Fire staff</main>
+			<sub></sub>
+		</set>
+		<set name="Thunder-acc">
+			<main>Thunder staff</main>
+			<sub></sub>
+		</set>
+		<set name="Water-acc">
+			<main>Water staff</main>
+			<sub></sub>
+		</set>
+		<set name="Earth-acc">
+			<main>Earth staff</main>
+			<sub></sub>
+		</set>
+		<set name="Wind-acc">
+			<main>Wind staff</main>
+			<sub></sub>
+		</set>
 		
 		<!-- Melee mode sets, toggle with "/1h, /2h, /dw". well lock main and sub to prevent tp loss lose tp. -->
 		
 		<set name="Melee-1H">
 			<main lock="true">Martial wand</main>
-			<sub lock="true"></sub>
+			<sub lock="true">Tortoise shield</sub>
 		</set>
 		
 		<set name="Melee-2H">
 			<main lock="true">kirin's pole</main>
-			<sub lock="true"></sub>
+			<sub lock="true">lizard strap</sub>
 		</set>
 		
 		<set name="Melee-DW">
-			<main lock="true">club of trials</main>
+			<main lock="true">Martial wand</main>
 			<sub lock="true">martial wand</sub>
 		</set>
 		
@@ -246,16 +357,16 @@
 		-->		
 		<set name="TP-Set">
 			<head>Walahra turban</head>
-			<body>cleric's Briault</body>
-			<hands>Healer's Mitts</hands>
-			<legs>cleric's pantaln.</legs>
+			<body>hydra doublet</body>
+			<hands>blessed mitts</hands>
+			<legs>Blessed trousers</legs>
 			<feet>blessed pumps</feet>
-			<neck></neck>
+			<neck>chivalrous chain</neck>
 			<waist></waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
+			<ear1>Merman's earring</ear1>
+			<ear2>Merman's earring</ear2>
+			<ring1>Sniper's ring</ring1>
+			<ring2>Sniper's ring</ring2>
 			<back></back>
 		</set>
 		
@@ -270,7 +381,7 @@
 		</set>
 		
 		<set name="HexaStrike" baseset="TP-Set">
-			<hands>Healer's Mitts</hands>
+			
 		</set>
 		
 		
@@ -288,12 +399,14 @@
 	-->
 
 	<variables>
+		
 		<var name="Melee1H">0</var>
 		<var name="Melee2H">0</var>
 		<var name="MeleeDW">0</var>
 		<var name="MDTSetActive">0</var>
 		<var name="PDTSetActive">0</var>
 		<var name="MaxHP">0</var>
+
 	</variables>
 
 
@@ -398,11 +511,11 @@
 
 
 	<premagic>
-		<equip set="Precast" />
+		<equip set="Precast" />z
 
 		<if ad_name="Cure*|Cura*">
 			<equip>
-				<feet>Cure Clogs</feet>
+				<feet>cure clogs</feet>
 			</equip>
 		</if>
 	</premagic>
@@ -475,9 +588,6 @@
 
 			<elseif ad_skill="divinemagic">
 				<equip set="DivineMagic"/>
-				<if ad_skill="Repose">
-					<equip set="Repose"/>
-				</if>
 			</elseif>
 
 			<elseif ad_skill="enhancingmagic">
@@ -485,13 +595,6 @@
 				<if ad_name="Stoneskin">
 					<equip set="Stoneskin"/>
 				</if>
-
-				<elseif ad_name="regen*">
-					<equip>
-						<body>Cleric's Briault</body>
-					</equip>
-
-				</elseif>
 
 				<elseif ad_name="Bar*">
 					<equip set="Barspells" />
@@ -610,7 +713,7 @@
 
 			<equip set="Idle" />
  			<if e_area="Windurst*|Port Windurst">
-				<equip set="Town"/>
+				<equip set="Town" />
 			</if>
 			
 			<if eq_main="Warp Cudgel|trick Staff II|treat staff II">

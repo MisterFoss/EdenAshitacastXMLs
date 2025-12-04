@@ -1,0 +1,646 @@
+<!--
+          Archaide's Level 75 SAM XML
+ 
+This XML includes a few specific things for SAM:
+- Will auto set macro book and lockstyle upon switching to SAM
+- Specific WS sets for Sidewinder, Penta Thrust, and GK WS's to accomodate CoP Gorgets and Justice Torque
+- Minuet Earring will autoequip in left ear when you have Minuet buff
+- Coded Vampire Earring into left ear in WS sets for Nighttime
+- Will auto-equip Opo-opo Necklace when sleeping
+- Desert Boots will autoequip in Earth Weather
+- Specific Lightning/Fire Resist sets for Cerberus and Khimaira
+- The below items will lock in slot when they are equipped manually in idle set:
+        - Reraise Hairpin (Head Slot)
+        - Tidal Talisman (Body Slot)
+        - Reraise Earring (Left Ear Slot)
+        - Empress Band (Left Ring Slot)
+        - Anniversary Ring (Left Ring Slot)
+- Sets included are Evasion, PhysicalDefense, MagicDefense, FireResist, LightningResist, Accuracy, Town
+- To activate /eva, /pdt, /mdt, /fr, /lr, /acc, /town
+- To remove /evao, /pdto etc. to turn off
+ 
+Enjoy! Have Fun!!  
+-->
+ 
+<ashitacast>
+    <settings>
+        <buffupdate>true</buffupdate> 
+        <statusupdate>true</statusupdate> 
+        <hpupdate>false</hpupdate>
+        <autoupdate>true</autoupdate> 
+    </settings>
+    <variables>
+        <var name="Evasion">0</var>
+        <var name="PhysicalDefense">0</var>
+        <var name="MagicDefense">0</var>
+        <var name="FireResist">0</var>
+        <var name="LightningResist">0</var>
+        <var name="Acc">0</var>
+    </variables>
+    <init>
+        <command delay="1500">/echo ****** Initiating Archaide's Samurai AshitaCast, ENJOY! ******</command>
+        <command delay="1600">/echo Job is %p_job.</command>
+        <command delay="1700">/echo Macro-book $macrobook, Page $macropage.</command>
+        <command delay="2000">/macro book $macrobook</command>
+        <command delay="3000">/macro set $macropage</command>
+        <command delay="4000">/lockstyleset $lockstyleset</command>
+<!-- This codeblock will automatically change your macro book/page/lockstyle according to the job and subjob list below -->
+<!-- Change the below variable subjob abbreviations according to the subjobs you use with this profile. -->         
+        <if p_mainjob="SAM"><setvar name="macrobook" value="1" /><setvar name="lockstyleset" value="9" /></if>  
+        <if p_subjob="DNC"><setvar name="macropage" value="2" /></if>
+        <if p_subjob="NIN"><setvar name="macropage" value="2" /></if>
+        <if p_subjob="WAR"><setvar name="macropage" value="2" /></if>
+        <if p_subjob="RNG"><setvar name="macropage" value="2" /></if>
+<!-- Delete next 4 lines if you don't use keybinds -->
+        <if p_subjob="DNC"><command delay="5000">/exec SAMDNC_keybinds</command></if>
+        <if p_subjob="NIN"><command delay="5000">/exec SAMNIN_keybinds</command></if>
+        <if p_subjob="WAR"><command delay="5000">/exec SAMWAR_keybinds</command></if>
+        <if p_subjob="RNG"><command delay="5000">/exec SAMRNG_keybinds</command></if>
+    </init>
+    
+    <sets>
+    
+    
+<!--
+	Change the below sets to your own, type the item EXACTLY how you see it in your inventory EX> Shura Head is "Shr.Znr.Kabuto" with no spaces. GL!
+-->
+ 
+    
+<!-- Default Idle Set when out of combat -->
+        <set name="Idle">
+			<head>Empress Hairpin</head>
+			<body>Scorpion Harness</body>
+			<hands>Rasetsu Tekko</hands>
+			<legs>Byakko's Haidate</legs>
+			<feet>Myochin Sune-Ate</feet>
+			<neck>Orochi Nodowa</neck>
+			<waist>scouter's rope</waist>
+			<ear1>dodge Earring</ear1>
+			<ear2>dodge Earring</ear2>
+			<ring1>Victory Ring</ring1>
+			<ring2>flame Ring</ring2>
+			<back>Bat Cape</back>
+        </set>
+		
+<!-- Town Set, equips in windurst ares -->
+        <set name="Town" baseset="Idle">
+            <body>Federation aketon</body>
+        </set>
+
+<!-- Default TP Set -->
+        <set name="TP">
+			<head>Walahra Turban</head>
+			<body>Haubergeon</body>
+			<hands>Hachiman Kote</hands>
+			<legs>Byakko's Haidate</legs>
+			<feet>Hmn. Sune-Ate</feet>
+			<neck>Chivalrous Chain</neck>
+			<waist>Life Belt</waist>
+			<ear1>Fowling Earring</ear1>
+			<ear2>Bushinomimi</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Sniper's Ring</ring2>
+			<back>Amemet Mantle +1</back>
+        </set>
+		
+<!-- High Accuracy Set, /acc /acco -->
+        <set name="Acc">
+			<head>Walahra Turban</head>
+			<body>Haubergeon</body>
+			<hands>Dusk gloves</hands>
+			<legs>Byakko's Haidate</legs>
+			<feet>Sarutobi Kyahan</feet>
+			<neck>Chivalrous Chain</neck>
+			<waist>Life Belt</waist>
+			<ear1>Fowling Earring</ear1>
+			<ear2>Bushinomimi</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Sniper's Ring</ring2>
+			<back>Amemet Mantle +1</back>
+        </set>
+		
+<!-- Evasion Set, /eva /evao -->
+        <set name="Evasion">
+			<head>Empress Hairpin</head>
+			<body>Scorpion Harness</body>
+			<hands>Rasetsu Tekko</hands>
+			<legs>Myochin haidate</legs>
+			<feet>Myochin Sune-Ate</feet>
+			<neck>Evasion Torque</neck>
+			<waist>Scouter's Rope</waist>
+			<ear1>dodge Earring</ear1>
+			<ear2>dodge Earring</ear2>
+			<ring1>Victory Ring</ring1>
+			<ring2>flame Ring</ring2>
+			<back>Bat Cape</back>
+        </set>
+
+<!-- PDT Set, /pdt /pdto -->
+        <set name="PhysicalDefense">
+			<head>Arh. Jinpachi +1</head>
+			<body>Arhat's Gi +1</body>
+			<hands>Rasetsu Tekko</hands>
+			<legs>Byakko's Haidate</legs>
+			<feet>Rasetsu Sune-Ate</feet>
+			<neck>Peacock Charm</neck>
+			<ear1>Cassie Earring</ear1>
+			<ear2>Pigeon Earring</ear2>
+			<ring1>Rajas Ring</ring1>
+			<ring2>Bomb Queen Ring</ring2>
+			<back>Resentment Cape</back>
+        </set>
+		
+<!-- MDT Set, /mdt /mdto -->
+        <set name="MagicDefense">
+			<ear1>Merman's Earring</ear1>
+			<ear2>Merman's Earring</ear2>
+			<ring1>Merman's Ring</ring1>
+			<ring2>Merman's Ring</ring2>
+			<back>Resentment Cape</back>
+        </set>
+		
+<!-- Fire Resist Set for Cerberus, /fr /fro -->
+        <set name="FireResist">
+			<head>Walkure mask</head>
+			<body>scorpion Harness</body>
+			<hands>Ochimusha Kote</hands>
+			<legs>Ryl.Kgt. Breeches</legs>
+			<feet>Sarutobi Kyahan</feet>
+			<neck>spike necklace</neck>
+			<waist>Life Belt</waist>
+			<ear1>Fang Earring</ear1>
+			<ear2>Fang Earring</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Sniper's Ring</ring2>
+			<back>Amemet Mantle +1</back>
+        </set>
+		
+<!-- Lightning Resist Set for Khimaira, /lr /lro -->
+        <set name="LightningResist">
+			<head>Walkure mask</head>
+			<body>Haubergeon</body>
+			<hands>Ochimusha Kote</hands>
+			<legs>Ryl.Kgt. Breeches</legs>
+			<feet>Sarutobi Kyahan</feet>
+			<neck>Chivalrous Chain</neck>
+			<waist>Life Belt</waist>
+			<ear1>Minuet Earring</ear1>
+			<ear2>Merman's Earring</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Sniper's Ring</ring2>
+			<back>Amemet Mantle +1</back>
+        </set>
+		
+<!-- Default WS Set -->	
+        <set name="WS">
+			<head>Wyvern Helm</head>
+			<body>Kirin's Osode</body>
+			<hands>Alkyoneus's Brc.</hands>
+			<legs>Byakko's Haidate</legs>
+			<feet>Savage Gaiters</feet>
+			<neck>Chivalrous Chain</neck>
+			<waist>Warwolf Belt</waist>
+			<ear1>Fowling Earring</ear1>
+			<ear2>Bushinomimi</ear2>
+			<ring1>Victory Ring</ring1>
+			<ring2>flame Ring</ring2>
+			<back>Amemet Mantle +1</back>
+        </set>
+		
+<!-- Tachi: Jinpu WS Set (add Magic Attk Bonus where you can) -->
+        <set name="Jinpu">
+			<head>Wyvern Helm</head>
+			<body>Kirin's Osode</body>
+			<hands>Alkyoneus's Brc.</hands>
+			<legs>Myochin Haidate</legs>
+			<feet>Savage Gaiters</feet>
+			<neck>Spike Necklace</neck>
+			<waist>Brave belt</waist>
+			<ear1>Fowling Earring</ear1>
+			<ear2>Bushinomimi</ear2>
+			<ring1>Victory Ring</ring1>
+			<ring2>flame Ring</ring2>
+			<back>Amemet Mantle +1</back>
+        </set>
+<!-- Tachi: kasha WS Set -->
+        <set name="kasha">
+			<head>Wyvern Helm</head>
+			<body>Kirin's Osode</body>
+			<hands>Alkyoneus's Brc.</hands>
+			<legs>Byakko's Haidate</legs>
+			<feet>Savage Gaiters</feet>
+			<neck>Chivalrous Chain</neck>
+			<waist>Warwolf Belt</waist>
+			<ear1>Fowling Earring</ear1>
+			<ear2>Bushinomimi</ear2>
+			<ring1>Victory Ring</ring1>
+			<ring2>flame Ring</ring2>
+			<back>Amemet Mantle +1</back>
+	</set>		
+<!-- Tachi: Rana WS Set -->
+        <set name="Rana">
+			<head>Wyvern Helm</head>
+			<body>Kirin's Osode</body>
+			<hands>Alkyoneu's Brc.</hands>
+			<legs>Byakko's Haidate</legs>
+			<feet>Savage Gaiters</feet>
+			<neck>Chivalrous Chain</neck>
+			<waist>Warwolf Belt</waist>
+			<ear1>Fowling Earring</ear1>
+			<ear2>Bushinomimi</ear2>
+			<ring1>Victory Ring</ring1>
+			<ring2>flame Ring</ring2>
+			<back>Amemet Mantle +1</back>
+        </set>
+<!-- Penta Thrust WS Set -->
+        <set name="Penta">
+			<head>Wyvern Helm</head>
+			<body>Haubergeon</body>
+			<hands>Ochimusha Kote</hands>
+			<legs>Byakko's Haidate</legs>
+			<feet>Saotome Sune-Ate</feet>
+			<neck>Chivalrous Chain</neck>
+			<waist>Warwolf Belt</waist>
+			<ear1>Merman's Earring</ear1>
+			<ear2>Merman's Earring</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Sniper's Ring</ring2>
+			<back>Amemet Mantle +1</back>
+        </set>	
+		
+<!-- Sidewinder WS Set -->
+        <set name="Sidewinder">
+			<head>Optical Hat</head>
+			<body>Akinji Peti</body>
+			<hands>Seiryu's Kote</hands>
+			<legs>Dusk Trousers</legs>
+			<feet>Hmn. Sune-Ate</feet>
+			<neck>Aqua Gorget</neck>
+			<waist>Volant Belt</waist>
+			<ear1>Wilhelm's Earring</ear1>
+			<ear2>Altdorf's Earring</ear2>
+			<ring1>Merman's Ring</ring1>
+			<ring2>Merman's Ring</ring2>
+			<back>Amemet Mantle +1</back>
+        </set>
+
+<!-- Snaphot set for Ranged Attacks -->
+		<set name="Preshot">
+		</set>
+		
+<!-- Ranged Attack Set -->
+		<set name="Ranged">
+			<head>Optical Hat</head>
+			<body>Akinji Peti</body>
+			<hands>Seiryu's Kote</hands>
+			<legs>Dusk Trousers</legs>
+			<feet>Hmn. Sune-Ate</feet>
+			<neck>Peacock Charm</neck>
+			<waist>Volant Belt</waist>
+			<ear1>Wilhelm's Earring</ear1>
+			<ear2>Altdorf's Earring</ear2>
+			<ring1>Merman's Ring</ring1>
+			<ring2>Merman's Ring</ring2>
+			<back>Amemet Mantle +1</back>
+		</set>
+		
+<!-- Provoke Set -->
+		<set name="Provoke">
+			<head>Aegishjalmr</head>
+			<body>Arhat's Gi +1</body>
+			<hands></hands>
+			<legs></legs>
+			<feet>Myochin Sune-Ate</feet>
+			<neck>Harmonia's Torque</neck>
+			<waist>Warwolf Belt</waist>
+			<ear1></ear1>
+			<ear2></ear2>
+			<ring1></ring1>
+			<ring2></ring2>
+			<back>Toreador's Cape</back>
+		</set>
+		
+<!-- Haste Set for Magic Recast, all Haste+ and I filled rest with eva+ -->
+		<set name="Haste">
+			<head>Walahra Turban</head>
+			<body>Scorpion Harness</body>
+			<hands>dusk gloves</hands>
+			<legs>Myochin haidate</legs>
+			<feet>Sarutobi kyahan</feet>
+			<neck>Evasion Torque</neck>
+			<waist>Headlong Belt</waist>
+			<ear1>Novia Earring</ear1>
+			<ear2>Dodge Earring</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Rajas Ring</ring2>
+			<back>Bat cape</back>
+        </set>
+		
+<!-- Will autoequip Desert Boots in Earth Weather -->
+		<set name="DesertBoots">
+			<feet>Desert Boots</feet>
+		</set>
+
+		<set name="Sneak">
+			<feet>Dream boots +1</feet>
+		</set>
+    </sets>
+	
+	
+<!--
+ IMPORTANT CODE BELOW  
+ DO NOT TOUCH UNLESS YOU KNOW WHAT YOU'RE DOING! 
+-->
+
+	
+    <inputcommands>
+
+		<cmd input="/silent">
+			<command>/ac set Sneak 3</command>
+			<command>/item "silent oil" %p_name</command>
+		</cmd>
+
+        <cmd input="/eva">
+            <setvar name="PhysicalDefense" value="0" />
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="FireResist" value="0" />
+            <setvar name="LightningResist" value="0" />
+            <setvar name="Acc" value="0" />
+            <if advanced="$Evasion=0">
+                <setvar name="Evasion" value="1" />
+                <addtochat color="100">Evasion Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/evao">
+            <if advanced="$Evasion=1">
+                <setvar name="Evasion" value="0" />
+                <addtochat color="200">Evasion Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/pdt">
+            <setvar name="Evasion" value="0" />
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="FireResist" value="0" />
+            <setvar name="LightningResist" value="0" />
+            <setvar name="Acc" value="0" />
+            <if advanced="$PhysicalDefense=0">
+                <setvar name="PhysicalDefense" value="1" />
+                <addtochat color="100">Physical Defense Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/pdto">
+            <if advanced="$PhysicalDefense=1">
+                <setvar name="PhysicalDefense" value="0" />
+                <addtochat color="200">Physical Defense Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/mdt">
+            <setvar name="Evasion" value="0" />
+            <setvar name="PhysicalDefense" value="0" />
+            <setvar name="FireResist" value="0" />
+            <setvar name="LightningResist" value="0" />
+            <setvar name="Acc" value="0" />
+            <if advanced="$MagicDefense=0">
+                <setvar name="MagicDefense" value="1" />
+                <addtochat color="100">Magic Defense Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/mdto">
+            <if advanced="$MagicDefense=1">
+                <setvar name="MagicDefense" value="0" />
+                <addtochat color="200">Magic Defense Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/fr">
+            <setvar name="Evasion" value="0" />
+            <setvar name="PhysicalDefense" value="0" />
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="LightningResist" value="0" />
+            <setvar name="Acc" value="0" />
+            <if advanced="$FireResist=0">
+                <setvar name="FireResist" value="1" />
+                <addtochat color="100">Fire Resist Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/fro">
+            <if advanced="$FireResist=1">
+                <setvar name="FireResist" value="0" />
+                <addtochat color="200">Fire Resist Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/lr">
+            <setvar name="Evasion" value="0" />
+            <setvar name="PhysicalDefense" value="0" />
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="FireResist" value="0" />
+            <setvar name="Acc" value="0" />
+            <if advanced="$LightningResist=0">
+                <setvar name="LightningResist" value="1" />
+                <addtochat color="100">Lightning Resist Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/lro">
+            <if advanced="$LightningResist=1">
+                <setvar name="LightningResist" value="0" />
+                <addtochat color="200">Lightning Resist Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/acc">
+            <setvar name="Evasion" value="0" />
+            <setvar name="PhysicalDefense" value="0" />
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="FireResist" value="0" />
+            <setvar name="LightningResist" value="0" />
+            <if advanced="$Acc=0">
+                <setvar name="Acc" value="1" />
+                <addtochat color="100">High Accuracy Set Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/acco">
+            <if advanced="$Acc=1">
+                <setvar name="Acc" value="0" />
+                <addtochat color="200">High Accuracy Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+
+    </inputcommands>
+	
+    <idlegear>
+        <if p_status="idle">
+            <equip set="Idle" />
+				<if eq_lring="Emperor Band">
+					<equip lock="true">
+					<lring>Empress Band</lring>                
+					</equip>
+				</if>
+				<if eq_lring="Anniversary Ring">		
+					<equip lock="true">
+					<lring>Anniversary Ring</lring> 
+					</equip>
+				</if>
+				<if eq_lear="Reraise Earring">
+					<equip lock="true">
+					<lear>Reraise Earring</lear> 
+					</equip>
+				</if>
+				<if eq_head="Reraise Hairpin">		
+					<equip lock="true">
+					<head>Reraise Hairpin</head> 
+					</equip>
+				</if>
+				<if eq_body="Tidal Talisman">		
+					<equip lock="true">
+					<body>Tidal Talisman</body> 
+					</equip>
+				</if>
+				<if buffactive="2">
+                    <equip>
+                    <neck>Opo-opo Necklace</neck>
+                    </equip>
+                </if>
+                <if advanced="$Evasion=1">
+                    <equip set="Evasion" />
+                </if>
+                <if advanced="$Acc=1">
+                    <equip set="Acc" />
+                </if>
+                <if advanced="$PhysicalDefense=1">
+                    <equip set="PhysicalDefense" />
+                </if>
+                <if advanced="$MagicDefense=1">
+                    <equip set="MagicDefense" />
+                </if>
+                <if advanced="$FireResist=1">
+                    <equip set="FireResist" />
+                </if>
+                <if advanced="$LightningResist=1">
+                    <equip set="LightningResist" />
+                </if>
+				<if e_area="Windurst*|Port Windurst">
+					<equip set="Town" />
+				</if>
+				<elseif p_ismoving="true">
+					<if e_weatherelement="Earth">
+						<equip set="DesertBoots" />
+					</if>
+				</elseif>
+        </if>
+        <if p_status="engaged">
+                <if advanced="$Evasion=1">
+                    <equip set="Evasion" />
+                </if>
+                <elseif advanced="$PhysicalDefense=1">
+                    <equip set="PhysicalDefense" />
+                </elseif>
+                <elseif advanced="$MagicDefense=1">
+                    <equip set="MagicDefense" />
+                </elseif>
+                <elseif advanced="$FireResist=1">
+                    <equip set="FireResist" />
+                </elseif>
+                <elseif advanced="$LightningResist=1">
+                    <equip set="LightningResist" />
+                </elseif>
+                <elseif advanced="$Acc=1">
+                    <equip set="Acc" />
+                </elseif>
+                <elseif>
+                    <equip set="TP" />
+                </elseif>
+				<if buffactive="2">
+					<equip>
+						<neck>Opo-opo Necklace</neck>
+					</equip>
+				</if>
+				<if buffactive="354&amp;67">
+					<equip>
+						<legs>saotome haidate</legs>
+					</equip>
+				</if>
+                <!--<if buffactive="198">
+                    <equip>
+                        <ear1>Minuet Earring</ear1>
+                    </equip>
+                </if>-->
+
+        </if>           
+    </idlegear>
+	
+	<preranged>
+			<equip set="Preshot" />
+	</preranged>
+
+	<midranged>
+			<equip set="Ranged" />
+	</midranged>
+	
+    <premagic>
+        <equip set="Haste" />
+    </premagic>
+	
+    <midmagic>
+		<if ad_name="Utsusemi: Ichi">
+			<equip set="Haste"/>
+				<if buffactive="66"> <!-- One shadow are left -->
+					<command delay="3545">/cancel 66</command>
+				</if>
+				<else buffactive="444"> <!-- Two shadows are left -->
+					<command delay="3545">/cancel 444</command>
+				</else>
+		</if>
+		<if ad_name="Utsusemi: Ni|Tonko*">
+			<equip set="Haste"/>
+		</if>
+		<if ad_name="Monomi: Ichi">
+			<equip set="Haste"/>
+            <command delay="2800">/cancel 71</command>
+		</if>
+    </midmagic>
+    <jobability>
+        <if ad_name="Provoke"> 
+            <equip set="Provoke">
+			</equip>
+        </if>
+        <if ad_name="Meditate">
+            <equip when="precast">
+                <head>Myochin Kabuto</head>
+				<hands>Saotome Kote</hands>
+            </equip>
+        </if>
+        <if ad_name="Warding Circle">
+            <equip when="precast">
+				<head>Myochin Kabuto</head>
+            </equip>
+        </if>
+		<if ad_name="Curing Waltz*">
+			<equip when="precast">
+				<body>Kirin's Osode</body>
+			</equip>
+		</if>
+    </jobability>   
+	<weaponskill>
+        <if ad_name="Tachi: Jinpu">
+            <equip set="Jinpu" />
+        </if>
+        <elseif ad_name="Penta Thrust">
+            <equip set="Penta" />
+        </elseif>
+	<elseif ad_name="Tachi: Rana">
+            <equip set="Rana" />
+        </elseif>
+	<elseif ad_name="Tachi: Kasha">
+            <equip set="Kasha" />
+        </elseif>
+        <elseif ad_name="Sidewinder">
+            <equip set="Sidewinder" />
+        </elseif>
+        <else>
+            <equip set="WS" />
+        </else>
+        <if e_time="&gt;18.00|&lt;6.00">
+            <equip>
+                <ear1>Vampire Earring</ear1>
+            </equip>
+        </if>
+    </weaponskill>
+</ashitacast>
