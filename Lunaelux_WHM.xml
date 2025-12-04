@@ -508,7 +508,7 @@
 				</elseif>
 
 				<elseif ad_name="Invisible">
-					<equip>
+					<equip set="Haste">
 						<back>Skulker's cape</back>
 					</equip>
 				</elseif>
