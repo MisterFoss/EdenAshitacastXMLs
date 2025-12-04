@@ -1,0 +1,396 @@
+<!--
+          Archaide's Level 75 SMN XML 
+-->
+ 
+ 
+<ashitacast>
+
+    <settings> 
+        <buffupdate>true</buffupdate> 
+        <statusupdate>true</statusupdate> 
+        <hpupdate>false</hpupdate> 
+        <autoupdate>true</autoupdate> 
+    </settings>
+        
+    <init>
+        <!-- This codeblock will automatically change your macro book/page according to the job and subjob list below -->
+        <command delay="1600">/echo Job is %p_job.</command>
+        <command delay="1700">/echo Macro-book $macrobook, Page $macropage.</command>
+        <command delay="2000">/macro book $macrobook</command>
+        <command delay="3000">/macro set $macropage</command>
+        <command delay="3200">/gl blink</command>
+		<command delay="3400">/Addon reload equipviewer</command>
+
+        <if p_mainjob="SMN"><setvar name="macrobook" value="6" /></if>
+        <if p_subjob="WHM"><setvar name="macropage" value="1" /></if>
+        <if p_subjob="NIN"><setvar name="macropage" value="1" /></if>
+        <if p_subjob="THF"><setvar name="macropage" value="1" /></if>
+    </init> 
+    
+    <sets>
+        
+        <set name="Idle">
+            <main>Earth Staff</main>
+			<sub>Bugard Strap +1</sub>
+			<head>Evoker's Horn</head>
+			<body>Yinyang Robe</body>
+			<hands>Summoner's Brcr.</hands>
+			<legs>Evoker's Spats</legs>
+			<feet>Seer's Pumps</feet>
+			<neck>Beak Necklace</neck>
+			<waist>Qiqirn Sash</waist>
+			<ear1>Antivenom Earring</ear1>
+			<ear2>Morion Earring</ear2>
+			<ring2>Astral Ring</ring2>
+			<back>Summoner's Cape</back>
+        </set>
+
+        <set name="Perpetuation" baseset="Idle">
+            <head>Evoker's Horn</head>
+			<body>Yinyang Robe</body>
+			<hands>Summoner's Brcr.</hands>
+			<legs>Evoker's Spats</legs>
+            <ring1>Evoker's Ring</ring1>
+        </set>
+
+        <set name="Perp-DAY">
+            <body>Summoner's Dblt</body>
+        </set>
+
+        <set name="Carbuncle"       baseset="Perpetuation"> <main>apollo's Staff</main> <hands>Carbuncle Mitts</hands> </set>
+        <set name="Dark Perp"       baseset="Perpetuation"> <main>Dark Staff</main> </set>
+        <set name="Fire Perp"       baseset="Perpetuation"> <main>Fire Staff</main> </set>
+        <set name="Ice Perp"        baseset="Perpetuation"> <main>aquilo's Staff</main> </set>
+        <set name="Earth Perp"      baseset="Perpetuation"> <main>Earth Staff</main> </set>
+        <set name="Water Perp"      baseset="Perpetuation"> <main></main> </set>
+        <set name="Lightning Perp"   baseset="Perpetuation"> <main></main> </set>
+        <set name="wind Perp"       baseset="Perpetuation"> <main>Auster's Staff</main> </set>
+        <set name="Light Perp"      baseset="Perpetuation"> <main>apollo's Staff</main> </set>     
+        
+        
+        <set name="Resting">
+            <main>Dark Staff</main>
+			<body>Errant Hpl.</body>
+			<neck>Beak Necklace</neck>
+			<waist>Qiqirn Sash</waist>
+			<ear1>Antivenom Earring</ear1>
+			<ear2>Boroka Earring</ear2>
+        </set>
+        
+        <set name="Cure">
+            <main>apollo's Staff</main>
+        </set>
+
+        <set name="Stoneskin">
+			<main>Kirin's Pole</main>
+			<sub>Bugard Strap +1</sub>
+			<body>Errant Hpl.</body>
+			<hands>Zealot's Mitts</hands>
+			<legs>Errant Slops</legs>
+			<feet>Seer's Pumps</feet>
+			<neck>Promise Badge</neck>
+			<waist>Friar's Rope</waist>
+			<back>Rainbow Cape</back>
+        </set>
+        
+        <set name="Town">
+        	<body>Federation aketon</body>
+        </set>
+           
+        <set name="TP-Set">
+        </set>  
+        
+        <set name="Precast">
+        </set>
+        
+        <set name="BP-Delay">
+            <body>Yinyang Robe</body>
+			<hands>Summoner's Brcr.</hands>
+        </set>  
+        
+        <set name="Siphon">            
+        </set>
+        
+        <set name="Haste">
+            <head>Walahra Turban</head>
+        </set>
+	</sets> 
+ 
+ 
+	<!--
+	 IMPORTANT CODE BELOW  
+	 DO NOT TOUCH UNLESS YOU KNOW WHAT YOU'RE DOING! 
+	-->
+ 
+        
+    <variables>
+        <var name="MDTSetActive">0</var>
+        <var name="PDTSetActive">0</var>
+    </variables>
+       
+    <inputcommands>
+        <cmd input="/killall">
+            <setvar name="MDTSetActive" value="0" />
+            <setvar name="PDTSetActive" value="0" />
+            <addtochat color="57">Reset it all!</addtochat>
+        </cmd>      
+    
+ 
+        <!-- MDT set toggle -->
+        <!-- As stated, you can alter the command input below if you wish -->
+        <cmd input="/mdt">
+ 
+            <setvar name="PDTSetActive" value="0" />
+            <if advanced="$MDTSetActive=0">
+                <setvar name="MDTSetActive" value="1" />
+                <addtochat color="57">MDT set enabled!</addtochat>
+            </if>
+            <else>
+                <setvar name="MDTSetActive" value="0" />
+                <addtochat color="57">MDT set disabled.</addtochat>
+            </else>
+        </cmd>
+        
+        <!-- PDT set toggle -->
+        <!-- As stated, you can alter the command input below if you wish -->
+        <cmd input="/pdt">
+ 
+            <setvar name="MDTSetActive" value="0" />
+            <if advanced="$PDTSetActive=0">
+                <setvar name="PDTSetActive" value="1" />
+                <addtochat color="57">PDT set enabled!</addtochat>
+            </if>
+            <else>
+                <setvar name="PDTSetActive" value="0" />
+                <addtochat color="57">PDT set disabled.</addtochat>
+            </else>
+        </cmd>         
+    </inputcommands>
+          
+    <preranged>
+    </preranged>
+    <midranged>
+        
+    </midranged>
+	
+    <premagic>
+ 
+        <equip set="Precast" />
+ 
+
+    </premagic>
+        
+    <midmagic>
+        <if ad_type="whitemagic">
+            <if ad_skill="healingmagic">
+                <if ad_name="Cure*|Curaga*">
+                    <elseif>
+                    <equip set="Cure"/>
+                    </elseif>
+                </if>
+            </if>
+            <elseif ad_skill="enhancingmagic">
+                <if ad_name="Stoneskin">
+                    <equip set="Stoneskin"/>
+                </if>
+
+                <elseif ad_name="Sneak">
+                    <equip set="Haste">
+                        <feet>Dream boots +1</feet>
+                        <back>Skulker's cape</back>
+                    </equip>
+                    <if advanced="%at_type=self">
+                        <command delay="1400">/cancel 71</command>
+                    </if>
+                </elseif>
+    
+                <elseif ad_name="Invisible">
+                    <equip>
+                        <back>Skulker's cape</back>
+                    </equip>
+                </elseif>
+    
+                <else>
+                    <equip set="Haste" />
+                </else>
+            </elseif>
+
+            <else>
+                    <equip set="Haste" />
+            </else>
+        </if>
+        <else>
+            <equip set="Haste" />
+        </else>    
+    </midmagic>
+        
+    <idlegear>
+
+        <if pet_name="Carbuncle">
+            <equip set="Carbuncle" />
+            <if advanced="%e_day=lightsday">
+                <equip set="Perp-DAY" />
+            </if>
+        </if>
+        
+        <elseif pet_name="Ifrit|Fire*">
+            <equip set="Fire Perp" />
+            <if advanced="%e_day=firesday">
+                <equip set="Perp-DAY" />
+            </if>
+        </elseif>
+        
+        <elseif pet_name="Titan|Earth*">
+            <equip set="Earth Perp" />
+            <if advanced="%e_day=earthsday">
+                <equip set="Perp-DAY" />
+            </if>
+        </elseif>
+        
+        <elseif pet_name="Leviathan|Water*">
+            <equip set="Water Pepr" />
+            <if advanced="%e_day=watersday">
+                <equip set="Perp-DAY" />
+            </if>
+        </elseif>
+        
+        <elseif pet_name="Garuda|Wind*">
+            <equip set="Wind Perp" />
+            <if advanced="%e_day=windsday">
+                <equip set="Perp-DAY" />
+            </if>
+        </elseif>
+        
+        <elseif pet_name="Shiva|Ice*">
+            <equip set="Ice Perp" />
+            <if advanced="%e_day=iceday">
+                <equip set="Perp-DAY" />
+            </if>
+        </elseif>
+        
+        <elseif pet_name="Ramuh|Lightning*">
+            <equip set="Lightning Perp" />
+            <if advanced="%e_day=lightningday">
+                <equip set="Perp-DAY" />
+            </if>
+        </elseif>
+        
+        <elseif pet_name="Fenrir|Diabolos|Dark*">
+            <equip set="Dark Perp" />
+            <if advanced="%e_day=darksday">
+                <equip set="Perp-DAY" />
+            </if>
+        </elseif>
+        
+        <elseif pet_name="LightSpirit">
+            <equip set="Light Perp" />
+            <if advanced="%e_day=lightsday">
+                <equip set="Perp-DAY" />
+            </if>
+        </elseif>
+        <elseif p_status="resting">
+            <equip set="Resting" />
+        </elseif>
+        
+        <elseif advanced="$MDTSetActive=1">
+            <equip set="MDT" />
+                <if p_ismoving="True">
+                    <equip set="Movement" />
+                </if>
+        </elseif>
+ 
+        <elseif advanced="$PDTSetActive=1">
+            <equip set="PDT"/>
+                <if p_ismoving="True">
+                    <equip set="Movement" />
+                </if>
+        </elseif>
+        <elseif p_status="engaged">
+            <equip set="TP-Set" />
+        </elseif>
+        <else>
+			<equip set="Idle" />
+ 			<if e_area="Windurst*|Port Windurst">
+				<equip set="Town"/>
+			</if>
+			
+			<if eq_main="Warp Cudgel|trick Staff II|treat staff II">
+				<equip lock="true">
+					<main>%eq_main</main>
+				</equip>
+			</if>		
+			<if eq_head="Nomad cap">
+				<equip>
+					<head>%eq_head</head>
+				</equip>
+			</if>
+			<if eq_body="Tidal Talisman">
+				<equip>
+					<body>%eq_body</body>
+				</equip>
+			</if>
+			<if eq_ring1="Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+				<equip lock="true">
+					<ring1>%eq_ring1</ring1>
+				</equip>
+			</if>
+			<if eq_ring2="Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+				<equip lock="true">
+					<ring2>%eq_ring2</ring2>
+				</equip>
+			</if>
+        </else>
+
+    </idlegear>     
+       
+    <jobability>
+        <if ad_name="
+                |Shining Ruby|Glittering Ruby|
+                |Crimson Howl|Inferno Howl|
+                |Frost Armor|Crystal Blessing|
+                |Aerial Armor|Hastega II|Fleet Wind|Hastega|
+                |Earthen Ward|Earthen Armor|
+                |Rolling Thunder|Lightning Armor|
+                |Soothing Current|
+                |Ecliptic Growl|Ecliptic Howl|Heavenward Howl|
+                |Noctoshield|Dream Shroud|
+                |Altana's Favor|Reraise*|Raise*|
+               
+                |Diamond Storm|Sleepga|
+                |Shock Squall|
+                |Slowga|Tidal Roar|
+                |Pavor Nocturnus|Ultimate Terror|Nightmare|
+                |Mewing Lullaby|Eerie Eye|
+               
+                |Healing Ruby*|Whispering Wind|Spring Water|
+               
+                |Poison Nails|
+                |Double Punch|Punch|
+                |Axe Kick|Rush|Slap|
+                |Claw|Predator Claws|
+                |Rock Buster|Mountain Buster|Rock Throw|Crag Throw|Megalith Throw|
+                |Chaotic Strike|Volt Strike|
+                |Tail Whip|Spinning Dive|Barracuda Dive|
+                |Crescent Fang|Eclipse Bite|Moonlit Charge|
+                |Blindside|Camisado|
+                |Regal Scratch|Regal Gash|
+               
+                |Burning Strike|Flaming Crush|
+                |Searing Light|Meteorite|Holy Mist|
+                |Inferno|Fire II|Fire IV|Meteor Strike|Conflag Strike|
+                |Diamond Dust|Blizzard II|Blizzard IV|Heavenly Strike|
+                |Aerial Blast|Aero II|Aero IV|Wind Blade|
+                |Earthen Fury|Stone II|Stone IV|Geocrush|
+                |Judgement Bolt|Thunder II|Thunder IV|Thunderstorm|Thunderspark|
+                |Tidal Wave|Water II|Water IV|Grand Fall|
+                |Howling Moon|Lunar Bay|
+                |Ruinous Omen|Somnolence|Nether Blast|Night Terror|
+                |Level ? Holy">
+            <equip set="BP-Delay" />
+        </if>
+        <if ad_name="Elemental Siphon">
+
+        </if>
+    </jobability>
+
+</ashitacast>
