@@ -39,11 +39,16 @@
 		
 		<!-- Equiped when resting -->
 		<set name="Resting" baseset="Idle">
-			<main>Pilgrim's wand</main>			
+			<main>Dark staff</main>
+			<neck>Beak Necklace</neck>
+			<body>Seer's tunic</body>
+			<waist>Mohbwa Sash</waist>
+			<ear1>Antivenom earring</ear1>			
 		</set>
 		
 		<!-- Town gear, only in windurst currently -->
 		<set name="Town" baseset="Idle">
+			<body>Federation aketon</body>
 		</set>
 		
 		<!-- Equiped when runing-->
@@ -72,22 +77,16 @@
 		
 		<!-- All elemental including DoTs, addi if needed-->
 		<set name="Elemental" baseset="Haste">
-			<main>yew wand +1</main>
-			<sub></sub>
-			<ammo></ammo>
-			<head></head>
-			<body>ryl.ftm. tunic</body>
-			<hands></hands>
-			<legs></legs>
-			<feet></feet>
-			<neck></neck>
-			<waist></waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1>Eremite's ring</ring1>
-			<ring2>Eremite's ring</ring2>
-			<back></back>
-		</set>
+			<sub>Rose Wand +1</sub>
+			<head>Seer's Crown</head>
+			<hands>Seer's Mitts</hands>
+			<legs>Seer's Slacks +1</legs>
+			<feet>Seer's Pumps</feet>
+			<ear1>Moldavite Earring</ear1>
+			<ear2>Morion Earring</ear2>
+			<ring1>Eremite's Ring</ring1>
+			<ring2>Eremite's Ring</ring2>
+ 		</set>
 
 		<set name="Elem_Debuffs">
 
@@ -114,20 +113,15 @@
 		
 		<!-- Black magic based enfeebeling-->
 		<set name="Enfeeble-INT">
-			<sub></sub>
-			<ammo></ammo>
-			<head></head>
-			<body>ryl.ftm. tunic</body>
-			<hands></hands>
-			<legs></legs>
-			<feet></feet>
-			<neck></neck>
-			<waist></waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1>Eremite's ring</ring1>
-			<ring2>Eremite's ring</ring2>
-			<back></back>
+			<sub>Rose Wand +1</sub>
+			<head>Seer's Crown</head>
+			<hands>Seer's Mitts</hands>
+			<legs>Seer's Slacks +1</legs>
+			<feet>Seer's Pumps</feet>
+			<ear1>Morion Earring</ear1>
+			<ear2>Morion Earring</ear2>
+			<ring1>Eremite's Ring</ring1>
+			<ring2>Eremite's Ring</ring2>
 		</set>
 		
 		<!-- Stoneskin set, max mind -->
@@ -204,24 +198,30 @@
 		-->
 		
 		<set name="BaseCastingMain">
-			<main>yew wand +1</main>
+			<main>Rose Wand +1</main>
 		</set>
 
 		<set name="Dark-acc" baseset="BaseCastingMain">
+			<main>Dark staff</main>
 		</set>
 		<set name="Light-acc" baseset="BaseCastingMain">
+			<main>Apollo's staff</main>
 		</set>
 		<set name="Ice-acc" baseset="BaseCastingMain">
+			<main>Aquilo's staff</main>
 		</set>
 		<set name="Fire-acc" baseset="BaseCastingMain">
+			<main>Fire staff</main>
 		</set>
 		<set name="Thunder-acc" baseset="BaseCastingMain">
 		</set>
 		<set name="Water-acc" baseset="BaseCastingMain">
 		</set>
 		<set name="Earth-acc" baseset="BaseCastingMain">
+			<main>Earth staff</main>
 		</set>
 		<set name="Wind-acc" baseset="BaseCastingMain">
+			<main>Auster's staff</main>
 		</set>
 		
 		<!-- Melee mode sets, toggle with "/1h, /2h, /dw". well lock main and sub to prevent tp loss lose tp. -->
@@ -297,6 +297,38 @@
 			
 		</set>
 		
+		<set name="dumpcasting">
+			<main>Yew Wand +1</main>
+			<sub>Yew Wand +1</sub>
+			<head>Seer's Crown</head>
+			<body>Savage Separates</body>
+			<hands>Seer's Mitts</hands>
+			<legs>Seer's Slacks +1</legs>
+			<feet>Seer's Pumps</feet>
+			<neck>Justice Badge</neck>
+			<waist>Mohbwa Sash</waist>
+			<ear1>Moldavite Earring</ear1>
+			<ear2>Morion Earring</ear2>
+			<ring1>Eremite's Ring</ring1>
+			<ring2>Eremite's Ring</ring2>
+			<back>Mist Silk Cape</back>
+		</set>
+		<set name="castingdump">
+			<main>Rose Wand +1</main>
+			<sub>Rose Wand +1</sub>
+			<head>Seer's Crown</head>
+			<body>Savage Separates</body>
+			<hands>Seer's Mitts</hands>
+			<legs>Seer's Slacks +1</legs>
+			<feet>Seer's Pumps</feet>
+			<neck>Justice Badge</neck>
+			<waist>Mohbwa Sash</waist>
+			<ear1>Moldavite Earring</ear1>
+			<ear2>Morion Earring</ear2>
+			<ring1>Eremite's Ring</ring1>
+			<ring2>Eremite's Ring</ring2>
+			<back>Mist Silk Cape</back>
+		</set>
 	</sets> 
 
 	<!-- 
