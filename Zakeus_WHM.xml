@@ -1,5 +1,4 @@
 
-
 <!--  																								
 									White mage 75 cap Ashitacast
 -->
@@ -152,9 +151,9 @@
 			<waist>Cleric's belt</waist>
 			<ear1>Harvent earring</ear1>
 			<ear2></ear2>
-			<ring1>Saintly ring</ring1>
-			<ring2>Saintly ring</ring2>
-			<back>White cape</back>
+			<ring1>sapphire ring</ring1>
+			<ring2>sapphire ring</ring2>
+			<back>Prism Cape</back>
 		</set>
 		
 		<!-- white magic based efeebling-->
@@ -171,9 +170,9 @@
 			<waist>Cleric's belt</waist>
 			<ear1>Harvent earring</ear1>
 			<ear2></ear2>
-			<ring1>Saintly ring</ring1>
-			<ring2>Saintly ring</ring2>
-			<back>White cape</back>
+			<ring1>sapphire ring</ring1>
+			<ring2>sapphire ring</ring2>
+			<back>Prism Cape</back>
 		</set>
 		
 		<!-- Black magic based enfeebeling-->
@@ -192,7 +191,7 @@
 			<ear2>Cunning earring</ear2>
 			<ring1>Ermite's ring</ring1>
 			<ring2>Ermite's ring</ring2>
-			<back>Black cape</back>
+			<back>Prism Cape</back>
 		</set>
 		
 		<!-- Stoneskin set, max mind -->
@@ -209,9 +208,9 @@
 			<waist>Cleric's belt</waist>
 			<ear1>Harvent earring</ear1>
 			<ear2></ear2>
-			<ring1>Saintly ring</ring1>
-			<ring2>Saintly ring</ring2>
-			<back>White cape</back>
+			<ring1>sapphire ring</ring1>
+			<ring2>sapphire ring</ring2>
+			<back>Prism Cape</back>
 		</set>
 		
 		<!-- Cursna -->
@@ -234,9 +233,9 @@
 			<waist>Cleric's belt</waist>
 			<ear1>Harvent earring</ear1>
 			<ear2></ear2>
-			<ring1>Saintly ring</ring1>
-			<ring2>Saintly ring</ring2>
-			<back>White cape</back>
+			<ring1>sapphire ring</ring1>
+			<ring2>sapphire ring</ring2>
+			<back>Prism Cape</back>
 		</set>
 		
 		<set name="Barspells" baseset="Haste">
@@ -272,7 +271,7 @@
 			<ear2>Cunning earring</ear2>
 			<ring1></ring1>
 			<ring2></ring2>
-			<back>Black cape</back>
+			<back>Prism Cape</back>
 		</set>
 		
 		<!-- All elemental including DoTs, addi if needed-->
@@ -291,7 +290,7 @@
 			<ear2>Cunning earring</ear2>
 			<ring1></ring1>
 			<ring2></ring2>
-			<back>Black cape</back>
+			<back>Prism Cape</back>
 		</set>
 		
 
@@ -574,7 +573,14 @@
 		<elseif ad_type="whitemagic">
 			<if ad_skill="healingmagic">
 				<if ad_name="Cure*|Cura*">
-					<equip set="Cure"/>
+					<if advanced="(%p_hpp&lt;75)">
+						<equip set="Cure">
+							<ring1>Medicine Ring</ring1>
+						</equip>
+					</if>
+					<else>
+						<equip set="Cure"/>
+					</else>
 				</if>
 				<elseif ad_name="*na">
 					<if ad_name="Cursna">

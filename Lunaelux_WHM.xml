@@ -215,12 +215,12 @@
 
 		<set name="Dark-acc" 	baseset="BaseCastingMain"> <main>Dark Staff</main> </set>
 		<set name="Light-acc" 	baseset="BaseCastingMain"> <main>Apollo's Staff</main> </set>
-		<set name="Ice-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Ice-acc" 	baseset="BaseCastingMain"> <main>Aquilo's Staff</main></set>
 		<set name="Fire-acc" 	baseset="BaseCastingMain"> </set>
 		<set name="Thunder-acc" baseset="BaseCastingMain"> </set>
 		<set name="Water-acc" 	baseset="BaseCastingMain"> </set>
 		<set name="Earth-acc" 	baseset="BaseCastingMain"> <main>Earth Staff</main> </set>
-		<set name="Wind-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Wind-acc" 	baseset="BaseCastingMain"> <main>Auster's Staff</main> </set>
 		
 		<!-- Melee mode sets, toggle with "/1h, /2h, /dw". well lock main and sub to prevent tp loss lose tp. -->
 		
@@ -460,9 +460,16 @@
 		
 		<elseif ad_type="whitemagic">
 			<if ad_skill="healingmagic">
-				<if ad_name="Cure*|Cura*">
-					<equip set="Cure"/>
-				</if>
+<if ad_name="Cure*|Cura*">
+	<if advanced="(%p_hpp&lt;75)">
+		<equip set="Cure">
+			<ring1>Medicine Ring</ring1>
+		</equip>
+	</if>
+	<else>
+		<equip set="Cure"/>
+	</else>
+</if>
 				<elseif ad_name="*na">
 					<if ad_name="Cursna">
 						<equip set="Cursna"/>
