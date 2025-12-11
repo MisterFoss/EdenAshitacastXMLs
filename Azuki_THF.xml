@@ -282,6 +282,7 @@
             <equip when="precast">
                 <head>Rogue's Bonnet</head>
                 <feet>Rogue's Poulaines</feet>
+                <ring1>Rogue's Ring</ring1>
                 <!-- 
                 <neck>Rabbit Charm</neck>
                 <hands>Thief's Kote</hands>
