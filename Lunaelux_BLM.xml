@@ -168,6 +168,7 @@
 		
 		<!-- When castin Cure* Cura* spells-->
 		<set name="Cure" baseset="Haste">
+			<main>Apollo's staff</main>
 			<sub></sub>
 			<ammo></ammo>
 			<head></head>
@@ -461,8 +462,7 @@
 		</elseif>	
 		
 		<elseif ad_name="Paralyze*|Bind|Frost|Blizzard*|Blizzaga*|Freeze*">
-			<equip set="Earth-acc" lock="true"/>
-			<equip set="Ice-acc" lock="true"/>
+ 			<equip set="Ice-acc" lock="true"/>
 		</elseif>
 		
 		<elseif ad_name="Silence|Choke|Gravity|Aero*|Aeroga*|Tornado*">
@@ -545,7 +545,6 @@
 					<equip lock="true">
 						<legs>Sorcerer's Tonban</legs>
 					</equip>
-					<addtochat color="200">%ad_element-belt</addtochat>
 					<equip set="%ad_element-belt"/>
 				</elseif>	
 				<elseif advanced="%ad_element=%e_weatherelement">
