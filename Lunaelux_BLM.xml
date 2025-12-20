@@ -241,6 +241,7 @@
 		<set name="Thunder-acc" baseset="BaseCastingMain">
 		</set>
 		<set name="Water-acc" baseset="BaseCastingMain">
+			<main>Water staff</main>
 		</set>
 		<set name="Earth-acc" baseset="BaseCastingMain">
 			<main>Earth staff</main>

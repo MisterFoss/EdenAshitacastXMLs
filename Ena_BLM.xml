@@ -54,8 +54,8 @@
 		<!-- Equiped when resting -->
 		<set name="Resting" baseset="Idle">
 			<main>Dark staff</main>
-			<neck>Beak Necklace</neck>
-			<body>Seer's tunic</body>
+			<neck>Beak Necklace</neck>			
+			<body>Vermillion Cloak</body>
 			<waist>Mohbwa Sash</waist>
 			<ear1>Antivenom earring</ear1>			
 		</set>
@@ -180,20 +180,14 @@
 		</set>
 			
 		<set name="DarkMagic" baseset="Haste">
-			<sub></sub>
-			<ammo></ammo>
-			<head></head>
-			<body></body>
-			<hands></hands>
-			<legs></legs>
-			<feet></feet>
-			<neck></neck>
-			<waist></waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
-			<back></back>
+			<head>Wizard's Petasos</head>
+			<hands>Seer's Mitts</hands>
+			<legs>Wizard's Tonban</legs>
+			<feet>Wizard's Sabots</feet>
+			<ear1>Morion Earring</ear1>
+			<ear2>Morion Earring</ear2>
+			<ring1>Eremite's Ring</ring1>
+			<ring2>Eremite's Ring</ring2>
 		</set>
 		<set name="Light-belt">
 		</set>
@@ -235,6 +229,7 @@
 		<set name="Thunder-acc" baseset="BaseCastingMain">
 		</set>
 		<set name="Water-acc" baseset="BaseCastingMain">
+			<main>Water staff</main>
 		</set>
 		<set name="Earth-acc" baseset="BaseCastingMain">
 			<main>Earth staff</main>
@@ -324,6 +319,16 @@
 			<legs>Seer's Slacks +1</legs>
 			<feet>Wizard's Sabots</feet>
 			<ear1>Moldavite Earring</ear1>
+			<ear2>Morion Earring</ear2>
+			<ring1>Eremite's Ring</ring1>
+			<ring2>Eremite's Ring</ring2>
+		</set>
+		<set name="dumbDark">
+			<head>Wizard's Petasos</head>
+			<hands>Seer's Mitts</hands>
+			<legs>Wizard's Tonban</legs>
+			<feet>Wizard's Sabots</feet>
+			<ear1>Morion Earring</ear1>
 			<ear2>Morion Earring</ear2>
 			<ring1>Eremite's Ring</ring1>
 			<ring2>Eremite's Ring</ring2>
