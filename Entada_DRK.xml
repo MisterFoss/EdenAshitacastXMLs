@@ -57,7 +57,7 @@
 <!-- Default TP Set -->
         <set name="TP">
 			<head>Walahra Turban</head>
-			<body>Haubergeon</body>
+			<body>scorpion harness</body>
 			<hands>Dusk Gloves</hands>
 			<legs>Ryl.Kgt. Breeches</legs>
 			<feet>Dusk Ledelsens</feet>
@@ -119,7 +119,7 @@
 <!-- Default WS Set -->		
         <set name="WS">
 			<head>Walkure Mask</head>
-			<body>Haubergeon</body>
+			<body>scorpion harness</body>
 			<hands>Ryl.Kgt. Mufflers</hands>
 			<legs>Ryl.Kgt. Breeches</legs>
 			<feet>Dusk Ledelsens</feet>
