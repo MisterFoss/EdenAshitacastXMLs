@@ -55,7 +55,8 @@
 		<set name="Resting" baseset="Idle">
 			<main>Dark staff</main>
 			<neck>Beak Necklace</neck>
-			<body>Seer's tunic</body>
+			<head>Wizard's Petasos</head>
+			<body>Errant Hpl.</body>
 			<waist>qiqirn Sash</waist>
 			<ear1>Antivenom earring</ear1>			
 		</set>
@@ -106,15 +107,15 @@
 		<set name="Elemental" baseset="Haste">
 			<sub>Bugard Strap +1</sub>
 			<head>Wizard's Petasos</head>
-			<hands>Wizard's Gloves</hands>
-			<legs>Seer's Slacks +1</legs>
+			<body>Igqira Weskit</body>
+			<hands>Seer's Mitts</hands>
+			<legs>Errant Slops</legs>
 			<feet>Wizard's Sabots</feet>
-			<ear1>Moldavite Earring</ear1>
-			<ear2>Morion Earring</ear2>
-			<waist>Mrc.Cpt. Belt</waist>
-			<back>Red cape</back>
+			<ear1>Abyssal Earring</ear1>
+			<ear2>Moldavite Earring</ear2>
 			<ring1>Eremite's Ring</ring1>
 			<ring2>Eremite's Ring</ring2>
+			<back>Rainbow Cape</back>
  		</set>
 
 		<set name="Elem_Debuffs">
@@ -186,20 +187,16 @@
 		</set>
 			
 		<set name="DarkMagic" baseset="Haste">
-			<sub></sub>
-			<ammo></ammo>
-			<head></head>
-			<body></body>
-			<hands></hands>
-			<legs></legs>
-			<feet></feet>
-			<neck></neck>
-			<waist></waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
-			<back></back>
+			<head>Wizard's Petasos</head>
+			<body>Errant Hpl.</body>
+			<hands>Seer's Mitts</hands>
+			<legs>Wizard's Tonban</legs>
+			<waist>Mrc.Cpt. Belt</waist>
+			<ear1>Abyssal Earring</ear1>
+			<ear2>Boroka Earring</ear2>
+			<ring1>Eremite's Ring</ring1>
+			<ring2>Eremite's Ring</ring2>
+			<back>Rainbow Cape</back>
 		</set>
 		<set name="Light-belt">
 		</set>
@@ -321,19 +318,6 @@
 		
 		<set name="HexaStrike" baseset="TP-Set">
 			
-		</set>
-		
-		<set name="dumpCasting">
-			<main>Earth Staff</main>
-			<sub>Bugard Strap +1</sub>
-			<head>Wizard's Petasos</head>
-			<hands>Wizard's Gloves</hands>
-			<legs>Seer's Slacks +1</legs>
-			<feet>Wizard's Sabots</feet>
-			<ear1>Moldavite Earring</ear1>
-			<ear2>Morion Earring</ear2>
-			<ring1>Eremite's Ring</ring1>
-			<ring2>Eremite's Ring</ring2>
 		</set>
 	</sets> 
 
@@ -496,13 +480,20 @@
 				</else>
 			</if>
 			<elseif ad_name="Sneak">
-				<equip set="Haste">
-					<feet>Dream boots +1</feet>
-				</equip>
-				<if advanced="%at_type=self">
-					<command delay="1400">/cancel 71</command>
-				</if>
-			</elseif>
+					<equip set="Haste">
+						<feet>Dream boots +1</feet>
+						<back>Skulker's cape</back>
+					</equip>
+					<if advanced="%at_type=self">
+						<command delay="1400">/cancel 71</command>
+					</if>
+				</elseif>
+
+				<elseif ad_name="Invisible">
+					<equip set="Haste">
+						<back>Skulker's cape</back>
+					</equip>
+				</elseif>
 			<elseif ad_skill="enhancingmagic">
 	
 				<if ad_name="Stoneskin">
@@ -644,12 +635,12 @@
 					<body>%eq_body</body>
 				</equip>
 			</if>
-			<if eq_ring1="Empress Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+			<if eq_ring1="Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
 				<equip lock="true">
 					<ring1>%eq_ring1</ring1>
 				</equip>
 			</if>
-			<if eq_ring2="Empress Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+			<if eq_ring2="Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
 				<equip lock="true">
 					<ring2>%eq_ring2</ring2>
 				</equip>
