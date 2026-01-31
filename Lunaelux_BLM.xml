@@ -40,25 +40,27 @@
 			<main>Earth Staff</main>
 			<sub>Bugard Strap +1</sub>
 			<body>Vermillion Cloak</body>
-			<hands>Savage Gauntlets</hands>
-			<legs>Savage Loincloth</legs>
+			<hands>Wizard's Gloves</hands>
+			<legs>Wizard's Tonban</legs>
 			<feet>Wizard's Sabots</feet>
 			<neck>Beak Necklace</neck>
-			<waist>Mohbwa Sash</waist>
+			<waist>Qiqirn Sash</waist>
 			<ear1>Antivenom Earring</ear1>
-			<ear2>Morion Earring</ear2>
-			<ring1>Vilma's Ring</ring1>
-			<ring2>Astral Ring</ring2>
+			<ear2>Abyssal Earring</ear2>
+			<ring1>Astral Ring</ring1>
+			<ring2>Tamas Ring</ring2>
+			<back>Rainbow Cape</back>
 		</set>
 		
 		<!-- Equiped when resting -->
 		<set name="Resting" baseset="Idle">
-			<main>Dark staff</main>
-			<neck>Beak Necklace</neck>
-			<head>Wizard's Petasos</head>
+			<main>Dark Staff</main>
+			<head>Sorcerer's Petas.</head>
 			<body>Errant Hpl.</body>
-			<waist>qiqirn Sash</waist>
-			<ear1>Antivenom earring</ear1>			
+			<neck>Beak Necklace</neck>
+			<waist>Qiqirn Sash</waist>
+			<ear1>Antivenom Earring</ear1>
+			<ear2>Boroka Earring</ear2>			
 		</set>
 		
 		<!-- Town gear, only in windurst currently -->
@@ -100,6 +102,8 @@
 		
 		<!-- Max Haste, Deafault spellcasting set -->
 		<set name="Haste">
+			<head>Walahra Turban</head>
+			<body>Igqira Weskit</body>
 			<feet>Wizard's Sabots</feet>
 		</set>
 		
@@ -126,45 +130,47 @@
 		<!-- white magic based efeebling-->
 		<set name="Enfeeble-MND">
 			<sub>Bugard Strap +1</sub>
+			<head>Sorcerer's Petas.</head>
 			<body>Wizard's Coat</body>
-			<hands>Savage Gauntlets</hands>
-			<legs>Savage Loincloth</legs>
+			<hands>Seer's Mitts</hands>
+			<legs>Errant Slops</legs>
 			<feet>Seer's Pumps</feet>
-			<neck>Justice Badge</neck>
-			<waist>Friar's Rope</waist>
-			<back>Red cape</back>
+			<neck>Promise Badge</neck>
 			<waist>Mrc.Cpt. Belt</waist>
-			<ring1>Saintly Ring</ring1>
-			<ring2>Saintly Ring</ring2>
-			<back>Mist Silk Cape</back>
+			<ring1>Sapphire Ring</ring1>
+			<ring2>Tamas Ring</ring2>
+			<back>Rainbow Cape</back>
 		</set>
 		
 		<!-- Black magic based enfeebeling-->
 		<set name="Enfeeble-INT">
 			<sub>Bugard Strap +1</sub>
-			<head>Wizard's Petasos</head>
+			<head>Sorcerer's Petas.</head>
 			<body>Wizard's Coat</body>
 			<hands>Seer's Mitts</hands>
-			<legs>Seer's Slacks +1</legs>
-			<back>Red cape</back>
+			<legs>Errant Slops</legs>
 			<waist>Mrc.Cpt. Belt</waist>
-			<ear1>Morion Earring</ear1>
-			<ear2>Morion Earring</ear2>
-			<ring1>Eremite's Ring</ring1>
-			<ring2>Eremite's Ring</ring2>
+			<ear1>Abyssal Earring</ear1>
+			<ear2>Boroka Earring</ear2>
+			<ring1>Diamond Ring</ring1>
+			<ring2>Tamas Ring</ring2>
+			<back>Rainbow Cape</back>
 		</set>
 		
 		<!-- Stoneskin set, max mind -->
 		<set name="Stoneskin" baseset="Haste">
+			<main>Kirin's Pole</main>
 			<sub>Bugard Strap +1</sub>
-			<hands>Savage Gauntlets</hands>
-			<legs>Savage Loincloth</legs>
+			<head>Walahra Turban</head>
+			<body>Errant Hpl.</body>
+			<hands>Zealot's Mitts</hands>
+			<legs>Errant Slops</legs>
 			<feet>Seer's Pumps</feet>
-			<neck>Justice Badge</neck>
-			<waist>Friar's Rope</waist>
-			<ring1>Saintly Ring</ring1>
-			<ring2>Saintly Ring</ring2>
-			<back>Mist Silk Cape</back>
+			<neck>Promise Badge</neck>
+			<waist>Mrc.Cpt. Belt</waist>
+			<ring1>Sapphire Ring</ring1>
+			<ring2>Tamas Ring</ring2>
+			<back>Rainbow Cape</back>
 		</set>
 		
 		<!-- When castin Cure* Cura* spells-->
@@ -194,8 +200,8 @@
 			<waist>Mrc.Cpt. Belt</waist>
 			<ear1>Abyssal Earring</ear1>
 			<ear2>Boroka Earring</ear2>
-			<ring1>Eremite's Ring</ring1>
-			<ring2>Eremite's Ring</ring2>
+			<ring1>Diamond Ring</ring1>
+			<ring2>Tamas Ring</ring2>
 			<back>Rainbow Cape</back>
 		</set>
 		<set name="Light-belt">
@@ -319,6 +325,7 @@
 		<set name="HexaStrike" baseset="TP-Set">
 			
 		</set>
+
 	</sets> 
 
 	<!-- 
