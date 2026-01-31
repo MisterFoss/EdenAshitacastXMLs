@@ -65,7 +65,7 @@
 		
 		<!-- Town gear, only in windurst currently -->
 		<set name="Town" baseset="Idle">
-			<head>Wizard's Petasos</head>
+			<head>Sorcerer's Petas.</head>
 			<body>Federation aketon</body>
 		</set>
 		
