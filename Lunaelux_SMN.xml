@@ -32,7 +32,7 @@
         <set name="Idle">
             <main>Earth Staff</main>
 			<sub>Bugard Strap +1</sub>
-			<head>Evoker's Horn</head>
+			<head>Summoner's Horn</head>
 			<body>Yinyang Robe</body>
 			<hands>Summoner's Brcr.</hands>
 			<legs>Evoker's Spats</legs>
@@ -41,12 +41,13 @@
 			<waist>Qiqirn Sash</waist>
 			<ear1>Antivenom Earring</ear1>
 			<ear2>Morion Earring</ear2>
+            <ring2>Astral Ring</ring2>
 			<ring2>Astral Ring</ring2>
 			<back>Summoner's Cape</back>
         </set>
 
         <set name="Perpetuation" baseset="Idle">
-            <head>Evoker's Horn</head>
+            <head>Summoner's Horn</head>
 			<body>Yinyang Robe</body>
 			<hands>Summoner's Brcr.</hands>
 			<legs>Evoker's Spats</legs>
@@ -62,8 +63,8 @@
         <set name="Fire Perp"       baseset="Perpetuation"> <main>Fire Staff</main> </set>
         <set name="Ice Perp"        baseset="Perpetuation"> <main>aquilo's Staff</main> </set>
         <set name="Earth Perp"      baseset="Perpetuation"> <main>Earth Staff</main> </set>
-        <set name="Water Perp"      baseset="Perpetuation"> <main></main> </set>
-        <set name="Lightning Perp"   baseset="Perpetuation"> <main></main> </set>
+        <set name="Water Perp"      baseset="Perpetuation"> <main>Water staff</main> </set>
+        <set name="Lightning Perp"   baseset="Perpetuation"> <main>Thunder staff</main> </set>
         <set name="wind Perp"       baseset="Perpetuation"> <main>Auster's Staff</main> </set>
         <set name="Light Perp"      baseset="Perpetuation"> <main>apollo's Staff</main> </set>     
         
@@ -104,11 +105,13 @@
         </set>
         
         <set name="BP-Delay">
+            <head>Summoner's Horn</head>
             <body>Yinyang Robe</body>
 			<hands>Summoner's Brcr.</hands>
         </set>  
         
-        <set name="Siphon">            
+        <set name="Siphon">
+            <head>Evoker's horn</head>            
         </set>
         
         <set name="Haste">

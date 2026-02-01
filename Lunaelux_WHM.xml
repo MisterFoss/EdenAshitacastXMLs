@@ -34,17 +34,18 @@
 	<sets>
 		<set name="Idle">
 			<main>earth staff</main>
+			<sub>Bugard strap +1</sub>
 			<head>Walahra Turban</head>
 			<body>Cleric's briault</body>
-			<hands>Healer's mitts</hands>
-			<legs>Healer's Pantaln.</legs>
+			<hands>Cleric's mitts</hands>
+			<legs>Cleric's Pantaln.</legs>
 			<feet>blessed pumps</feet>
 			<neck>beak necklace</neck>
 			<waist>Cleric's Belt</waist>
 			<ear1>antivenom earring</ear1>
-			<ear2>Morion Earring</ear2>
+			<ear2>abyssal Earring</ear2>
 			<ring1>astral Ring</ring1>
-			<ring2>astral Ring</ring2>
+			<ring2>Tamas Ring</ring2>
 			<back>Rainbow Cape</back>
 		</set>
 		
@@ -90,69 +91,58 @@
 		
 		<set name="Cure" baseset="Haste">
 			<main>Apollo's Staff</main>
-			<head></head>
+			<sub>Bugard Strap +1</sub>
+			<head>Cleric's Cap</head>
 			<body>Noble's Tunic</body>
 			<hands>Healer's Mitts</hands>
 			<legs>Cleric's pantaln.</legs>
-			<feet></feet>
+			<feet>Blessed Pumps</feet>
 			<neck></neck>
-			<waist></waist>
+			<waist>Cleric's belt</waist>
 			<ear1></ear1>
 			<ear2></ear2>
 			<ring1></ring1>
-			<ring2></ring2>
-			<back></back>
+			<ring2>Tamas ring</ring2>
+			<back>Rainbow cape</back>
 		</set>
 		
 		<set name="Enfeeble-MND">
-			<sub></sub>
-			<ammo></ammo>
+			<sub>Bugard Strap +1</sub>
 			<head>healer's cap</head>
 			<body>Healer's Briault</body>
 			<hands>cleric's mitts</hands>
 			<legs>errant slops</legs>
 			<feet>blessed pumps</feet>
-			<neck>justice badge</neck>
+			<neck>Promise badge</neck>
 			<waist>Cleric's Belt</waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
+			<ring1>sapphire ring</ring1>
+			<ring2>Tamas ring</ring2>
 			<back>rainbow cape</back>
 		</set>
 		
 		<set name="Enfeeble-INT">
-			<sub></sub>
-			<ammo></ammo>
-			<head></head>
+			<sub>Bugard Strap +1</sub>
 			<body>Healer's Briault</body>
 			<hands>cleric's mitts</hands>
 			<legs>errant slops</legs>
-			<feet></feet>
-			<neck></neck>
-			<waist>mrc.cpt. belt</waist>
-			<ear1></ear1>
-			<ear2>morion earring</ear2>
-			<ring1>eremite's ring</ring1>
-			<ring2>eremite's ring</ring2>
+			<ear1>boroka Earring</ear1>
+			<ear2>Abyssal earring</ear2>
+			<ring1>Diamond ring</ring1>
+			<ring2>Tamas ring</ring2>
 			<back>rainbow cape</back>
 		</set>
 		
 		<set name="Stoneskin" baseset="Haste">
 			<main>kirin's pole</main>
-			<sub></sub>
-			<ammo></ammo>
+			<sub>Bugard Strap +1</sub>
 			<head>healer's cap</head>
 			<body>Errant Hpl.</body>
-			<hands>zealot's mitts</hands>
 			<legs>errant slops</legs>
 			<feet>blessed pumps</feet>
-			<neck>justice badge</neck>
+			<neck>Promise badge</neck>
 			<waist>Cleric's Belt</waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
+			<ring1>Sapphire</ring1>
+			<ring2>Tamas ring</ring2>
 			<back>rainbow cape</back>
 		</set>
 		
@@ -162,36 +152,30 @@
 		</set>
 		
 		<set name="DivineMagic" baseset="Haste">
-			<sub></sub>
-			<ammo></ammo>
-			<head></head>
+			<sub>Bugard Strap +1</sub>
+			<head>Healer's cap</head>
 			<body>errant hpl.</body>
 			<hands>cleric's mitts</hands>
 			<legs>healer's pantaln.</legs>
-			<feet></feet>
-			<neck>justice badge</neck>
+			<feet>Blessed pumps</feet>
+			<neck>Promise badge</neck>
 			<waist>cleric's belt</waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
+			<ring1>Sapphire</ring1>
+			<ring2>Tamas Ring</ring2>
 			<back>rainbow cape</back>
 		</set>
 
 		<set name="Repose" baseset="Haste">
-			<sub></sub>
-			<ammo></ammo>
-			<head>Healer's Cap</head>
+			<sub>Bugard Strap +1</sub>
+			<head>Healer's cap</head>
 			<body>errant hpl.</body>
 			<hands>zealot's mitts</hands>
 			<legs>healer's pantaln.</legs>
-			<feet></feet>
-			<neck>justice badge</neck>
+			<feet>Blessed pumps</feet>
+			<neck>Promise badge</neck>
 			<waist>cleric's belt</waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
+			<ring1>Sapphire</ring1>
+			<ring2>Tamas Ring</ring2>
 			<back>rainbow cape</back>
 		</set>
 		
@@ -211,14 +195,17 @@
 			will be equiped on any offencice spell alligned with that element.
 		-->
 		
-		<set name="BaseCastingMain"> <main>Krins Pole</main> </set>
+		<set name="BaseCastingMain"> 
+			<main>Krins Pole</main>
+			<sub>Bugard Strap +1</sub>
+		</set>
 
 		<set name="Dark-acc" 	baseset="BaseCastingMain"> <main>Dark Staff</main> </set>
 		<set name="Light-acc" 	baseset="BaseCastingMain"> <main>Apollo's Staff</main> </set>
 		<set name="Ice-acc" 	baseset="BaseCastingMain"> <main>Aquilo's Staff</main></set>
-		<set name="Fire-acc" 	baseset="BaseCastingMain"> </set>
-		<set name="Thunder-acc" baseset="BaseCastingMain"> </set>
-		<set name="Water-acc" 	baseset="BaseCastingMain"> </set>
+		<set name="Fire-acc" 	baseset="BaseCastingMain"> <main>Fire staff</main> </set>
+		<set name="Thunder-acc" baseset="BaseCastingMain"> <main>Thunder staff</main> </set>
+		<set name="Water-acc" 	baseset="BaseCastingMain"> <main>Water staff</main> </set>
 		<set name="Earth-acc" 	baseset="BaseCastingMain"> <main>Earth Staff</main> </set>
 		<set name="Wind-acc" 	baseset="BaseCastingMain"> <main>Auster's Staff</main> </set>
 		

@@ -42,7 +42,7 @@
 			<body>Vermillion Cloak</body>
 			<hands>Wizard's Gloves</hands>
 			<legs>Wizard's Tonban</legs>
-			<feet>Wizard's Sabots</feet>
+			<feet>Sorcerer's Sabots</feet>
 			<neck>Beak Necklace</neck>
 			<waist>Qiqirn Sash</waist>
 			<ear1>Antivenom Earring</ear1>
@@ -76,19 +76,7 @@
 		
 		<!--magic damage taken down set, can be toggled with - "/mdt" -->
 		<set name="MDT">
-			<main>Yew Wand +1</main>
-			<sub>Yew Wand +1</sub>
-			<body>Ryl.Ftm. Tunic</body>
-			<hands>Fsh. Gloves</hands>
-			<legs>Fisherman's Hose</legs>
-			<feet>Dream Boots +1</feet>
-			<neck>Wing Pendant</neck>
-			<waist>Mohbwa Sash</waist>
-			<ear1>Energy Earring</ear1>
-			<ear2>Energy Earring</ear2>
-			<ring1>Eremite's Ring</ring1>
-			<ring2>Eremite's Ring</ring2>
-			<back>Mist Silk Cape</back>
+
 		</set>
 		
 		<!-- Physical damage taken down set, can be toggled with "/pdt"-->
@@ -114,7 +102,7 @@
 			<body>Igqira Weskit</body>
 			<hands>Seer's Mitts</hands>
 			<legs>Errant Slops</legs>
-			<feet>Wizard's Sabots</feet>
+			<feet>Sorcerer's Sabots</feet>
 			<ear1>Abyssal Earring</ear1>
 			<ear2>Moldavite Earring</ear2>
 			<ring1>Eremite's Ring</ring1>
@@ -132,7 +120,7 @@
 			<sub>Bugard Strap +1</sub>
 			<head>Sorcerer's Petas.</head>
 			<body>Wizard's Coat</body>
-			<hands>Seer's Mitts</hands>
+			<hands>Zealot's Mitts</hands>
 			<legs>Errant Slops</legs>
 			<feet>Seer's Pumps</feet>
 			<neck>Promise Badge</neck>
@@ -149,6 +137,7 @@
 			<body>Wizard's Coat</body>
 			<hands>Seer's Mitts</hands>
 			<legs>Errant Slops</legs>
+			<feet>Sorcerer's Sabots</feet>
 			<waist>Mrc.Cpt. Belt</waist>
 			<ear1>Abyssal Earring</ear1>
 			<ear2>Boroka Earring</ear2>
@@ -176,20 +165,17 @@
 		<!-- When castin Cure* Cura* spells-->
 		<set name="Cure" baseset="Haste">
 			<main>Apollo's staff</main>
-			<sub></sub>
-			<ammo></ammo>
-			<head></head>
-			<body></body>
-			<hands></hands>
-			<legs></legs>
-			<feet></feet>
-			<neck>Justice badge</neck>
-			<waist></waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1>saintly ring</ring1>
-			<ring2>saintly ring</ring2>
-			<back></back>
+			<sub>Bugard Strap +1</sub>
+			<head>Walahra Turban</head>
+			<body>Errant Hpl.</body>
+			<hands>Zealot's Mitts</hands>
+			<legs>Errant Slops</legs>
+			<feet>Seer's Pumps</feet>
+			<neck>Promise Badge</neck>
+			<waist>Mrc.Cpt. Belt</waist>
+			<ring1>Sapphire Ring</ring1>
+			<ring2>Tamas Ring</ring2>
+			<back>Rainbow Cape</back>
 		</set>
 			
 		<set name="DarkMagic" baseset="Haste">
@@ -197,6 +183,7 @@
 			<body>Errant Hpl.</body>
 			<hands>Seer's Mitts</hands>
 			<legs>Wizard's Tonban</legs>
+			<feet>Sorcerer's Sabots</feet>
 			<waist>Mrc.Cpt. Belt</waist>
 			<ear1>Abyssal Earring</ear1>
 			<ear2>Boroka Earring</ear2>
@@ -226,7 +213,8 @@
 		-->
 		
 		<set name="BaseCastingMain">
-			<main>Rose Wand +1</main>
+			<main>Kirin's Pole</main>
+			<sub>Bugard Strap +1</sub>
 		</set>
 
 		<set name="Dark-acc" baseset="BaseCastingMain">
@@ -242,6 +230,7 @@
 			<main>Fire staff</main>
 		</set>
 		<set name="Thunder-acc" baseset="BaseCastingMain">
+			<main>Thunder staff</main>
 		</set>
 		<set name="Water-acc" baseset="BaseCastingMain">
 			<main>Water staff</main>
@@ -592,14 +581,7 @@
 		</elseif>
 		
 		<if p_status="resting">
-			<if advanced="$MDTSetActive=1"> 
-				<equip>
-					<main>Pilgrim's wand</main>
-				</equip>
-			</if>
-			<else>
-				<equip set="Resting"/>		
-			</else>
+			<equip set="Resting"/>		
 		</if>
 
 		<elseif p_status="engaged">

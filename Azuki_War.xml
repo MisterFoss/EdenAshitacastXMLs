@@ -44,7 +44,7 @@
 			<ear1>Suppanomimi</ear1>
 			<ear2>Reraise Earring</ear2>
 			<ring1>Balance Ring</ring1>
-			<ring2>Balance Ring</ring2>
+			<ring2>Rajas Ring</ring2>
 			<back>Nomad's Mantle</back>
         </set>
 
@@ -63,7 +63,7 @@
 			<ear1>Fang Earring</ear1>
 			<ear2>Fang Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
-			<ring2>Sniper's Ring</ring2>
+			<ring2>Rajas Ring</ring2>
 			<back>Amemet Mantle</back>
         </set>
 
@@ -105,7 +105,7 @@
 			<ear1>Fang Earring</ear1>
 			<ear2>Fang Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
-			<ring2>Sniper's Ring</ring2>
+			<ring2>Rajas Ring</ring2>
 			<back>Amemet Mantle</back>
         </set>
 		<set name="KingsJustice">
@@ -130,7 +130,18 @@
         </set>
 		
         <set name="WS">
-
+            <head>Patroclus's Helm</head>
+			<body>Kirin's Osode</body>
+			<hands>Custom F Gloves</hands>
+			<legs>Byakko's Haidate</legs>
+			<feet>Dusk Ledelsens</feet>
+			<neck>Chivalrous Chain</neck>
+			<waist>Warrior's Stone</waist>
+			<ear1>Fang Earring</ear1>
+			<ear2>Fang Earring</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Rajas Ring</ring2>
+			<back>Amemet Mantle</back>
         </set>
 		
 		<set name="Preshot">
@@ -400,36 +411,28 @@
     <jobability>
         <if ad_name="Provoke"> <!-- Can add +Enmity here if desired -->
             <equip when="precast">
-        
 				<head>Fighter's Mask</head>
 				<body>Fighter's Lorica</body>
 				<legs>Warrior's Cuisses</legs>
-            
 				<hands>Fighter's Mufflers</hands>
 				<feet>Fighter's Calligae</feet>
-				</equip>
+			</equip>
         </if>
         <if ad_name="Warcry"> <!-- Can add +Enmity here if desired -->
             <equip when="precast">
-             
 				<head>Warrior's Mask</head>
 				<legs>Warrior's Cuisses</legs>
-            
 				<feet>Fighter's Calligae</feet>
             </equip>
         </if>
         <if ad_name="Aggressor">
             <equip when="precast">
-            
                 <body>Warrior's Lorica</body>
-            
             </equip>
         </if>
 		<if ad_name="Berserk">
             <equip when="precast">
-            
                 <feet>Warrior's Calligae</feet>
-            
             </equip>
         </if>
 		<if ad_name="Tomahawk">

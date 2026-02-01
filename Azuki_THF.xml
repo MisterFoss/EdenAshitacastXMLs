@@ -37,7 +37,7 @@
 			<ear1>Suppanomimi</ear1>
 			<ear2>Reraise Earring</ear2>
 			<ring1>Balance Ring</ring1>
-			<ring2>Balance Ring</ring2>
+			<ring2>Rajas Ring</ring2>
 			<back>Bat cape</back>
         </set>
         <set name="Town">
@@ -50,7 +50,7 @@
 			<feet>Bounding Boots</feet>
 			<neck>Spike Necklace</neck>
 			<ring1>Balance Ring</ring1>
-			<ring2>Balance Ring</ring2>
+			<ring2>Rajas Ring</ring2>
 		</set>
 		<set name="TA">
 			<head>Empress Hairpin</head>
@@ -77,7 +77,7 @@
 			<ear1>Suppanomimi</ear1>
 			<ear2>Fang Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
-			<ring2>Sniper's Ring</ring2>
+			<ring2>Rajas Ring</ring2>
 			<back>Amemet Mantle</back>
 		</set>
 		<set name="WS">
@@ -91,7 +91,7 @@
 			<ear1>Fang Earring</ear1>
 			<ear2>Fang Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
-			<ring2>Sniper's Ring</ring2>
+			<ring2>Rajas Ring</ring2>
 			<back>Amemet Mantle</back>
 		</set>
 
@@ -106,7 +106,7 @@
 			<ear1>Fang Earring</ear1>
 			<ear2>Fang Earring</ear2>
 			<ring1>Courage Ring</ring1>
-			<ring2>Courage Ring +1</ring2>
+			<ring2>Rajas Ring</ring2>
 			<back>Amemet Mantle</back>
         </set>
 
