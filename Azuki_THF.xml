@@ -31,7 +31,7 @@
 			<body>Scorpion Harness</body>
 			<hands>Garden Bangles</hands>
 			<legs>Bravo's Subligar</legs>
-			<feet>Bounding Boots</feet>
+			<feet>Homam Gambieras</feet>
 			<neck>Chivalrous Chain</neck>
 			<waist>Life Belt</waist>
 			<ear1>Suppanomimi</ear1>
@@ -71,7 +71,7 @@
 			<body>Rapparee Harness</body>
 			<hands>Dusk Gloves</hands>
 			<legs>Bravo's Subligar</legs>
-			<feet>Dusk Ledelsens</feet>
+			<feet>Homam Gambieras</feet>
 			<neck>Chivalrous Chain</neck>
 			<waist>Life Belt</waist>
 			<ear1>Suppanomimi</ear1>
@@ -138,6 +138,7 @@
 
         <set name="MagicDefense">
         </set>
+
     </sets>
 
     <inputcommands>
@@ -281,6 +282,8 @@
         <if ad_name="Steal">
             <equip when="precast">
                 <head>Rogue's Bonnet</head>
+                <hands>Rogue's Armlets</hands>
+                <legs>Rogue's Culottes</legs>
                 <feet>Rogue's Poulaines</feet>
                 <ring1>Rogue's Ring</ring1>
                 <!-- 
