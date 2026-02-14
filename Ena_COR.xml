@@ -15,6 +15,7 @@
         <var name="FireResist">0</var>
         <var name="LightningResist">0</var>
 		<var name="SpeedOff">0</var>
+		<var name="MageMode">0</var>
     </variables>
     <init>
         <command delay="1600">/echo Job is %p_job.</command>
@@ -40,6 +41,24 @@
 			<hands>Commodore gants</hands>
 			<feet>Blood Greaves</feet>
         </set>
+
+		<set name="maxMP" baseset="Idle">
+			<main>Earth Staff</main>
+			<sub>Bugard Strap +1</sub>
+			<head>Walahra Turban</head>
+			<hands>Savage Gauntlets</hands>
+			<legs>Blood Cuisses</legs>
+			<feet>Blood Greaves</feet>
+			<neck>Beak Necklace</neck>
+			<ear1>Antivenom Earring</ear1>
+			<ring1>Vilma's Ring</ring1>
+			<ring2>Astral Ring</ring2>
+		</set>
+
+		<set name="RestMP">
+			<main>Dark staff</main>
+			<neck>Beak Necklace</neck>
+		</set>
 		
         <set name="Running">
             <legs>Blood Cuisses</legs>
@@ -55,8 +74,6 @@
 			<legs>Comm. Trews</legs>
 			<feet>Denali gamashes</feet>
 			<neck>Wivre gorget</neck>
-			<waist>Life Belt</waist>
-			<ear1>Beetle earring</ear1>
 			<ear2>Suppanomimi</ear2>
 			<ring1>woodsman Ring</ring1>
 			<ring2>Rajas Ring</ring2>
@@ -117,7 +134,6 @@
         <set name="SavageBlade">
 			<head>Corsair's Tricorne</head>
 			<body>Commodore Frac</body>
-			<hands>Garden Bangles</hands>
 			<legs>Comm. Trews</legs>
 			<feet>Savage Gaiters</feet>
 			<neck>Spike Necklace</neck>
@@ -187,14 +203,15 @@
         <set name="LightningResist">
         </set>
 
-        <set name="WhiteMagic">
+        <set name="Cure">
+			<main>Apollo's staff</main>
+			<head>Walahra Turban</head>
         </set>
 		
         <set name="Haste">
 			<head>Walahra Turban</head>
 			<body>scorpion harness</body>
 			<hands>Dusk Gloves</hands>
-			<feet>Dusk Ledelsens</feet>
 		<!-- 
 			<legs></legs>	
 			<neck></neck>
@@ -207,21 +224,46 @@
 		-->
         </set>		
     
-		<set name="QD">
+		<set name="QD Acc">
 			<ammo>Steel Bullet</ammo>
-			<head>empress hairpin</head>
-			<body>corsair's frac</body>
-			<hands>mrc.cpt. gloves</hands>
+			<head>Empress Hairpin</head>
+			<body>Corsair's Frac</body>
+			<hands>Commodore Gants</hands>
 			<legs>Comm. Trews</legs>
-			<feet>Blood Greaves</feet>
+			<feet>Denali Gamashes</feet>
 			<neck>Wing Pendant</neck>
-			<waist>mrc.cpt. belt</waist>
-			<ear1>drone earring</ear1>
-			<ear2>drone earring</ear2>
-			<ring1>jadeite Ring</ring1>
+			<waist>Ryl.Kgt. Belt</waist>
+			<ear1>Drone Earring</ear1>
+			<ear2>Drone Earring</ear2>
+			<ring1>Alacrity Ring</ring1>
 			<ring2>Emerald Ring</ring2>
 			<back>Nomad's Mantle +1</back>
-		</set>	
+		</set>
+
+		<set name="QD Damage">
+			<ammo>Steel Bullet</ammo>
+			<head>Comm. Tricorne</head>
+			<body>Corsair's Frac</body>
+			<hands>Commodore Gants</hands>
+			<legs>Comm. Trews</legs>
+			<feet>Denali Gamashes</feet>
+			<neck>Wing Pendant</neck>
+			<waist>Ryl.Kgt. Belt</waist>
+			<ear1>Drone Earring</ear1>
+			<ear2>Moldavite Earring</ear2>
+			<ring1>Alacrity Ring</ring1>
+			<ring2>Emerald Ring</ring2>
+			<back>Nomad's Mantle +1</back>
+		</set>
+		
+        <set name="Dark Acc"        > <main>Dark Staff</main> </set>
+        <set name="Fire Acc"        > <main>Fire Staff</main> </set>
+        <set name="Ice Acc"         > <main>Aquilo's Staff</main> </set>
+        <set name="Earth Acc"       > <main>Earth Staff</main> </set>
+        <set name="Water Acc"       > <main>Water staff</main> </set>
+        <set name="Lightning Acc"   > <main>Thunder staff</main> </set>
+        <set name="wind Acc"        > <main>Auster's Staff</main> </set>
+        <set name="Light Acc"       > <main>Apollo's Staff</main> </set>   
 
 
 		<set name="asleep">
@@ -235,8 +277,52 @@
 		<set name="RandomDeal">
 			<body>Commodore Frac</body>
 		</set>
-
-
+		
+		<set name="detonatorDump">
+			<ammo>Steel Bullet</ammo>
+			<head>Comm. Tricorne</head>
+			<body>Commodore Frac</body>
+			<hands>Commodore Gants</hands>
+			<legs>Comm. Trews</legs>
+			<feet>Denali Gamashes</feet>
+			<neck>Spike Necklace</neck>
+			<waist>Commodore Belt</waist>
+			<ear1>Heims Earring</ear1>
+			<ear2>Cassie Earring</ear2>
+			<ring1>Ruby Ring</ring1>
+			<ring2>Rajas Ring</ring2>
+			<back>Amemet Mantle</back>
+		</set>
+		<set name="slugDump">
+			<range>Martial Gun</range>
+			<ammo>Steel Bullet</ammo>
+			<head>Corsair's Tricorne</head>
+			<body>Corsair's Frac</body>
+			<hands>Commodore Gants</hands>
+			<legs>Jaridah Salvars</legs>
+			<feet>Corsair's Bottes</feet>
+			<neck>Wivre Gorget</neck>
+			<waist>Commodore Belt</waist>
+			<ear1>Heims Earring</ear1>
+			<ear2>Cassie Earring</ear2>
+			<ring1>Scorpion Ring +1</ring1>
+			<ring2>Scorpion Ring +1</ring2>
+			<back>Amemet Mantle</back>
+		</set>
+		<set name="SBDump">
+			<head>Corsair's Tricorne</head>
+			<body>Commodore Frac</body>
+			<hands>Dusk Gloves</hands>
+			<legs>Comm. Trews</legs>
+			<feet>Denali Gamashes</feet>
+			<neck>Spike Necklace</neck>
+			<waist>Commodore Belt</waist>
+			<ear1>Heims Earring</ear1>
+			<ear2>Cassie Earring</ear2>
+			<ring1>Ruby Ring</ring1>
+			<ring2>Rajas Ring</ring2>
+			<back>Amemet Mantle</back>
+		</set>
 	</sets>
 
 	
@@ -255,6 +341,28 @@ IMPORTANT CODE BELOW
             <if advanced="$Fish=0">
                 <setvar name="Fish" value="1" />
                 <addtochat color="100">Fishing Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/mmo">
+			<setvar name="MagicDefense" value="0" />
+            <setvar name="FireResist" value="0" />
+            <setvar name="LightningResist" value="0" />
+            <setvar name="PhysicalDefense" value="0" />
+			<setvar name="Fish" value="0" />
+            <if advanced="$MageMode=1">
+                <setvar name="MageMode" value="0" />
+                <addtochat color="200">Mage Mode Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+		<cmd input="/mm">
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="FireResist" value="0" />
+            <setvar name="LightningResist" value="0" />
+            <setvar name="PhysicalDefense" value="0" />
+			<setvar name="Fish" value="0" />
+            <if advanced="$MageMode=0">
+                <setvar name="MageMode" value="1" />
+                <addtochat color="100">Mage Mode Equipped.</addtochat>
             </if>
         </cmd>
         <cmd input="/fsho">
@@ -345,41 +453,32 @@ IMPORTANT CODE BELOW
     <idlegear>
         <if p_status="idle">
             <equip set="Idle" />
-				<if eq_lring="Empress Band">
+				<if eq_ring1="Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
 					<equip lock="true">
-					<lring>Emperor Band</lring>                
+						<ring1>%eq_ring1</ring1>
 					</equip>
 				</if>
-				<if eq_lring="Olduum Ring">
+				<if eq_ring2="Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
 					<equip lock="true">
-					<lring>Olduum ring</lring>                
+						<ring2>%eq_ring2</ring2>
 					</equip>
 				</if>
-				<!-- 
-				<if eq_lring="Anniversary Ring">		
+				<if eq_main="Warp Cudgel|trick Staff II|treat staff II">
 					<equip lock="true">
-					<lring>Anniversary Ring</lring> 
+						<main>%eq_main</main>
 					</equip>
-				</if>
+				</if>		
 				<if eq_lear="Reraise Earring">
 					<equip lock="true">
-					<lear>Reraise Earring</lear> 
+					<lear>%eq_lear</lear> 
 					</equip>
 				</if>
 				<if eq_head="Reraise Hairpin">		
 					<equip lock="true">
-						<head>Reraise Hairpin</head> 
+						<head>%eq_head</head> 
 					</equip>
 				</if>
-				<if eq_body="Tidal Talisman">		
-					<equip lock="true">
-						<body>Tidal Talisman</body>  
-					</equip>
-				</if>
-				<if e_area="Windurst*|Port Windurst">
-					<equip set="Town" />
-				</if>
-				-->
+
 				<elseif buffactive="2">
                     <equip set="asleep"/>
                 </elseif>
@@ -401,6 +500,9 @@ IMPORTANT CODE BELOW
                 <elseif advanced="$LightningResist=1">
                     <equip set="LightningResist" />
                 </elseif>
+				<elseif advanced="$MageMode=1">
+					<equip set="maxMP"/>
+				</elseif>
                 <if p_ismoving="true">
 					<if advanced="$SpeedOff=1">
 						<equip>
@@ -462,7 +564,9 @@ IMPORTANT CODE BELOW
 	
     <midmagic>
 		<if ad_skill="White Magic">
-			<equip set="WhiteMagic" />
+			<if ad_name="Cure*">
+				<equip set="Cure"/>
+			</if>
 		</if>
 		<if ad_name="Stoneskin">
 			<command delay="2000">/cancel stoneskin</command>
@@ -503,24 +607,38 @@ IMPORTANT CODE BELOW
 		</if>
         
 		<if ad_name="*Shot">
-			<equip set="QD"/>
-			<!-- 
-			<if ad_name="Dark Shot">
-				<equip lock="true">
-					<main>Dark Staff</main>
-				</equip>
+			<if advanced="$MageMode=1">
+				<if ad_name="Dark Shot">
+					<equip set="Dark Acc"/>
+				</if>
+				<if ad_name="Light Shot">
+					<equip set="Light Acc"/>
+				</if>
+				<if ad_name="Fire Shot">
+					<equip set="Fire Acc"/>
+				</if>
+				<if ad_name="Ice Shot">
+					<equip set="Ice Acc"/>
+				</if>
+				<if ad_name="Thunder Shot">
+					<equip set="Thunder Acc"/>
+				</if>
+				<if ad_name="Water Shot">
+					<equip set="Water Acc"/>
+				</if>
+				<if ad_name="Earth Shot">
+					<equip set="Earth Acc"/>
+				</if>
+				<if ad_name="Wind Shot">
+					<equip set="Wind Acc"/>
+				</if>
 			</if>
-			<if ad_name="Light Shot">
-				<equip lock="true">
-					<main>Light Staff</main>
-				</equip>
+			<if ad_name="Fire*|Ice*|Wind*|Water*|Earth*|Thunder*">
+				<equip set="QD Damage"/>
 			</if>
-			-->
-			<if ad_name="Fire*">
-				<equip>
-					<head>Corsair's Tricorne</head>
-				</equip>
-			</if>
+			<else>
+				<equip set="QD Acc"/>
+			</else>
 		</if>
     </jobability>
 
@@ -546,7 +664,5 @@ IMPORTANT CODE BELOW
         <else>
         	<equip set="WS" />
         </else>
-		<!-- 
-		-->
     </weaponskill>
 </ashitacast>
