@@ -88,7 +88,8 @@
 		</set>
 		
 		<set name="Haste">
-			<head>Walahra Turban</head>		
+			<head>Walahra Turban</head>
+			<waist>Swift Belt</waist>		
 		</set>
 		
 		<set name="SongAcc">
@@ -402,6 +403,19 @@
 			<elseif ad_name="*Mazurka">	<equip set="Mazurka+"/></elseif>
 		</if>
 		
+		<if ad_name="Utsusemi: Ichi">
+            <equip set="Casting"/>
+				<if buffactive="66"> <!-- One shadow are left -->
+					<command delay="3545">/cancel 66</command>
+				</if>
+            <elseif buffactive="444"> <!-- Two shadows are left -->
+                <command delay="3545">/cancel 444</command>
+            </elseif>
+        </if>
+        <elseif ad_name="Monomi: Ichi">
+            <equip set="Casting"/>
+            <command delay="2800">/cancel 71</command>
+        </elseif>
 		<elseif ad_type="whitemagic">
 			<if ad_skill="healingmagic">
 				<if ad_name="Cure*|Cura*">
@@ -416,6 +430,14 @@
 					<equip set="Haste"/>
 				</else>
 			</if>
+			<elseif ad_name="Sneak">
+				<equip set="Haste">
+					<feet>Dream boots +1</feet>
+				</equip>
+				<if advanced="%at_type=self">
+					<command delay="1400">/cancel 71</command>
+				</if>
+			</elseif>
 
 			<elseif ad_skill="divinemagic">
 				<equip set="DivineMagic"/>

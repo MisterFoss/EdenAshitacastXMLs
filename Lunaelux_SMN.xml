@@ -64,7 +64,7 @@
         <set name="Ice Perp"        baseset="Perpetuation"> <main>aquilo's Staff</main> </set>
         <set name="Earth Perp"      baseset="Perpetuation"> <main>Earth Staff</main> </set>
         <set name="Water Perp"      baseset="Perpetuation"> <main>Water staff</main> </set>
-        <set name="Lightning Perp"   baseset="Perpetuation"> <main>Thunder staff</main> </set>
+        <set name="Lightning Perp"  baseset="Perpetuation"> <main>Thunder staff</main> </set>
         <set name="wind Perp"       baseset="Perpetuation"> <main>Auster's Staff</main> </set>
         <set name="Light Perp"      baseset="Perpetuation"> <main>apollo's Staff</main> </set>     
         
@@ -116,6 +116,7 @@
         
         <set name="Haste">
             <head>Walahra Turban</head>
+            <waist>Swift Belt</waist>
         </set>
 	</sets> 
  
