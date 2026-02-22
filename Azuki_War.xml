@@ -42,7 +42,7 @@
 			<neck>Chivalrous Chain</neck>
 			<waist>Warrior's Stone</waist>
 			<ear1>Suppanomimi</ear1>
-			<ear2>Reraise Earring</ear2>
+			<ear2>Fowling Earring</ear2>
 			<ring1>Balance Ring</ring1>
 			<ring2>Rajas Ring</ring2>
 			<back>Nomad's Mantle</back>
@@ -61,7 +61,7 @@
 			<neck>Chivalrous Chain</neck>
 			<waist>Swift Belt</waist>
 			<ear1>Fang Earring</ear1>
-			<ear2>Fang Earring</ear2>
+			<ear2>Fowling Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
 			<ring2>Rajas Ring</ring2>
 			<back>Forager's Mantle</back>
@@ -103,7 +103,7 @@
 			<neck>Chivalrous Chain</neck>
 			<waist>Warrior's Stone</waist>
 			<ear1>Fang Earring</ear1>
-			<ear2>Fang Earring</ear2>
+			<ear2>Fowling Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
 			<ring2>Rajas Ring</ring2>
 			<back>Forager's Mantle</back>
@@ -125,7 +125,7 @@
 			<ring2>Garnet Ring</ring2>
 			<back>Nomad's Mantle</back>
         </set>
-        <set name="SteelCyclone">
+        <set name="SteelCyclone" baseset="WS">
 
         </set>
 		
@@ -138,7 +138,7 @@
 			<neck>Chivalrous Chain</neck>
 			<waist>Warrior's Stone</waist>
 			<ear1>Fang Earring</ear1>
-			<ear2>Fang Earring</ear2>
+			<ear2>Fowling Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
 			<ring2>Rajas Ring</ring2>
 			<back>Forager's Mantle</back>
