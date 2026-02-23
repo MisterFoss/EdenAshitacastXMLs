@@ -35,7 +35,7 @@
 			<neck>Chivalrous Chain</neck>
 			<waist>Life Belt</waist>
 			<ear1>Suppanomimi</ear1>
-			<ear2>Reraise Earring</ear2>
+			<ear2>Brutal Earring</ear2>
 			<ring1>Balance Ring</ring1>
 			<ring2>Rajas Ring</ring2>
 			<back>Bat cape</back>
@@ -75,7 +75,7 @@
 			<neck>Chivalrous Chain</neck>
 			<waist>Swift Belt</waist>
 			<ear1>Suppanomimi</ear1>
-			<ear2>Fang Earring</ear2>
+			<ear2>Brutal Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
 			<ring2>Rajas Ring</ring2>
 			<back>Forager's Mantle</back>
@@ -89,7 +89,7 @@
 			<neck>Chivalrous Chain</neck>
 			<waist>Life Belt</waist>
 			<ear1>Fang Earring</ear1>
-			<ear2>Fang Earring</ear2>
+			<ear2>Brutal Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
 			<ring2>Rajas Ring</ring2>
 			<back>Forager's Mantle</back>
@@ -104,7 +104,7 @@
 			<neck>Chivalrous Chain</neck>
 			<waist>Life Belt</waist>
 			<ear1>Fang Earring</ear1>
-			<ear2>Fang Earring</ear2>
+			<ear2>Brutal Earring</ear2>
 			<ring1>Courage Ring</ring1>
 			<ring2>Rajas Ring</ring2>
 			<back>Forager's Mantle</back>
@@ -308,6 +308,11 @@
         <if ad_name="Mercy Stroke|Shark Bite|Mandalic Stab">
             <equip set="StrWS" />
         </if>
+        <elseif ad_name="Cyclone">
+            <equip set="WS">
+                <hands>Assassin's armlets</hands>
+            </equip>
+        </elseif>
         <else>
             <equip set="WS" />
         </else>
