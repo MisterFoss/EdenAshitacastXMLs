@@ -119,7 +119,7 @@
 		<!-- white magic based efeebling-->
 		<set name="Enfeeble-MND">
 			<sub>Bugard Strap +1</sub>
-			<head>Sorcerer's Petas.</head>
+			<head>Igqira Tiara</head>
 			<body>Wizard's Coat</body>
 			<hands>Zealot's Mitts</hands>
 			<legs>Errant Slops</legs>
@@ -134,7 +134,7 @@
 		<!-- Black magic based enfeebeling-->
 		<set name="Enfeeble-INT">
 			<sub>Bugard Strap +1</sub>
-			<head>Sorcerer's Petas.</head>
+			<head>Igqira Tiara</head>
 			<body>Wizard's Coat</body>
 			<hands>Seer's Mitts</hands>
 			<legs>Errant Slops</legs>
