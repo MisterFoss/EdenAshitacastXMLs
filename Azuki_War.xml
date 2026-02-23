@@ -41,7 +41,7 @@
 			<feet>Fighter's Calligae</feet>
 			<neck>Chivalrous Chain</neck>
 			<waist>Warrior's Stone</waist>
-			<ear1>Suppanomimi</ear1>
+			<ear1>Brutal Earring</ear1>
 			<ear2>Fowling Earring</ear2>
 			<ring1>Balance Ring</ring1>
 			<ring2>Rajas Ring</ring2>
@@ -60,7 +60,7 @@
 			<feet>Dusk Ledelsens</feet>
 			<neck>Chivalrous Chain</neck>
 			<waist>Swift Belt</waist>
-			<ear1>Fang Earring</ear1>
+			<ear1>Brutal Earring</ear1>
 			<ear2>Fowling Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
 			<ring2>Rajas Ring</ring2>
@@ -73,8 +73,6 @@
         <set name="Evasion">
             <head>Empress Hairpin</head>
 			<body>Scorpion Harness</body>
-			<ear1>Suppanomimi</ear1>
-			<ear2>Reraise Earring</ear2>
 			<back>Nomad's Mantle</back>
         </set>
 	
@@ -102,7 +100,7 @@
 			<feet>Dusk Ledelsens</feet>
 			<neck>Chivalrous Chain</neck>
 			<waist>Warrior's Stone</waist>
-			<ear1>Fang Earring</ear1>
+			<ear1>Brutal Earring</ear1>
 			<ear2>Fowling Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
 			<ring2>Rajas Ring</ring2>
@@ -137,7 +135,7 @@
 			<feet>Dusk Ledelsens</feet>
 			<neck>Chivalrous Chain</neck>
 			<waist>Warrior's Stone</waist>
-			<ear1>Fang Earring</ear1>
+			<ear1>Brutal Earring</ear1>
 			<ear2>Fowling Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
 			<ring2>Rajas Ring</ring2>
