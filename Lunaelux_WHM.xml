@@ -634,6 +634,16 @@
 					<ring2>%eq_ring2</ring2>
 				</equip>
 			</if>
+			<if eq_ear1="Reraise Earring">
+				<equip lock="true">
+					<ring2>%eq_ear1</ring2>
+				</equip>
+			</if>
+			<if eq_ear2="Reraise Earring">
+				<equip lock="true">
+					<ring2>%eq_ear2</ring2>
+				</equip>
+			</if>
 
 			<if p_ismoving="True">
 				<equip set="Movement" />
