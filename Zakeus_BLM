@@ -17,18 +17,16 @@
     <init>
         <!-- This codeblock will automatically change your macro book/page according to the job and subjob list below -->
         <!-- Change the below variable subjob abbreviations according to the subjobs you use with this profile. -->
-        <if p_subjob="WHM"><setvar name="macropage" value="1" /></if>
-		<if p_subjob="SCH"><setvar name="macropage" value="1" /></if>
-        <if p_subjob="RDM"><setvar name="macropage" value="1" /></if>
-        <if p_subjob="NIN"><setvar name="macropage" value="1" /></if>
+        <if p_subjob="WHM"><setvar name="macropage" value="6" /></if>
+	<if p_subjob="SCH"><setvar name="macropage" value="6" /></if>
+        <if p_subjob="RDM"><setvar name="macropage" value="6" /></if>
+        <if p_subjob="NIN"><setvar name="macropage" value="6" /></if>
 		
-		<if p_mainjob="BLM"><setvar name="macrobook" value="18" /><setvar name="lockstyleset" value="" /></if>
+		<if p_mainjob="BLM"><setvar name="macrobook" value="1" /><setvar name="lockstyleset" value="" /></if>
 		
         <command delay="1500">/macro book $macrobook</command>
         <command delay="3000">/macro set $macropage</command>
         <command delay="4500">/echo *** Job is %p_job. Macros set to Book $macrobook, Page $macropage. ***</command>
-		<command delay="3200">/gl blink</command>
-		<command delay="3400">/Addon reload equipviewer</command>
 		
         <!-- This will change your Lockstyle set if desired -->
 		
@@ -37,35 +35,24 @@
 	<sets>
 		<!--Deafualt gear when not taking any action, refresh, max mp and damage daken down -->
 		<set name="Idle">
-			<main>Earth Staff</main>
-			<sub>Bugard Strap +1</sub>
-			<body>Vermillion Cloak</body>
-			<hands>Zenith Mitts</hands>
-			<legs>Wizard's Tonban</legs>
-			<feet>Yigit crackows</feet>
-			<neck>Beak Necklace</neck>
-			<waist>Qiqirn Sash</waist>
-			<ear1>Antivenom Earring</ear1>
-			<ear2>Abyssal Earring</ear2>
-			<ring1>Astral Ring</ring1>
-			<ring2>Tamas Ring</ring2>
-			<back>Rainbow Cape</back>
+		<main>terra's staff</main>
+		<head></head>
+		<body>vermillion cloak</body>
+		<hands>Zenith Mitts</hands>
 		</set>
 		
 		<!-- Equiped when resting -->
 		<set name="Resting" baseset="Idle">
-			<main>Dark Staff</main>
-			<head>Sorcerer's Petas.</head>
+			<main>Pluto's staff</main>
+			<neck>Beak Necklace +1</neck>
 			<body>Errant Hpl.</body>
-			<neck>Beak Necklace</neck>
-			<waist>Qiqirn Sash</waist>
-			<ear1>Antivenom Earring</ear1>
-			<ear2>Boroka Earring</ear2>			
-		</set>
+			<waist>Qiqirn Sash +1</waist>
+			<ear1>Loquac. Earring</ear1>
+			<ear2>Antivenom earring</ear2>
+			</set>
 		
 		<!-- Town gear, only in windurst currently -->
 		<set name="Town" baseset="Idle">
-			<head>Sorcerer's Petas.</head>
 			<body>Federation aketon</body>
 		</set>
 		
@@ -76,7 +63,7 @@
 		
 		<!--magic damage taken down set, can be toggled with - "/mdt" -->
 		<set name="MDT">
-
+			
 		</set>
 		
 		<!-- Physical damage taken down set, can be toggled with "/pdt"-->
@@ -86,30 +73,30 @@
 		
 		<!-- Default Precast, for fast cast -->
 		<set name="Precast">
-			<neck>Star Necklace</neck>
+		<ear1>Loquac. Earring</ear1>
 		</set>
 		
 		<!-- Max Haste, Deafault spellcasting set -->
 		<set name="Haste">
-			<head>Walahra Turban</head>
-			<body>Igqira Weskit</body>
-			<feet>Wizard's Sabots</feet>
-			<waist>Swift Belt</waist>
+		<head>Walahra Turban</head>
+		<waist>swift belt</waist>
 		</set>
 		
 		<!-- All elemental including DoTs, addi if needed-->
 		<set name="Elemental" baseset="Haste">
-			<sub>Bugard Strap +1</sub>
-			<head>Wizard's Petasos</head>
+			<sub></sub>
+			<head>sorcerer's petas.</head>
 			<body>Igqira Weskit</body>
 			<hands>Zenith Mitts</hands>
 			<legs>Errant Slops</legs>
-			<feet>Yigit crackows</feet>
-			<ear1>Abyssal Earring</ear1>
+			<feet>Yigit Crackows</feet>
+			<neck>elemental torque</neck>
+			<waist>Penitent's rope</waist>
+			<ear1>Omn. Earring</ear1>
 			<ear2>Moldavite Earring</ear2>
-			<ring1>Eremite's Ring</ring1>
-			<ring2>Eremite's Ring</ring2>
-			<back>Rainbow Cape</back>
+			<ring1>Snow ring</ring1>
+			<ring2>Snow ring</ring2>
+			<back>Prism cape</back>
  		</set>
 
 		<set name="Elem_Debuffs">
@@ -119,95 +106,114 @@
 
 		<!-- white magic based efeebling-->
 		<set name="Enfeeble-MND">
-			<sub>Bugard Strap +1</sub>
-			<head>Igqira Tiara</head>
-			<body>Wizard's Coat</body>
-			<hands>Zealot's Mitts</hands>
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
+			<body>Errant Hpl.</body>
+			<hands>savage gauntlets</hands>
 			<legs>Errant Slops</legs>
-			<feet>Yigit crackows</feet>
-			<neck>Promise Badge</neck>
-			<waist>Mrc.Cpt. Belt</waist>
-			<ring1>Sapphire Ring</ring1>
-			<ring2>Tamas Ring</ring2>
-			<back>Rainbow Cape</back>
+			<feet>Yigit Crackows</feet>
+			<neck>promise badge</neck>
+			<waist>Penitent's rope</waist>
+			<ear1>harvest earring</ear1>
+			<ear2></ear2>
+			<ring1>sapphire ring</ring1>
+			<ring2>sapphire ring</ring2>
+			<back>Prism cape</back>
 		</set>
 		
 		<!-- Black magic based enfeebeling-->
 		<set name="Enfeeble-INT">
-			<sub>Bugard Strap +1</sub>
+			<sub></sub>
 			<head>Igqira Tiara</head>
-			<body>Wizard's Coat</body>
+			<body>Wizard's coat</body>
 			<hands>Seer's Mitts</hands>
-			<legs>Errant Slops</legs>
-			<feet>Yigit crackows</feet>
-			<waist>Mrc.Cpt. Belt</waist>
-			<ear1>Abyssal Earring</ear1>
-			<ear2>Boroka Earring</ear2>
-			<ring1>Diamond Ring</ring1>
-			<ring2>Tamas Ring</ring2>
-			<back>Rainbow Cape</back>
+			<legs>Igqira Lappas</legs>
+			<feet>Yigit Crackows</feet>
+			<neck>Philomath stole</neck>
+			<waist>Penitent's rope</waist>
+			<ear1>Omn. Earring</ear1>
+			<ear2>moldavite Earring</ear2>
+			<ring1>Snow ring</ring1>
+			<ring2>Snow ring</ring2>
+			<back>Prism cape</back>
 		</set>
 		
 		<!-- Stoneskin set, max mind -->
 		<set name="Stoneskin" baseset="Haste">
-			<main>Kirin's Pole</main>
-			<sub>Bugard Strap +1</sub>
-			<head>Walahra Turban</head>
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
 			<body>Errant Hpl.</body>
-			<hands>Zealot's Mitts</hands>
+			<hands>savage gauntlets</hands>
 			<legs>Errant Slops</legs>
-			<feet>Seer's Pumps</feet>
-			<neck>Promise Badge</neck>
-			<waist>Mrc.Cpt. Belt</waist>
-			<ring1>Sapphire Ring</ring1>
-			<ring2>Tamas Ring</ring2>
-			<back>Rainbow Cape</back>
+			<feet>Yigit Crackows</feet>
+			<neck>promise badge</neck>
+			<waist>Penitent's rope</waist>
+			<ear1>harvest earring</ear1>
+			<ear2></ear2>
+			<ring1>sapphire ring</ring1>
+			<ring2>sapphire ring</ring2>
+			<back>Prism cape</back>
 		</set>
 		
 		<!-- When castin Cure* Cura* spells-->
 		<set name="Cure" baseset="Haste">
-			<main>Apollo's staff</main>
-			<sub>Bugard Strap +1</sub>
-			<head>Walahra Turban</head>
+			<sub></sub>
+			<ammo></ammo>
+			<head></head>
 			<body>Errant Hpl.</body>
-			<hands>Zealot's Mitts</hands>
+			<hands>savage gauntlets</hands>
 			<legs>Errant Slops</legs>
-			<feet>Seer's Pumps</feet>
-			<neck>Promise Badge</neck>
-			<waist>Mrc.Cpt. Belt</waist>
-			<ring1>Sapphire Ring</ring1>
-			<ring2>Tamas Ring</ring2>
-			<back>Rainbow Cape</back>
+			<feet>Yigit Crackows</feet>
+			<neck>promise badge</neck>
+			<waist>Penitent's rope</waist>
+			<ear1>harvest earring</ear1>
+			<ear2></ear2>
+			<ring1>sapphire ring</ring1>
+			<ring2>sapphire ring</ring2>
+			<back>Prism cape</back>
 		</set>
 			
 		<set name="DarkMagic" baseset="Haste">
-			<head>Wizard's Petasos</head>
+			<sub></sub>
+			<ammo></ammo>
+			<head>Wizard's petasos</head>
 			<body>Errant Hpl.</body>
-			<hands>Seer's Mitts</hands>
-			<legs>Wizard's Tonban</legs>
-			<feet>Sorcerer's Sabots</feet>
-			<waist>Mrc.Cpt. Belt</waist>
-			<ear1>Abyssal Earring</ear1>
-			<ear2>Boroka Earring</ear2>
-			<ring1>Diamond Ring</ring1>
-			<ring2>Tamas Ring</ring2>
-			<back>Rainbow Cape</back>
+			<hands>Sorcerer's Gloves</hands>
+			<legs>wizard's tonban</legs>
+			<feet>Yigit Crackows</feet>
+			<neck>Philomath stole</neck>
+			<waist>Penitent's rope</waist>
+			<ear1>Omn. Earring</ear1>
+			<ear2>moldavite Earring</ear2>
+			<ring1>Snow ring</ring1>
+			<ring2>Snow ring</ring2>
+			<back>Prism cape</back>
 		</set>
 		<set name="Light-belt">
+		<waist>Korin Obi</waist>
 		</set>
 		<set name="Dark-belt">
+		<waist>Anrin Obi</waist>
 		</set>
 		<set name="Fire-belt">
+		<waist>Karin Obi</waist>
 		</set>
 		<set name="Ice-belt">
+		<waist>Hyorin Obi</waist>
 		</set>
 		<set name="Wind-belt">
+		<waist>Furin Obi</waist>
 		</set>
 		<set name="Earth-belt">
+		<waist>Dorin Obi</waist>
 		</set>
 		<set name="Thunder-belt">
+		<waist>Rairin Obi</waist>
 		</set>
 		<set name="Water-belt">
+		<waist>Suirin Obi</waist>
 		</set>
 		<!-- 
 			Elemental accuracy sets, primeraly for elemetal staffs + grips, 
@@ -215,32 +221,39 @@
 		-->
 		
 		<set name="BaseCastingMain">
-			<main>Kirin's Pole</main>
-			<sub>Bugard Strap +1</sub>
+			<main>Rose Wand +1</main>
 		</set>
 
 		<set name="Dark-acc" baseset="BaseCastingMain">
-			<main>Dark staff</main>
+			<sub>dark grip</sub>
+			<main>Pluto's staff</main>
 		</set>
 		<set name="Light-acc" baseset="BaseCastingMain">
-			<main>Apollo's staff</main>
+			<sub>light grip</sub>
+			<main>light staff</main>
 		</set>
 		<set name="Ice-acc" baseset="BaseCastingMain">
+			<sub>ice grip</sub>
 			<main>Aquilo's staff</main>
 		</set>
 		<set name="Fire-acc" baseset="BaseCastingMain">
-			<main>Fire staff</main>
+			<sub>fire grip</sub>
+			<main>Vulcan's staff</main>
 		</set>
 		<set name="Thunder-acc" baseset="BaseCastingMain">
-			<main>Thunder staff</main>
+			<sub>thunder grip</sub>
+			<main>jupiter's staff</main>
 		</set>
 		<set name="Water-acc" baseset="BaseCastingMain">
-			<main>Water staff</main>
+			<sub>water grip</sub>
+			<main>Neptune's staff</main>
 		</set>
 		<set name="Earth-acc" baseset="BaseCastingMain">
-			<main>Earth staff</main>
+			<sub>earth grip</sub>
+			<main>terra's staff</main>
 		</set>
 		<set name="Wind-acc" baseset="BaseCastingMain">
+			<sub>wind grip</sub>
 			<main>Auster's staff</main>
 		</set>
 		
@@ -316,7 +329,39 @@
 		<set name="HexaStrike" baseset="TP-Set">
 			
 		</set>
-
+		
+		<set name="dumpcasting">
+			<main>Yew Wand +1</main>
+			<sub>Yew Wand +1</sub>
+			<head>Seer's Crown</head>
+			<body>Savage Separates</body>
+			<hands>Seer's Mitts</hands>
+			<legs>Seer's Slacks +1</legs>
+			<feet>Seer's Pumps</feet>
+			<neck>Justice Badge</neck>
+			<waist>Mohbwa Sash</waist>
+			<ear1>Moldavite Earring</ear1>
+			<ear2>Morion Earring</ear2>
+			<ring1>Eremite's Ring</ring1>
+			<ring2>Eremite's Ring</ring2>
+			<back>Mist Silk Cape</back>
+		</set>
+		<set name="castingdump">
+			<main>Rose Wand +1</main>
+			<sub>Rose Wand +1</sub>
+			<head>Seer's Crown</head>
+			<body>Savage Separates</body>
+			<hands>Seer's Mitts</hands>
+			<legs>Seer's Slacks +1</legs>
+			<feet>Seer's Pumps</feet>
+			<neck>Justice Badge</neck>
+			<waist>Mohbwa Sash</waist>
+			<ear1>Moldavite Earring</ear1>
+			<ear2>Morion Earring</ear2>
+			<ring1>Eremite's Ring</ring1>
+			<ring2>Eremite's Ring</ring2>
+			<back>Mist Silk Cape</back>
+		</set>
 	</sets> 
 
 	<!-- 
@@ -445,7 +490,8 @@
 		</elseif>	
 		
 		<elseif ad_name="Paralyze*|Bind|Frost|Blizzard*|Blizzaga*|Freeze*">
- 			<equip set="Ice-acc" lock="true"/>
+			<equip set="Earth-acc" lock="true"/>
+			<equip set="Ice-acc" lock="true"/>
 		</elseif>
 		
 		<elseif ad_name="Silence|Choke|Gravity|Aero*|Aeroga*|Tornado*">
@@ -478,20 +524,11 @@
 				</else>
 			</if>
 			<elseif ad_name="Sneak">
-					<equip set="Haste">
-						<feet>Dream boots +1</feet>
-						<back>Skulker's cape</back>
-					</equip>
-					<if advanced="%at_type=self">
-						<command delay="1400">/cancel 71</command>
-					</if>
-				</elseif>
-
-				<elseif ad_name="Invisible">
-					<equip set="Haste">
-						<back>Skulker's cape</back>
-					</equip>
-				</elseif>
+				<equip set="Haste">
+					<feet>Dream boots +1</feet>
+				</equip>
+				<command delay="1400">/cancel 71</command>
+			</elseif>
 			<elseif ad_skill="enhancingmagic">
 	
 				<if ad_name="Stoneskin">
@@ -527,16 +564,27 @@
 			</if>
 
 			<elseif ad_skill="ElementalMagic">
-				<equip set="Elemental"/>
+				<if advanced="%ad_mppaftercast&lt;51">
+					<equip set="Elemental">
+						<neck>Uggalepih Pendant</neck>
+					</equip>
+				</if>
+				<else>
+					<equip set="Elemental"/>
+				</else>
+
 				<if ad_name="Rasp|Drown|Frost|Burn|Choke|Shock">
 					<equip set="Elem_Debuffs"/>
 				</if>
+
 				<elseif advanced="%ad_element=%e_dayelement">
 					<equip lock="true">
 						<legs>Sorcerer's Tonban</legs>
 					</equip>
+					<addtochat color="200">%ad_element-belt</addtochat>
 					<equip set="%ad_element-belt"/>
-				</elseif>	
+				</elseif>
+
 				<elseif advanced="%ad_element=%e_weatherelement">
 					<equip set="%ad_element-belt"/>	
 				</elseif>
@@ -631,24 +679,14 @@
 					<body>%eq_body</body>
 				</equip>
 			</if>
-			<if eq_ring1="Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+			<if eq_ring1="Empress Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
 				<equip lock="true">
 					<ring1>%eq_ring1</ring1>
 				</equip>
 			</if>
-			<if eq_ring2="Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+			<if eq_ring2="Empress Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
 				<equip lock="true">
 					<ring2>%eq_ring2</ring2>
-				</equip>
-			</if>
-			<if eq_ear1="Reraise Earring">
-				<equip lock="true">
-					<ring2>%eq_ear1</ring2>
-				</equip>
-			</if>
-			<if eq_ear2="Reraise Earring">
-				<equip lock="true">
-					<ring2>%eq_ear2</ring2>
 				</equip>
 			</if>
 
