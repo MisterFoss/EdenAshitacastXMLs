@@ -89,9 +89,10 @@
 		</set>
 
 		<set name="HPDown" baseset="Precast">
-			<neck>Star necklace</neck>
+			<head>Zenith crown +1</head>
 			<hands>Zenith mitts</hands>
 			<legs>Zenith Slacks</legs>
+			<neck>Star necklace</neck>
 			<ring1>Astral ring</ring1>
 			<ring2>Astral ring</ring2>
 		</set>
@@ -107,7 +108,7 @@
 		<!-- All elemental including DoTs, addi if needed-->
 		<set name="Elemental" baseset="Haste">
 			<sub>Bugard Strap +1</sub>
-			<head>Wizard's Petasos</head>
+			<head>Zenith crown +1</head>
 			<body>Igqira Weskit</body>
 			<hands>Zenith Mitts</hands>
 			<legs>Errant Slops</legs>

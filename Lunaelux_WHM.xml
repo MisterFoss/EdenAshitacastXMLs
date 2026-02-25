@@ -35,7 +35,7 @@
 		<set name="Idle">
 			<main>earth staff</main>
 			<sub>Bugard strap +1</sub>
-			<head>Walahra Turban</head>
+			<head>Zenith crown +1</head>
 			<body>Cleric's briault</body>
 			<hands>Cleric's mitts</hands>
 			<legs>Cleric's Pantaln.</legs>
@@ -109,7 +109,7 @@
 		
 		<set name="Enfeeble-MND">
 			<sub>Bugard Strap +1</sub>
-			<head>healer's cap</head>
+			<head>Zenith crown +1</head>
 			<body>Healer's Briault</body>
 			<hands>cleric's mitts</hands>
 			<legs>errant slops</legs>
@@ -123,6 +123,7 @@
 		
 		<set name="Enfeeble-INT">
 			<sub>Bugard Strap +1</sub>
+			<head>Zenith crown +1</head>
 			<body>Healer's Briault</body>
 			<hands>cleric's mitts</hands>
 			<legs>errant slops</legs>
@@ -137,7 +138,7 @@
 		<set name="Stoneskin" baseset="Haste">
 			<main>kirin's pole</main>
 			<sub>Bugard Strap +1</sub>
-			<head>healer's cap</head>
+			<head>Zenith crown +1</head>
 			<body>Errant Hpl.</body>
 			<legs>errant slops</legs>
 			<feet>blessed pumps</feet>
@@ -155,7 +156,7 @@
 		
 		<set name="DivineMagic" baseset="Haste">
 			<sub>Bugard Strap +1</sub>
-			<head>Healer's cap</head>
+			<head>Zenith crown +1</head>
 			<body>errant hpl.</body>
 			<hands>cleric's mitts</hands>
 			<legs>healer's pantaln.</legs>
@@ -169,7 +170,7 @@
 
 		<set name="Repose" baseset="Haste">
 			<sub>Bugard Strap +1</sub>
-			<head>Healer's cap</head>
+			<head>Zenith crown +1</head>
 			<body>errant hpl.</body>
 			<hands>zealot's mitts</hands>
 			<legs>healer's pantaln.</legs>
