@@ -340,7 +340,7 @@
 		<var name="MeleeDW">0</var>
 		<var name="MDTSetActive">0</var>
 		<var name="PDTSetActive">0</var>
-		<var name="Sorc">0</var>
+		<var name="Sorc">1</var>
 
 	</variables>
 
@@ -565,7 +565,7 @@
 				<elseif advanced="%ad_element=%e_weatherelement">
 					<equip set="%ad_element-belt"/>	
 				</elseif>
-				<if advanced="$Sorc=1|%p_hpp&lt;76">
+				<if advanced="($Sorc=1)|(%p_hpp&lt;76)">
 					<equip>
 						<ring1>Sorcerer's Ring</ring1>
 					</equip>
