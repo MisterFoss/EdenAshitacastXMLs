@@ -75,6 +75,16 @@
 		<set name="Precast">
 		<ear1>Loquac. Earring</ear1>
 		</set>
+
+		<set name="HPdown" baseset="Precast">
+			<head>Zenith Crown</head>
+			<hands>Zenith mitts</hands>
+			<legs>Zenith slacks</legs>
+			<neck>Star necklace</neck>
+			<ring1>Astral ring</ring1>
+			<ring2>Eather ring</ring2>
+			<ear2>astral earring</ear2>
+		</set>
 		
 		<!-- Max Haste, Deafault spellcasting set -->
 		<set name="Haste">
@@ -377,11 +387,23 @@
 		<var name="MeleeDW">0</var>
 		<var name="MDTSetActive">0</var>
 		<var name="PDTSetActive">0</var>
+		<var name="Sorc">0</var>
 
 	</variables>
 
 
 	<inputcommands>
+
+		<cmd input="/sr">
+			<if advanced="$Sorc=0">
+				<setvar name="Sorc" value="1" />
+				<addtochat color="57">Sorc Ring enabled!</addtochat>
+			</if>
+			<else>
+				<setvar name="Sorc" value="0" />
+				<addtochat color="57">Sorc Ring disabled.</addtochat>
+			</else>
+		</cmd>
 
 		<!-- Resets All Toggles to Default! -->
 		<cmd input="/resetall">
@@ -465,7 +487,12 @@
 
 
 	<premagic>
-		<equip set="Precast" />
+		<if advanced="$Sorc=1">
+			<equip set="HPDown"/>
+		</if>
+		<else>
+			<equip set="Precast" />
+		</else>
 	</premagic>
 
 	<midmagic>
@@ -588,7 +615,7 @@
 				<elseif advanced="%ad_element=%e_weatherelement">
 					<equip set="%ad_element-belt"/>	
 				</elseif>
-				<if advanced="hpp&lt;76">
+				<if advanced="$Sorc=1|%p_hpp&lt;76">
 					<equip>
 						<ring1>Sorcerer's Ring</ring1>
 					</equip>
