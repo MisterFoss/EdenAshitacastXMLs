@@ -553,8 +553,17 @@
 			<elseif ad_name="Sneak">
 				<equip set="Haste">
 					<feet>Dream boots +1</feet>
+					<back>Skulker's cape</back>
 				</equip>
-				<command delay="1400">/cancel 71</command>
+				<if advanced="%at_type=self">
+					<command delay="1400">/cancel 71</command>
+				</if>
+			</elseif>
+
+			<elseif ad_name="Invisible">
+				<equip set="Haste">
+					<back>Skulker's cape</back>
+				</equip>
 			</elseif>
 			<elseif ad_skill="enhancingmagic">
 	
