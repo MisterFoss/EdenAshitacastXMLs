@@ -38,7 +38,7 @@
         <set name="Idle">
 			<neck>Orochi Nodowa</neck>
 			<body>Commodore Frac</body>
-			<hands>Commodore gants</hands>
+			<hands>Blood Fng. Gnt.</hands>
 			<feet>Blood Greaves</feet>
         </set>
 
@@ -46,7 +46,7 @@
 			<main>Earth Staff</main>
 			<sub>Bugard Strap +1</sub>
 			<head>Walahra Turban</head>
-			<hands>Savage Gauntlets</hands>
+			<hands>Blood Fng. Gnt.</hands>
 			<legs>Blood Cuisses</legs>
 			<feet>Blood Greaves</feet>
 			<neck>Beak Necklace</neck>
@@ -72,8 +72,9 @@
 			<body>scorpion harness</body>
 			<hands>Dusk gloves</hands>
 			<legs>Comm. Trews</legs>
-			<feet>Denali gamashes</feet>
+			<feet>Dusk Ledelsens</feet>
 			<neck>Wivre gorget</neck>
+			<waist>Swift Belt</waist>
 			<ear2>Suppanomimi</ear2>
 			<ring1>woodsman Ring</ring1>
 			<ring2>Rajas Ring</ring2>
@@ -81,13 +82,13 @@
         </set>
 		
 		<set name="Preshot">
-			<hands>Commodore gants</hands>
+			<hands>Comm. Gants +1</hands>
 		</set>
 
 		<set name="Ranged-TP">
 			<head>corsair's tricorne</head>
 			<body>Corsair's Frac</body>
-			<hands>Commodore gants</hands>
+			<hands>Blood Fng. Gnt.</hands>
 			<legs>Jaridah salvars</legs>
 			<feet>Corsair's Bottes</feet>
 			<neck>Wivre gorget</neck>
@@ -103,7 +104,7 @@
 			<ammo>Steel Bullet</ammo>
 			<head>corsair's tricorne</head>
 			<body>Corsair's Frac</body>
-			<hands>Commodore gants</hands>
+			<hands>Blood Fng. Gnt.</hands>
 			<legs>Comm. Trews</legs>
 			<feet>Corsair's Bottes</feet>
 			<neck>Wivre gorget</neck>
@@ -119,7 +120,7 @@
 			<ammo>Steel Bullet</ammo>
 			<head>corsair's tricorne</head>
 			<body>Corsair's Frac</body>
-			<hands>Commodore gants</hands>
+			<hands>Blood Fng. Gnt.</hands>
 			<legs>Jaridah salvars</legs>
 			<feet>Corsair's Bottes</feet>
 			<neck>Wivre gorget</neck>
@@ -166,7 +167,7 @@
 			<ammo>Steel Bullet</ammo>
 			<head>Comm. Tricorne</head>
 			<body>Commodore Frac</body>
-			<hands>Commodore Gants</hands>
+			<hands>Blood Fng. Gnt.</hands>
 			<legs>Comm. Trews</legs>
 			<feet>Savage Gaiters</feet>
 			<neck>Spike Necklace</neck>
@@ -212,6 +213,8 @@
 			<head>Walahra Turban</head>
 			<body>scorpion harness</body>
 			<hands>Dusk Gloves</hands>
+			<feet>Dusk Ledelsens</feet>
+			<waist>Swift Belt</waist>
 		<!-- 
 			<legs></legs>	
 			<neck></neck>
@@ -228,7 +231,7 @@
 			<ammo>Steel Bullet</ammo>
 			<head>Empress Hairpin</head>
 			<body>Corsair's Frac</body>
-			<hands>Commodore Gants</hands>
+			<hands>Comm. Gants +1</hands>
 			<legs>Comm. Trews</legs>
 			<feet>Denali Gamashes</feet>
 			<neck>Wing Pendant</neck>
@@ -244,7 +247,7 @@
 			<ammo>Steel Bullet</ammo>
 			<head>Comm. Tricorne</head>
 			<body>Corsair's Frac</body>
-			<hands>Commodore Gants</hands>
+			<hands>Comm. Gants +1</hands>
 			<legs>Comm. Trews</legs>
 			<feet>Denali Gamashes</feet>
 			<neck>Wing Pendant</neck>
@@ -278,51 +281,6 @@
 			<body>Commodore Frac</body>
 		</set>
 		
-		<set name="detonatorDump">
-			<ammo>Steel Bullet</ammo>
-			<head>Comm. Tricorne</head>
-			<body>Commodore Frac</body>
-			<hands>Commodore Gants</hands>
-			<legs>Comm. Trews</legs>
-			<feet>Denali Gamashes</feet>
-			<neck>Spike Necklace</neck>
-			<waist>Commodore Belt</waist>
-			<ear1>Heims Earring</ear1>
-			<ear2>Cassie Earring</ear2>
-			<ring1>Ruby Ring</ring1>
-			<ring2>Rajas Ring</ring2>
-			<back>Amemet Mantle</back>
-		</set>
-		<set name="slugDump">
-			<range>Martial Gun</range>
-			<ammo>Steel Bullet</ammo>
-			<head>Corsair's Tricorne</head>
-			<body>Corsair's Frac</body>
-			<hands>Commodore Gants</hands>
-			<legs>Jaridah Salvars</legs>
-			<feet>Corsair's Bottes</feet>
-			<neck>Wivre Gorget</neck>
-			<waist>Commodore Belt</waist>
-			<ear1>Heims Earring</ear1>
-			<ear2>Cassie Earring</ear2>
-			<ring1>Scorpion Ring +1</ring1>
-			<ring2>Scorpion Ring +1</ring2>
-			<back>Amemet Mantle</back>
-		</set>
-		<set name="SBDump">
-			<head>Corsair's Tricorne</head>
-			<body>Commodore Frac</body>
-			<hands>Dusk Gloves</hands>
-			<legs>Comm. Trews</legs>
-			<feet>Denali Gamashes</feet>
-			<neck>Spike Necklace</neck>
-			<waist>Commodore Belt</waist>
-			<ear1>Heims Earring</ear1>
-			<ear2>Cassie Earring</ear2>
-			<ring1>Ruby Ring</ring1>
-			<ring2>Rajas Ring</ring2>
-			<back>Amemet Mantle</back>
-		</set>
 	</sets>
 
 	
@@ -466,6 +424,7 @@ IMPORTANT CODE BELOW
 				<if eq_main="Warp Cudgel|trick Staff II|treat staff II">
 					<equip lock="true">
 						<main>%eq_main</main>
+						<sub>%eq_main</sub>
 					</equip>
 				</if>		
 				<if eq_lear="Reraise Earring">
@@ -567,9 +526,9 @@ IMPORTANT CODE BELOW
 			<if ad_name="Cure*">
 				<equip set="Cure"/>
 			</if>
-		</if>
-		<if ad_name="Stoneskin">
-			<command delay="2000">/cancel stoneskin</command>
+			<if ad_name="Stoneskin">
+				<command delay="2000">/cancel stoneskin</command>
+			</if>
 		</if>
 		<elseif ad_name="Utsusemi: Ichi">
 			<equip set="Haste"/>

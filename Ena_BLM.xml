@@ -39,7 +39,7 @@
 		<set name="Idle">
 			<main>Earth Staff</main>
 			<sub>Bugard Strap +1</sub>
-			<body>Vermillion Cloak</body>
+			<body>Black Cloak</body>
 			<hands>Sorcerer's Gloves</hands>
 			<legs>Wizard's Tonban</legs>
 			<feet>Wizard's Sabots</feet>
@@ -109,7 +109,7 @@
 			<ammo>Phtm. Tathlum</ammo>
 			<head>Wizard's Petasos</head>
 			<body>Igqira Weskit</body>
-			<hands>Seer's Mitts</hands>
+			<hands>Zenith Mitts</hands>
 			<legs>Errant Slops</legs>
 			<feet>Wizard's Sabots</feet>
 			<ear1>Heims Earring</ear1>
@@ -127,6 +127,7 @@
 		<!-- white magic based efeebling-->
 		<set name="Enfeeble-MND">
 			<sub>Bugard Strap +1</sub>
+			<head>Igqira Tiara</head>
 			<body>Wizard's Coat</body>
 			<hands>Savage Gauntlets</hands>
 			<legs>Savage Loincloth</legs>
@@ -141,7 +142,7 @@
 		<!-- Black magic based enfeebeling-->
 		<set name="Enfeeble-INT">
 			<sub>Bugard Strap +1</sub>
-			<head>Wizard's Petasos</head>
+			<head>Igqira Tiara</head>
 			<body>Wizard's Coat</body>
 			<hands>Seer's Mitts</hands>
 			<legs>Seer's Slacks +1</legs>
@@ -250,6 +251,8 @@
 		</set>
 		
 		<set name="Melee-2H">
+			<main>Kirin's Pole</main>
+			<sub>Bugard Strap +1</sub>
 		</set>
 		
 		<set name="Melee-DW">
@@ -261,20 +264,11 @@
 			Use the above sets with "/1h, /2h, /dw" to avoid tp loss 
 		-->		
 		<set name="TP-Set">
-		<sub></sub>
-			<ammo></ammo>
-			<head></head>
-			<body></body>
-			<hands></hands>
-			<legs></legs>
-			<feet></feet>
-			<neck></neck>
-			<waist></waist>
-			<ear1></ear1>
-			<ear2></ear2>
-			<ring1></ring1>
-			<ring2></ring2>
-			<back></back>
+			<head>Walahra Turban</head>
+			<body>Igqira Weskit</body>
+			<neck>Wivre Gorget</neck>
+			<ring1>Woodsman Ring</ring1>
+			<ring2>Rajas Ring</ring2>
 		</set>
 		
 		<!-- WS sets -->
@@ -317,6 +311,15 @@
 			
 		</set>
 		
+		<set name="tpDump">
+			<main>Kirin's Pole</main>
+			<sub>Bugard Strap +1</sub>
+			<head>Walahra Turban</head>
+			<body>Igqira Weskit</body>
+			<neck>Wivre Gorget</neck>
+			<ring1>Woodsman Ring</ring1>
+			<ring2>Rajas Ring</ring2>
+		</set>
 	</sets> 
 
 	<!-- 
@@ -612,9 +615,10 @@
 				<equip set="Town" />
 			</if>
 			
-			<if eq_main="Warp Cudgel|trick Staff II|treat staff II">
+			<if eq_main="Warp Cudgel|trick Staff II|treat staff II|Caduceus">
 				<equip lock="true">
 					<main>%eq_main</main>
+					<sub>%eq_sub</sub>
 				</equip>
 			</if>		
 			<if eq_head="Nomad cap">
@@ -635,6 +639,16 @@
 			<if eq_ring2="Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
 				<equip lock="true">
 					<ring2>%eq_ring2</ring2>
+				</equip>
+			</if>
+			<if eq_ear1="Reraise Earring">
+				<equip lock="true">
+					<ring2>%eq_ear1</ring2>
+				</equip>
+			</if>
+			<if eq_ear2="Reraise Earring">
+				<equip lock="true">
+					<ring2>%eq_ear2</ring2>
 				</equip>
 			</if>
 

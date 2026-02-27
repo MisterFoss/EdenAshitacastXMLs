@@ -39,35 +39,40 @@
 	
 <!-- Default Idle Set when out of combat -->
         <set name="Idle">
-			<body>Vampire Cloak</body>
-			<hands>Ryl.Kgt. Mufflers</hands>
+			<head>Walahra Turban</head>
+			<body>Hauberk +1</body>
+			<hands>Darksteel Mittens</hands>
 			<legs>Ryl.Kgt. Breeches</legs>
-			<feet>Leaping Boots</feet>
+			<feet>Homam Gambieras</feet>
 			<neck>Parade Gorget</neck>
-			<ring1>Sun Ring</ring1>
-			<ring2>Sun Ring</ring2>
+			<waist>Life Belt</waist>
+			<ear1>Coral Earring</ear1>
+			<ear2>Coral Earring</ear2>
+			<ring1>Ruby Ring</ring1>
+			<ring2>Rajas Ring</ring2>
+			<back>Lamia Mantle</back>
         </set>
 		
 <!-- Town Set, When in Windurst -->
         <set name="Town">
-		<head>Walahra Turban</head>
-        <body>Federation Aketon</body>
+            <head>Walahra Turban</head>
+            <body>Federation Aketon</body>
         </set>
 
 <!-- Default TP Set -->
         <set name="TP">
 			<head>Walahra Turban</head>
-			<body>scorpion harness</body>
+			<body>Hauberk +1</body>
 			<hands>Dusk Gloves</hands>
 			<legs>Ryl.Kgt. Breeches</legs>
-			<feet>Dusk Ledelsens</feet>
+			<feet>Homam Gambieras</feet>
 			<neck>Chivalrous Chain</neck>
-			<waist>Life Belt</waist>
-			<ear1>Beetle Earring +1</ear1>
-			<ear2>Beetle Earring +1</ear2>
+			<waist>Swift Belt</waist>   
+			<ear1>Abyssal Earring</ear1>
+			<ear2>Coral Earring</ear2>
 			<ring1>Sniper's Ring</ring1>
-			<ring2>Sniper's Ring</ring2>
-			<back>Amemet Mantle</back>
+			<ring2>Rajas Ring</ring2>
+			<back>Abyss Cape</back>
         </set>
 		
 <!-- High Accuracy Set, /acc /acco -->
@@ -98,38 +103,20 @@
 
         </set>
 		
-<!-- WS's -->
-        <set name="Rampage">
-
-        </set>
-		<set name="RagingRush">
-
-
-        </set>
-		<set name="KingsJustice">
-
-        </set>
-		<set name="Penta">
-
-        </set>
-        <set name="SteelCyclone">
-
-        </set>
-		
 <!-- Default WS Set -->		
         <set name="WS">
-			<head>Walkure Mask</head>
-			<body>scorpion harness</body>
-			<hands>Ryl.Kgt. Mufflers</hands>
-			<legs>Ryl.Kgt. Breeches</legs>
-			<feet>Dusk Ledelsens</feet>
+			<head>Chaos Burgeonet</head>
+			<body>Hauberk +1</body>
+			<hands>Black Gadlings</hands>
+			<legs>Black Cuisses</legs>
+			<feet>Black Sollerets</feet>
 			<neck>Chivalrous Chain</neck>
 			<waist>Life Belt</waist>
-			<ear1>Beetle Earring +1</ear1>
-			<ear2>Beetle Earring +1</ear2>
-			<ring1>Sniper's Ring</ring1>
-			<ring2>Sniper's Ring</ring2>
-			<back>Amemet Mantle</back>
+			<ear1>Abyssal Earring</ear1>
+			<ear2>Coral Earring</ear2>
+			<ring1>Ruby Ring</ring1>
+			<ring2>Rajas Ring</ring2>
+			<back>Forager's Mantle</back>
         </set>
 		
 <!-- Snaphot set for Ranged Attacks -->
@@ -146,7 +133,43 @@
 		<set name="Haste">
 			<head>Walahra Turban</head>
 			<hands>Dusk Gloves</hands>
-			<feet>Dusk Ledelsens</feet>
+			<feet>Homam Gambieras</feet>
+            <waist>Swift Belt</waist>
+        </set>
+
+        <set name="DarkMagic" baseset="Haste">
+			<head>Chaos Burgeonet</head>
+			<body>Elder's Surcoat</body>
+			<hands>Elder's Bracers</hands>
+			<legs>Elder's Braguette</legs>
+			<waist>Mrc.Cpt. Belt</waist>
+            <ear1>Abyssal Earring</ear1>
+			<ring1>Diamond Ring</ring1>
+			<ring2>Diamond Ring</ring2>
+            <back>Abyss Cape</back>
+        </set>
+
+        <set name="Nuke" baseset="Haste">
+            <body>Elder's Surcoat</body>
+			<hands>Elder's Bracers</hands>
+			<legs>Elder's Braguette</legs>
+ 			<waist>Mrc.Cpt. Belt</waist>
+            <ear1>Abyssal Earring</ear1>
+			<ring1>Diamond Ring</ring1>
+			<ring2>Diamond Ring</ring2>
+            <back>Abyss Cape</back>
+        </set>
+
+        <set name="Enfeeble-INT" baseset="Haste">
+            <body>Elder's Surcoat</body>
+			<hands>Elder's Bracers</hands>
+			<legs>Elder's Braguette</legs>
+			<feet>Abyss Sollerets</feet>
+			<waist>Mrc.Cpt. Belt</waist>
+            <ear1>Abyssal Earring</ear1>
+			<ring1>Diamond Ring</ring1>
+			<ring2>Diamond Ring</ring2>
+            <back>Abyss Cape</back>
         </set>
 		
 <!-- Will autoequip Desert Boots in Earth Weather -->
@@ -267,64 +290,63 @@
     <idlegear>
         <if p_status="idle">
             <equip set="Idle" />
-                <!-- 
-				<if eq_lring="Empress Band">
+                <if eq_ring1="Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
 					<equip lock="true">
-					<lring>Empress Band</lring>                
+						<ring1>%eq_ring1</ring1>
 					</equip>
 				</if>
-				<if eq_lring="Anniversary Ring">		
+				<if eq_ring2="Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
 					<equip lock="true">
-					<lring>Anniversary Ring</lring> 
+						<ring2>%eq_ring2</ring2>
 					</equip>
 				</if>
+				<if eq_main="Warp Cudgel|trick Staff II|treat staff II">
+					<equip lock="true">
+						<main>%eq_main</main>
+					</equip>
+				</if>		
 				<if eq_lear="Reraise Earring">
 					<equip lock="true">
-					<lear>Reraise Earring</lear> 
+					<lear>%eq_lear</lear> 
 					</equip>
 				</if>
 				<if eq_head="Reraise Hairpin">		
 					<equip lock="true">
-					<head>Reraise Hairpin</head> 
+						<head>%eq_head</head> 
 					</equip>
 				</if>
-				<if eq_body="Tidal Talisman">		
-					<equip lock="true">
-					<body>Tidal Talisman</body>  
-					</equip>
-				</if>
-                -->
-				<if buffactive="2">
-                    <equip>
-                        <neck>opo-opo necklace</neck>
+                <if advanced="(%p_mp&lt;188)&amp;((%e_time&gt;18.00)|(%e_time&lt;6.00))">
+                    <equip set="Idle">
+                        <head></head>
+                        <body>Vampire Cloak</body>
                     </equip>
-                </if>
+                </if> 
                 <if advanced="$Evasion=1">
                     <equip set="Evasion" />
                 </if>
-                <if advanced="$Acc=1">
+                <elseif advanced="$Acc=1">
                     <equip set="Acc" />
-                </if>
-                <if advanced="$PhysicalDefense=1">
+                </elseif>
+                <elseif advanced="$PhysicalDefense=1">
                     <equip set="PhysicalDefense" />
-                </if>
-                <if advanced="$MagicDefense=1">
+                </elseif>
+                <elseif advanced="$MagicDefense=1">
                     <equip set="MagicDefense" />
-                </if>
-                <if advanced="$FireResist=1">
+                </elseif>
+                <elseif advanced="$FireResist=1">
                     <equip set="FireResist" />
-                </if>
-                <if advanced="$LightningResist=1">
+                </elseif>
+                <elseif advanced="$LightningResist=1">
                     <equip set="LightningResist" />
-                </if>
-                <if e_area="Windurst*|Port Windurst">
+                </elseif>
+                <elseif e_area="Windurst*|Port Windurst">
 					<equip set="Town" />
-				</if>
+				</elseif>
 				<elseif p_ismoving="true">
 					<if e_weatherelement="Earth">
 						<equip set="DesertBoots" />
 					</if>
-				</elseif> 
+				</elseif>
         </if>
         <if p_status="engaged">
 				<if advanced="$Evasion=1">
@@ -393,6 +415,7 @@
     <premagic>
 			<equip set="Haste" />
     </premagic>
+
     <midmagic>
 		<if ad_name="Utsusemi: Ichi">
 			<equip set="Haste"/>
@@ -410,70 +433,40 @@
 			<equip set="Haste"/>
             <command delay="2800">/cancel 71</command>
 		</if>
+
+        <elseif ad_type="blackmagic">
+			<if ad_skill="darkmagic">
+				<if ad_name="Drain|Aspir*|Bio*">
+					<equip set="DarkMagic" />
+				</if>
+				<else>
+					<equip set="Haste" />
+				</else>
+			</if>
+
+			<elseif ad_skill="ElementalMagic">
+				<equip set="Nuke"/>
+			</elseif>
+
+			<elseif ad_skill="enfeeblingmagic">
+                <equip set="Enfeeble-INT"/>
+			</elseif>
+			<else>
+				<equip set="Haste"/>
+			</else>
+		</elseif>
     </midmagic>
+
     <jobability>
-        <if ad_name="Provoke"> <!-- Can add +Enmity here if desired -->
+        <if ad_name="Arcane Circle"> <!-- Can add +Enmity here if desired -->
             <equip when="precast">
-            <!-- 
-				<head>Fighter's Mask</head>
-				<body>Fighter's Lorica</body>
-				<legs>Warrior's Cuisses</legs>
-				<hands>Fighter's Mufflers</hands>
-				<feet>Fighter's Calligae</feet>
-            -->
+                <feet>Chaos Sollerets</feet>
 			</equip>
         </if>
-        <if ad_name="Warcry"> <!-- Can add +Enmity here if desired -->
-            <equip when="precast">
-            <!-- 
-				<head>Warrior's Mask</head>
-				<legs>Warrior's Cuisses</legs>
-				<feet>Fighter's Calligae</feet>
-            -->
-            </equip>
-        </if>
-        <if ad_name="Aggressor">
-            <equip when="precast">
-            <!-- 
-                <body>Warrior's Lorica</body>
-            -->
-            </equip>
-        </if>
-		<if ad_name="Berserk">
-            <equip when="precast">
-            <!-- 
-                <feet>Warrior's Calligae</feet>
-            -->
-            </equip>
-        </if>
-		<if ad_name="Tomahawk">
-            <equip when="precast">
-            <!-- 
-                <ammo>Thr. Tomahawk</ammo>
-            -->
-            </equip>
-        </if>
+    </jobability>
 
-    </jobability>   
     <weaponskill>
-        <if ad_name="Rampage*">
-            <equip set="Rampage" />
-        </if>
-		<elseif ad_name="Raging Rush*">
-            <equip set="RagingRush" />
-        </elseif>
-		<elseif ad_name="Penta Thrust*">
-            <equip set="Penta" />
-        </elseif>
-		<elseif ad_name="King's Justice*">
-            <equip set="KingsJustice" />
-        </elseif>
-        <elseif ad_name="Steel Cyclone*">
-            <equip set="SteelCyclone" />
-        </elseif>
-        <else>
             <equip set="WS" />
-        </else>
         <!-- 
 		<if e_time=" >18.00|<6.00">
             <equip>
