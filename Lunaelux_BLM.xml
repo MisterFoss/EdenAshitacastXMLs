@@ -667,12 +667,12 @@
 			</if>
 			<if eq_ear1="Reraise Earring">
 				<equip lock="true">
-					<ring2>%eq_ear1</ring2>
+					<ear1>%eq_ear1</ear1>
 				</equip>
 			</if>
 			<if eq_ear2="Reraise Earring">
 				<equip lock="true">
-					<ring2>%eq_ear2</ring2>
+					<ear2>%eq_ear2</ear2>
 				</equip>
 			</if>
 
