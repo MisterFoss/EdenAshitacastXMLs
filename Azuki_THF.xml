@@ -46,7 +46,7 @@
 		<set name="SA">
 			<head>Empress Hairpin</head>
 			<body>Brigandine</body>
-			<hands>Custom F Gloves</hands>
+			<hands>Hct. Mittens +1</hands>
 			<feet>Bounding Boots</feet>
 			<neck>Spike Necklace</neck>
 			<ring1>Balance Ring</ring1>
@@ -83,7 +83,7 @@
 		<set name="WS">
 			<head>Walkure Mask</head>
 			<body>Assault Jerkin</body>
-			<hands>Dusk Gloves</hands>
+			<hands>Hct. Mittens +1</hands>
 			<legs>Republic Subligar</legs>
 			<feet>Dusk Ledelsens</feet>
 			<neck>Chivalrous Chain</neck>
@@ -98,7 +98,7 @@
         <set name="STRWS">
             <head>Patroclus's Helm</head>
 			<body>Rogue's Vest</body>
-			<hands>Custom F Gloves</hands>
+			<hands>Hct. Mittens +1</hands>
 			<legs>Republic Subligar</legs>
 			<feet>Dusk Ledelsens</feet>
 			<neck>Chivalrous Chain</neck>
