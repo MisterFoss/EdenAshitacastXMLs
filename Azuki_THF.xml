@@ -28,10 +28,10 @@
     <sets>
         <set name="Idle">
 			<head>Empress Hairpin</head>
-			<body>Scorpion Harness</body>
+			<body>Hecatomb Harness</body>
 			<hands>Garden Bangles</hands>
 			<legs>Bravo's Subligar</legs>
-			<feet>Homam Gambieras</feet>
+			<feet>Trotter boots</feet>
 			<neck>Chivalrous Chain</neck>
 			<waist>Life Belt</waist>
 			<ear1>Suppanomimi</ear1>
@@ -82,7 +82,7 @@
 		</set>
 		<set name="WS">
 			<head>Walkure Mask</head>
-			<body>Assault Jerkin</body>
+			<body>Hecatomb Harness</body>
 			<hands>Hct. Mittens +1</hands>
 			<legs>Republic Subligar</legs>
 			<feet>Hct. Leggings +1</feet>
