@@ -403,7 +403,7 @@
 			<elseif ad_name="*Mazurka">	<equip set="Mazurka+"/></elseif>
 		</if>
 		
-		<if ad_name="Utsusemi: Ichi">
+		<elseif ad_name="Utsusemi: Ichi">
             <equip set="Casting"/>
 				<if buffactive="66"> <!-- One shadow are left -->
 					<command delay="3545">/cancel 66</command>
@@ -411,7 +411,7 @@
             <elseif buffactive="444"> <!-- Two shadows are left -->
                 <command delay="3545">/cancel 444</command>
             </elseif>
-        </if>
+        </elseif>
         <elseif ad_name="Monomi: Ichi">
             <equip set="Casting"/>
             <command delay="2800">/cancel 71</command>
