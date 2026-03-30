@@ -29,8 +29,8 @@
         <set name="Idle">
 			<head>Empress Hairpin</head>
 			<body>Hecatomb Harness</body>
-			<hands>Garden Bangles</hands>
-			<legs>Bravo's Subligar</legs>
+			<hands>Homam Manopolas</hands>
+			<legs>Rogue's Culottes</legs>
 			<feet>Trotter boots</feet>
 			<neck>Chivalrous Chain</neck>
 			<waist>Life Belt</waist>
@@ -41,7 +41,6 @@
 			<back>Bat cape</back>
         </set>
         <set name="Town">
-            <body>Federation Aketon</body>
         </set>
 		<set name="SA">
 			<head>Walahra Turban</head>
@@ -239,6 +238,11 @@
                 </elseif>
                 <if e_area="Windurst*|Port Windurst">
                     <equip set="Town"/>
+                </if>
+                <if advanced="(%p_hpp&lt;100)&amp;((%e_time&gt;6.00)|(%e_time&lt;18.00))">
+                    <equip>
+                        <hands>Garden Bangles</hands>
+                    </equip>
                 </if>
         </if>
         <if p_status="engaged">
