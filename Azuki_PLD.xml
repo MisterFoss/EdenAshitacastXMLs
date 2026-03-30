@@ -1,0 +1,413 @@
+
+
+<ashitacast>
+    <settings> <!--Contains settings specific to this xml, must be set to true/false to override default-->
+        <buffupdate>true</buffupdate> <!--Determines if your idlegear will be parsed when you gain/lose a buff. Default: TRUE -->
+        <statusupdate>true</statusupdate> <!--Determines if your idlegear will be parsed when you change status(stand/rest/engage/etc).  Default: TRUE -->
+        <hpupdate>false</hpupdate> <!--Determines if your idlegear will be parsed when your HP % changes.  Default: TRUE -->
+        <autoupdate>true</autoupdate> <!--Determines if your idlegear will be parsed on outgoing status updates(roughly every 350ms).  Default: TRUE-->
+    </settings>
+    <variables>
+        <var name="Evasion">0</var>
+        <var name="PhysicalDefense">0</var>
+        <var name="MagicDefense">0</var>
+        <var name="FireResist">0</var>
+        <var name="LightningResist">0</var>
+        <var name="Acc">0</var>
+        <var name="Refresh">0</var>
+    </variables>
+    <init>
+        <command delay="1500">/echo ****** Initiating Warrior AshitaCast, ENJOY! ******</command>
+        <command delay="1600">/echo Job is %p_job.</command>
+        <command delay="1700">/echo Macro-book $macrobook, Page $macropage.</command>
+        <command delay="2000">/macro book $macrobook</command>
+        <command delay="3000">/macro set $macropage</command>		
+        <command delay="3200">/gl blink</command>
+		<command delay="3400">/Addon reload equipviewer</command>
+        <if p_mainjob="PLD"><setvar name="macrobook" value="5" /></if>
+        <if p_subjob="NIN"><setvar name="macropage" value="1" /></if>
+<!-- Delete next line if you don't use keybinds -->
+    </init>
+	
+    <sets>
+        <set name="Idle">
+			<head>Koenig Schaller</head>
+			<body>dst. harness +1</body>
+			<hands>Kng. Handschuhs</hands>
+			<legs>Blood Cuisses</legs>
+			<feet>Homam Gambieras</feet>
+			<neck>Parade Gorget</neck>
+			<waist>Marid belt</waist>
+			<ear1>Heims Earring</ear1>
+			<ear2>Fowling Earring</ear2>
+			<ring1>Jelly Ring</ring1>
+			<ring2>Hercules' Ring</ring2>
+			<back>Valor Cape</back>
+        </set>
+        
+        <set name="Refresh">
+            <head></head>
+            <body>Vermillion Cloak</body>
+        </set>
+
+        <set name="Enmity">
+            <head>Aegishjalmr</head>
+            <neck>Harmonia's Torque</neck>
+            <body>Valor Surcoat</body>
+            <legs>Valor Breeches</legs>
+            <ring2>Hercules' Ring</ring2>
+            <back>Valor cape</back>
+        </set>
+
+        <set name="Town">
+        </set>
+
+        <set name="TP">
+			<head>Walahra Turban</head>
+			<body>Haubergeon</body>
+			<hands>Homam Manopolas</hands>
+			<legs>Valor Breeches</legs>
+			<feet>Homam Gambieras</feet>
+			<neck>Chivalrous Chain</neck>
+			<waist>Swift Belt</waist>
+			<ear1>Brutal Earring</ear1>
+			<ear2>Fowling Earring</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Rajas Ring</ring2>
+			<back>Forager's Mantle</back>
+        </set>
+
+        <set name="Acc">
+        </set>
+
+        <set name="Evasion">
+        </set>
+	
+        <set name="PhysicalDefense">
+            <head>Koenig Schaller</head>
+            <body>dst. harness +1</body>
+            <hands>Kng. Handschuhs</hands>
+            <feet>Gallant Leggings</feet>
+            <ring1>Jelly Ring</ring1>
+        </set>
+		
+        <set name="MagicDefense">
+            <head>Coral visor +1</head>
+			<back>Resentment Cape</back>
+        </set>
+		
+        <set name="FireResist">
+        </set>
+		
+        <set name="LightningResist">
+        </set>
+
+        <set name="Rampart" baseset="Enmity"> 
+            <head>Valor Coronet</head>
+        </set>
+
+        <set name="Sentinel" baseset="Enmity">
+            <!-- 
+                <feet>Valor Leggings</feet>
+            -->
+        </set>
+		
+        <set name="Chivalry" baseset="Enmity">
+            <legs>Custom Pants</legs>
+            <neck>Justice Badge</neck>
+        </set>
+<!-- WS's -->
+        <set name="Atonement" baseset="Enmity">
+        </set>
+		
+        <set name="WS">
+            <head>Patroclus's Helm</head>
+			<body>Kirin's Osode</body>
+			<hands>Hct. Mittens +1</hands>
+			<legs>Byakko's Haidate</legs>
+			<feet>Dusk Ledelsens</feet>
+			<neck>Chivalrous Chain</neck>
+			<waist>Warrior's Stone</waist>
+			<ear1>Brutal Earring</ear1>
+			<ear2>Fowling Earring</ear2>
+			<ring1>Sniper's Ring</ring1>
+			<ring2>Rajas Ring</ring2>
+			<back>Forager's Mantle</back>
+        </set>
+		
+		<set name="Preshot">
+		</set>
+		
+		<set name="Ranged">
+		</set>
+		
+		<set name="Casting"> 
+			<head>Walahra Turban</head>
+			<hands>Homam Manopolas</hands>
+			<legs>Valor Breeches</legs>
+			<feet>Homam Gambieras</feet>
+            <waist>Swift Belt</waist>
+        </set>
+		
+		<set name="DesertBoots">    
+            <!-- <feet>Desert Boots</feet> -->
+		</set>
+
+    </sets>
+	
+
+	
+    <inputcommands>
+        <cmd input="/rf">
+            <if advanced="$Refresh=0">
+                <setvar name="Refresh" value="1"/>
+                <addtochat color="100">Refresh Set Equipped.</addtochat>
+            </if>
+            <else>
+                <setvar name="Refresh" value="0"></setvar>
+                <addtochat color="200">Refresh Set Unequipped.</addtochat>
+            </else>
+        </cmd>
+        <cmd input="/eva">
+            <setvar name="PhysicalDefense" value="0" />
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="FireResist" value="0" />
+            <setvar name="LightningResist" value="0" />
+            <setvar name="Acc" value="0" />
+            <if advanced="$Evasion=0">
+                <setvar name="Evasion" value="1" />
+                <addtochat color="100">Evasion Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/evao">
+            <if advanced="$Evasion=1">
+                <setvar name="Evasion" value="0" />
+                <addtochat color="200">Evasion Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/pdt">
+            <setvar name="Evasion" value="0" />
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="FireResist" value="0" />
+            <setvar name="LightningResist" value="0" />
+            <setvar name="Acc" value="0" />
+            <if advanced="$PhysicalDefense=0">
+                <setvar name="PhysicalDefense" value="1" />
+                <addtochat color="100">Physical Defense Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/pdto">
+            <if advanced="$PhysicalDefense=1">
+                <setvar name="PhysicalDefense" value="0" />
+                <addtochat color="200">Physical Defense Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/mdt">
+            <setvar name="Evasion" value="0" />
+            <setvar name="PhysicalDefense" value="0" />
+            <setvar name="FireResist" value="0" />
+            <setvar name="LightningResist" value="0" />
+            <setvar name="Acc" value="0" />
+            <if advanced="$MagicDefense=0">
+                <setvar name="MagicDefense" value="1" />
+                <addtochat color="100">Magic Defense Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/mdto">
+            <if advanced="$MagicDefense=1">
+                <setvar name="MagicDefense" value="0" />
+                <addtochat color="200">Magic Defense Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/fr">
+            <setvar name="Evasion" value="0" />
+            <setvar name="PhysicalDefense" value="0" />
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="LightningResist" value="0" />
+            <setvar name="Acc" value="0" />
+            <if advanced="$FireResist=0">
+                <setvar name="FireResist" value="1" />
+                <addtochat color="100">Fire Resist Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/fro">
+            <if advanced="$FireResist=1">
+                <setvar name="FireResist" value="0" />
+                <addtochat color="200">Fire Resist Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/lr">
+            <setvar name="Evasion" value="0" />
+            <setvar name="PhysicalDefense" value="0" />
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="FireResist" value="0" />
+            <setvar name="Acc" value="0" />
+            <if advanced="$LightningResist=0">
+                <setvar name="LightningResist" value="1" />
+                <addtochat color="100">Lightning Resist Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/lro">
+            <if advanced="$LightningResist=1">
+                <setvar name="LightningResist" value="0" />
+                <addtochat color="200">Lightning Resist Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/acc">
+            <setvar name="Evasion" value="0" />
+            <setvar name="PhysicalDefense" value="0" />
+            <setvar name="MagicDefense" value="0" />
+            <setvar name="FireResist" value="0" />
+            <setvar name="LightningResist" value="0" />
+            <if advanced="$Acc=0">
+                <setvar name="Acc" value="1" />
+                <addtochat color="100">High Accuracy Set Set Equipped.</addtochat>
+            </if>
+        </cmd>
+        <cmd input="/acco">
+            <if advanced="$Acc=1">
+                <setvar name="Acc" value="0" />
+                <addtochat color="200">High Accuracy Set Canceled. Returning to Normal set.</addtochat>
+            </if>
+        </cmd>
+    </inputcommands>
+    <idlegear>
+        <if advanced="$Refresh=1">
+            <equip set="Refresh" lock="True"/>
+        </if>
+        <if p_status="idle">
+            <equip set="Idle" />
+            <if eq_ring1="Empress Band|Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+                <equip lock="true">
+                    <ring1>%eq_ring1</ring1>
+                </equip>
+            </if>
+            <if eq_ring2="Empress Band|Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+                <equip lock="true">
+                    <ring2>%eq_ring2</ring2>
+                </equip>
+            </if>
+            <if eq_main="Warp Cudgel|trick Staff II|treat staff II">
+                <equip lock="true">
+                    <main>%eq_main</main>
+                    <sub>%eq_sub</sub>
+                </equip>
+            </if>		
+            <if eq_lear="Reraise Earring">
+                <equip lock="true">
+                <lear>%eq_lear</lear> 
+                </equip>
+            </if>
+            <if eq_head="Reraise Hairpin">		
+                <equip lock="true">
+                    <head>%eq_head</head> 
+                </equip>
+            </if>
+            <if e_area="Windurst*|Port Windurst">
+                <equip set="Town"/>
+            </if>
+            <if advanced="$Evasion=1">
+                <equip set="Evasion" />
+            </if>
+            <if advanced="$Acc=1">
+                <equip set="Acc" />
+            </if>
+            <if advanced="$PhysicalDefense=1">
+                <equip set="PhysicalDefense" />
+            </if>
+            <if advanced="$MagicDefense=1">
+                <equip set="MagicDefense" />
+            </if>
+            <if advanced="$FireResist=1">
+                <equip set="FireResist" />
+            </if>
+            <if advanced="$LightningResist=1">
+                <equip set="LightningResist" />
+            </if>
+            <elseif p_ismoving="true">
+                <if e_weatherelement="Earth">
+                    <equip set="DesertBoots" />
+                </if>
+            </elseif>
+        </if>
+        <if p_status="engaged">
+                <equip set="TP" />
+				<if advanced="$Evasion=1">
+                    <equip set="Evasion" />
+				</if>     
+				<elseif advanced="$Acc=1">
+                    <equip set="Acc" />
+				</elseif>  			
+				<elseif advanced="$MagicDefense=1">
+					<equip set="MagicDefense"/>
+				</elseif>
+				<elseif advanced="$PhysicalDefense=1">
+					<equip set="PhysicalDefense"/>
+				</elseif>
+				<elseif advanced="$LightningResist=1">
+					<equip set="LightningResist" />
+				</elseif>
+				<elseif advanced="$FireResist=1">
+					<equip set="FireResist" />
+				</elseif>
+        </if>   
+    </idlegear>
+
+
+	<preranged>
+			<equip set="Preshot" />
+	</preranged>
+
+	<midranged>
+			<equip set="Ranged" />
+	</midranged>
+	
+	
+    <premagic>
+			<equip set="Casting" />
+    </premagic>
+
+    <midmagic>
+		<if ad_name="Utsusemi: Ichi">
+			<equip set="Casting"/>
+				<if buffactive="66"> <!-- One shadow are left -->
+					<command delay="3545">/cancel 66</command>
+				</if>
+				<else buffactive="444"> <!-- Two shadows are left -->
+					<command delay="3545">/cancel 444</command>
+				</else>
+		</if>
+		<elseif ad_name="Monomi: Ichi">
+			<equip set="Casting"/>
+            <command delay="2800">/cancel 71</command>
+		</elseif>
+        <else>
+            <equip set="Casting"/>
+        </else>
+    </midmagic>
+
+    <jobability>
+        <if ad_name="Sentinel"> 
+            <equip when="precast" set="Sentinel"/>
+        </if>
+        <elseif ad_name="Rampart">
+            <equip when="precast" set="Rampart"/>
+        </elseif>
+		<elseif ad_name="Chivalry">
+            <equip when="precast" set="Chivalry"/>
+        </elseif>
+        <else>
+            <equip when="precast" set="Enmity" />
+        </else>
+    </jobability>
+
+    <weaponskill>
+        <if ad_name="Atonement*">
+            <equip set="Atonement" />
+        </if>
+        <else>
+            <equip set="WS" />
+        </else>
+    </weaponskill>
+
+</ashitacast>
