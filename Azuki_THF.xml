@@ -36,7 +36,7 @@
 			<waist>Life Belt</waist>
 			<ear1>Suppanomimi</ear1>
 			<ear2>Brutal Earring</ear2>
-			<ring1>Balance Ring</ring1>
+			<ring1>Jelly Ring</ring1>
 			<ring2>Rajas Ring</ring2>
 			<back>Bat cape</back>
         </set>
@@ -44,20 +44,31 @@
             <body>Federation Aketon</body>
         </set>
 		<set name="SA">
-			<head>Empress Hairpin</head>
-			<body>Brigandine</body>
-			<hands>Hct. Mittens +1</hands>
-			<feet>Hct. Leggings +1</feet>
+			<head>Walahra Turban</head>
+			<body>Assault Jerkin</body>
+			<hands>Dusk Gloves</hands>
+			<legs>Republic Subligar</legs>
+			<feet>Dusk Ledelsens</feet>
 			<neck>Spike Necklace</neck>
+			<waist>Swift Belt</waist>
+			<ear1>Suppanomimi</ear1>
+			<ear2>Brutal Earring</ear2>
 			<ring1>Balance Ring</ring1>
 			<ring2>Rajas Ring</ring2>
+			<back>Forager's Mantle</back>
 		</set>
 		<set name="TA">
-			<head>Empress Hairpin</head>
-			<legs>Rogue's Culottes</legs>
-			<feet>Bounding Boots</feet>
+			<head>Walahra Turban</head>
+			<body>Assault Jerkin</body>
+			<hands>Dusk Gloves</hands>
+			<legs>Bravo's Subligar</legs>
+			<feet>Dusk Ledelsens</feet>
+			<waist>Swift Belt</waist>
 			<ear1>Suppanomimi</ear1>
-			<back>Nomad's Mantle</back>
+			<ear2>Wing Earring</ear2>
+			<ring1>Emerald Ring</ring1>
+			<ring2>Rajas Ring</ring2>
+			<back>Forager's Mantle</back>
 		</set>
 		<set name="RangedAttack">
 			<body>Rapparee Harness</body>
@@ -69,7 +80,7 @@
 		<set name="TP">
 			<head>Walahra Turban</head>
 			<body>Rapparee Harness</body>
-			<hands>Dusk Gloves</hands>
+			<hands>Homam Manopolas</hands>
 			<legs>Bravo's Subligar</legs>
 			<feet>Homam Gambieras</feet>
 			<neck>Chivalrous Chain</neck>
@@ -111,6 +122,7 @@
         </set>
 
         <set name="Running">
+            <feet>Trotter boots</feet>
         </set>
 
         <set name="Casting">
@@ -121,7 +133,7 @@
 			<feet>Dusk Ledelsens</feet>
             <waist>Swift Belt</waist>
 			<ear1>Suppanomimi</ear1>
-			<ear2>Raising Earring</ear2>
+			<ear2>Brutal Earring</ear2>
 			<back>Bat Cape</back>
         </set>
 
@@ -132,7 +144,7 @@
         <set name="Evasion">
             <head>Empress Hairpin</head>
 			<ear1>Suppanomimi</ear1>
-			<ear2>Reraise Earring</ear2>
+			<ear2>Brutal Earring</ear2>
 			<body>Scorpion Harness</body>
 			<back>Bat cape</back>
         </set>
@@ -190,6 +202,32 @@
     <idlegear>
         <if p_status="idle">
             <equip set="Idle" />
+                <if eq_ring1="Empress Band|Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+					<equip lock="true">
+						<ring1>%eq_ring1</ring1>
+					</equip>
+				</if>
+				<if eq_ring2="Empress Band|Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+					<equip lock="true">
+						<ring2>%eq_ring2</ring2>
+					</equip>
+				</if>
+				<if eq_main="Warp Cudgel|trick Staff II|treat staff II">
+					<equip lock="true">
+						<main>%eq_main</main>
+						<sub>%eq_sub</sub>
+					</equip>
+				</if>		
+				<if eq_lear="Reraise Earring">
+					<equip lock="true">
+					<lear>%eq_lear</lear> 
+					</equip>
+				</if>
+				<if eq_head="Reraise Hairpin">		
+					<equip lock="true">
+						<head>%eq_head</head> 
+					</equip>
+				</if>
                 <if advanced="$Evasion=1">
                     <equip set="Evasion" />
                 </if>

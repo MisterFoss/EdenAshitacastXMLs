@@ -43,8 +43,8 @@
 			<waist>Warrior's Stone</waist>
 			<ear1>Brutal Earring</ear1>
 			<ear2>Fowling Earring</ear2>
-			<ring1>Balance Ring</ring1>
-			<ring2>Rajas Ring</ring2>
+			<ring1>Jelly Ring</ring1>
+			<ring2>Hercules' Ring</ring2>
 			<back>Nomad's Mantle</back>
         </set>
 
@@ -275,62 +275,58 @@
     <idlegear>
         <if p_status="idle">
             <equip set="Idle" />
-				<if eq_lring="Empress Band">
-					<equip lock="true">
-					<lring>Empress Band</lring>                
-					</equip>
-				</if>
-				<if eq_lring="Anniversary Ring">		
-					<equip lock="true">
-					<lring>Anniversary Ring</lring> 
-					</equip>
-				</if>
-				<if eq_lear="Reraise Earring">
-					<equip lock="true">
-					<lear>Reraise Earring</lear> 
-					</equip>
-				</if>
-				<if eq_head="Reraise Hairpin">		
-					<equip lock="true">
-					<head>Reraise Hairpin</head> 
-					</equip>
-				</if>
-				<if eq_body="Tidal Talisman">		
-					<equip lock="true">
-					<body>Tidal Talisman</body>  
-					</equip>
-				</if>
-                
-				<if buffactive="2">
-                    <equip>
-                    </equip>
+            <if eq_ring1="Empress Band|Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+                <equip lock="true">
+                    <ring1>%eq_ring1</ring1>
+                </equip>
+            </if>
+            <if eq_ring2="Empress Band|Emperor Band|Homing Ring|Olduum Ring|Tavnazian Ring|Anniversary Ring">
+                <equip lock="true">
+                    <ring2>%eq_ring2</ring2>
+                </equip>
+            </if>
+            <if eq_main="Warp Cudgel|trick Staff II|treat staff II">
+                <equip lock="true">
+                    <main>%eq_main</main>
+                    <sub>%eq_sub</sub>
+                </equip>
+            </if>		
+            <if eq_lear="Reraise Earring">
+                <equip lock="true">
+                <lear>%eq_lear</lear> 
+                </equip>
+            </if>
+            <if eq_head="Reraise Hairpin">		
+                <equip lock="true">
+                    <head>%eq_head</head> 
+                </equip>
+            </if>
+            <if e_area="Windurst*|Port Windurst">
+                <equip set="Town"/>
+            </if>
+            <if advanced="$Evasion=1">
+                <equip set="Evasion" />
+            </if>
+            <if advanced="$Acc=1">
+                <equip set="Acc" />
+            </if>
+            <if advanced="$PhysicalDefense=1">
+                <equip set="PhysicalDefense" />
+            </if>
+            <if advanced="$MagicDefense=1">
+                <equip set="MagicDefense" />
+            </if>
+            <if advanced="$FireResist=1">
+                <equip set="FireResist" />
+            </if>
+            <if advanced="$LightningResist=1">
+                <equip set="LightningResist" />
+            </if>
+            <if e_weatherelement="Earth">
+                <if p_ismoving="true">
+                    <equip><feet>Desert Boots</feet></equip>
                 </if>
-                <if e_area="Windurst*|Port Windurst">
-                    <equip set="Town"/>
-                </if>
-                <if advanced="$Evasion=1">
-                    <equip set="Evasion" />
-                </if>
-                <if advanced="$Acc=1">
-                    <equip set="Acc" />
-                </if>
-                <if advanced="$PhysicalDefense=1">
-                    <equip set="PhysicalDefense" />
-                </if>
-                <if advanced="$MagicDefense=1">
-                    <equip set="MagicDefense" />
-                </if>
-                <if advanced="$FireResist=1">
-                    <equip set="FireResist" />
-                </if>
-                <if advanced="$LightningResist=1">
-                    <equip set="LightningResist" />
-                </if>
-				<elseif p_ismoving="true">
-					<if e_weatherelement="Earth">
-						<equip set="DesertBoots" />
-					</if>
-				</elseif>
+            </if>
         </if>
         <if p_status="engaged">
 				<if advanced="$Evasion=1">
