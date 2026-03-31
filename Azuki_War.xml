@@ -35,8 +35,8 @@
     <sets>
         <set name="Idle">
 			<head>Genbu's Kabuto</head>
-			<body>Kirin's Osode</body>
-			<hands>Hct. Mittens +1</hands>
+			<body>Dst. Harness +1</body>
+			<hands>Kng. Handschuhs</hands>
 			<legs>Byakko's Haidate</legs>
 			<feet>Hct. Leggings +1</feet>
 			<neck>Chivalrous Chain</neck>
@@ -45,7 +45,7 @@
 			<ear2>Fowling Earring</ear2>
 			<ring1>Jelly Ring</ring1>
 			<ring2>Hercules' Ring</ring2>
-			<back>Nomad's Mantle</back>
+			<back>Bat Cape</back>
         </set>
 
         <set name="Town">
@@ -74,9 +74,12 @@
             <head>Empress Hairpin</head>
 			<body>Scorpion Harness</body>
 			<back>Nomad's Mantle</back>
+            <back>Bat Cape</back>
         </set>
 	
         <set name="PhysicalDefense">
+            <body>Dst. Harness +1</body>
+            <ring1>Jelly Ring</ring1>
         </set>
 		
         <set name="MagicDefense">

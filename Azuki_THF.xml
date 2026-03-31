@@ -28,17 +28,17 @@
     <sets>
         <set name="Idle">
 			<head>Empress Hairpin</head>
-			<body>Hecatomb Harness</body>
-			<hands>Assassin's Armlets</hands>
-			<legs>Rogue's Culottes</legs>
-			<feet>Trotter boots</feet>
+			<body>Dst. Harness +1</body>
+			<hands>War Gloves</hands>
+			<legs>Crow Hose</legs>
+			<feet>Trotter Boots</feet>
 			<neck>Chivalrous Chain</neck>
-			<waist>Life Belt</waist>
+			<waist>Marid Belt</waist>
 			<ear1>Suppanomimi</ear1>
 			<ear2>Brutal Earring</ear2>
 			<ring1>Jelly Ring</ring1>
 			<ring2>Rajas Ring</ring2>
-			<back>Bat cape</back>
+			<back>Bat Cape</back>   
         </set>
         <set name="Town">
         </set>
@@ -141,16 +141,15 @@
         </set>
 
         <set name="Evasion">
-            <head>Empress Hairpin</head>
-			<ear1>Suppanomimi</ear1>
-			<ear2>Brutal Earring</ear2>
+			<head>Empress Hairpin</head>
 			<body>Scorpion Harness</body>
-			<back>Bat cape</back>
+			<hands>War Gloves</hands>
+			<legs>Crow Hose</legs>
+			<back>Bat Cape</back>
         </set>
 
         <set name="MagicDefense">
         </set>
-
     </sets>
 
     <inputcommands>
@@ -239,7 +238,7 @@
                 <if e_area="Windurst*|Port Windurst">
                     <equip set="Town"/>
                 </if>
-                <if advanced="(%p_hpp&lt;100)&amp;((%e_time&gt;6.00)|(%e_time&lt;18.00))">
+                <if advanced="(%p_hpp&lt;100)&amp;((%e_time&gt;6.00)&amp;(%e_time&lt;18.00))">
                     <equip>
                         <hands>Garden Bangles</hands>
                     </equip>
