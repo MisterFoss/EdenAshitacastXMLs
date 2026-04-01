@@ -141,7 +141,7 @@
 		<set name="Ranged">
 		</set>
 		
-		<set name="Casting"> 
+		<set name="Casting" baseset="Enmity"> 
 			<head>Walahra Turban</head>
 			<hands>Homam Manopolas</hands>
 			<legs>Valor Breeches</legs>
@@ -364,7 +364,7 @@
 	
 	
     <premagic>
-			<equip set="Casting" />
+			<equip set="Casting"/>
     </premagic>
 
     <midmagic>
@@ -381,6 +381,10 @@
 			<equip set="Casting"/>
             <command delay="2800">/cancel 71</command>
 		</elseif>
+        <elseif as_name="Flash">
+            <equip set="Casting"/>
+            <equip set="Enmity"/>
+        </elseif>
         <else>
             <equip set="Casting"/>
         </else>
