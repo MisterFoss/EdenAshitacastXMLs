@@ -350,6 +350,11 @@
 				<elseif advanced="$FireResist=1">
 					<equip set="FireResist" />
 				</elseif>
+        </if>
+        <if advanced="(%p_hpp&gt;=85)&amp;(%p_mpp&lt;51)">
+            <equip>
+                <neck>parade gorget</neck>
+            </equip>
         </if>   
     </idlegear>
 
