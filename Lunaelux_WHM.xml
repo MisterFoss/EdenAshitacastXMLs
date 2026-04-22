@@ -77,7 +77,7 @@
 		
 		<set name="Precast">
 			<ear1></ear1>
-			<feet></feet>
+			<feet>Rostrum Pumps</feet>
 		</set>
 		
 		<set name="Haste">

@@ -86,6 +86,7 @@
 		
 		<!-- Default Precast, for fast cast -->
 		<set name="Precast">
+			<feet>Rostrum Pumps</feet>
 		</set>
 
 		<set name="HPDown" baseset="Precast">
